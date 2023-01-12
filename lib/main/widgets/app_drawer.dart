@@ -6,7 +6,13 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Text("Drawer"),
+      child: Column(
+        children: [
+          Text("Drawer Item 1"),
+          Text("Drawer Item 2"),
+          Text("Drawer Item 3"),
+        ]
+      ),
     );
   }
 }

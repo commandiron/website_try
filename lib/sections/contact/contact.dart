@@ -6,9 +6,9 @@ class Contact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: double.infinity,
-        height: 800,
-        color: Colors.purple
+      width: double.infinity,
+      height: 1000,
+      color: Colors.red,
     );
   }
 }

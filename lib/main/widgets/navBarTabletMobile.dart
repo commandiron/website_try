@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../../provider/drawer_provider.dart';
 import 'package:provider/provider.dart';
 
+import '../../widget/nav_bar_logo.dart';
+
 class NavBarTabletMobile extends StatelessWidget {
   const NavBarTabletMobile({Key? key}) : super(key: key);
 
@@ -13,8 +15,12 @@ class NavBarTabletMobile extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      height: 65,
-      color: Colors.blue,
+      height: 120,
+      color: Theme.of(context).primaryColor.withOpacity(0.75),
+      padding: EdgeInsets.symmetric(
+          horizontal: 28,
+          vertical: 32
+      ),
       child: Row(
         children: [
           IconButton(
@@ -26,6 +32,8 @@ class NavBarTabletMobile extends StatelessWidget {
               Icons.menu,
             ),
           ),
+          Expanded(child: SizedBox(width: double.infinity)),
+          NavBarLogo()
         ],
       ),
     );

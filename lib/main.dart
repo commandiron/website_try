@@ -1,8 +1,9 @@
-import 'package:demirli_tech_website/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'configs/core_theme.dart';
+import 'main/main_screen.dart';
 import 'provider/drawer_provider.dart';
+import 'provider/scroll_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => DrawerProvider()),
+        ChangeNotifierProvider(create: (_) => ScrollProvider()),
       ],
       child: const MaterialChild()
     );

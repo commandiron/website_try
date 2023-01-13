@@ -1,4 +1,10 @@
+import 'package:demirli_tech_website/sections/body_sections.dart';
+import 'package:demirli_tech_website/widget/nav_bar_logo.dart';
+import 'package:demirli_tech_website/widget/navbar_actions_button.dart';
 import 'package:flutter/material.dart';
+
+import '../../configs/app_padding.dart';
+import '../../configs/app_space.dart';
 
 class NavBarDesktop extends StatelessWidget {
   const NavBarDesktop({Key? key}) : super(key: key);
@@ -7,8 +13,21 @@ class NavBarDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 65,
-      color: Colors.red,
+      height: 112,
+      color: Theme.of(context).colorScheme.primaryContainer.withOpacity(0.75),
+      padding: AppPadding.navBarPadding,
+      child: Row(
+        children: [
+          const NavBarLogo(),
+          AppSpace.xExpanded!,
+          ...BodySections.names.asMap().entries.map(
+            (sectionName) => NavBarActionButton(
+              label: sectionName.value,
+              index: sectionName.key
+            )
+          ),
+        ],
+      ),
     );
   }
 }

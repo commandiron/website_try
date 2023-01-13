@@ -6,9 +6,9 @@ class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: double.infinity,
-        height: 800,
-        color: Colors.black38
+      width: double.infinity,
+      height: 800,
+      color: Colors.blue,
     );
   }
 }

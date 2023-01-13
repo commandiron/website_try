@@ -1,18 +1,29 @@
 import 'package:flutter/material.dart';
 
-class AppDrawer extends StatelessWidget {
+class AppDrawer extends StatefulWidget {
   const AppDrawer({Key? key}) : super(key: key);
 
   @override
+  State<AppDrawer> createState() => _AppDrawerState();
+}
+
+class _AppDrawerState extends State<AppDrawer> {
+  @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Column(
-        children: [
-          Text("Drawer Item 1"),
-          Text("Drawer Item 2"),
-          Text("Drawer Item 3"),
-        ]
-      ),
+      child: ListView(
+        children: <Widget>[
+          ListTile(
+            title: Text("Menu1"),
+          ),
+          ListTile(
+            title: Text("Menu2"),
+          ),
+          ListTile(
+            title: Text("Menu3"),
+          ),
+        ],
+      )
     );
   }
 }

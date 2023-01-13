@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
+import '../configs/app_size.dart';
+
 class ScrollProvider extends ChangeNotifier {
   final scrollController = ScrollController();
 
@@ -7,14 +9,14 @@ class ScrollProvider extends ChangeNotifier {
 
   scrollDesktop(int index) {
     double offset = index == 1
-        ? 1000
+        ? 1000 - AppSize.navBarSize!
         : index == 2
-            ? 800
+            ? 1800 - AppSize.navBarSize!
             : index == 3
-                ? 800
-                : 800;
+                ? 2600 - AppSize.navBarSize!
+                : 0;
     controller.animateTo(
-      offset * index,
+      offset,
       duration: const Duration(seconds: 1),
       curve: Curves.easeInOut,
     );

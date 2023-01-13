@@ -4,6 +4,7 @@ import 'package:demirli_tech_website/widget/navbar_actions_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../configs/app_padding.dart';
+import '../../configs/app_size.dart';
 import '../../configs/app_space.dart';
 
 class NavBarDesktop extends StatelessWidget {
@@ -13,7 +14,7 @@ class NavBarDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 112,
+      height: AppSize.navBarSize,
       color: Theme.of(context).colorScheme.primaryContainer.withOpacity(0.75),
       padding: AppPadding.navBarPadding,
       child: Row(

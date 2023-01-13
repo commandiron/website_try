@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'core_theme.dart';
+
 class AppText {
   static TextStyle? btn;
 
@@ -25,21 +27,21 @@ class AppText {
 
   static init() {
     const b = FontWeight.bold;
-    const baseStyle = TextStyle();
+    const baseStyle = TextStyle(fontFamily: fontFamily);
 
-    h1 = baseStyle.copyWith(fontSize: 32);
+    h1 = baseStyle.copyWith(fontSize: 36);
     h1b = h1!.copyWith(fontWeight: b);
 
-    h2 = baseStyle.copyWith(fontSize: 26);
+    h2 = baseStyle.copyWith(fontSize: 22);
     h2b = h2!.copyWith(fontWeight: b);
 
-    h3 = baseStyle.copyWith(fontSize: 22);
+    h3 = baseStyle.copyWith(fontSize: 18);
     h3b = h3!.copyWith(fontWeight: b);
 
-    b1 = baseStyle.copyWith(fontSize: 18);
+    b1 = baseStyle.copyWith(fontSize: 16);
     b1b = b1!.copyWith(fontWeight: b);
 
-    b2 = baseStyle.copyWith(fontSize: 15);
+    b2 = baseStyle.copyWith(fontSize: 14);
     b2b = b2!.copyWith(fontWeight: b);
 
     l1 = baseStyle.copyWith(fontSize: 10);

@@ -71,9 +71,10 @@ class AppPadding {
         vertical: verticalS!.vertical
     );
 
-    homePadding = EdgeInsets.symmetric(
-      horizontal: horizontalL!.horizontal,
-      vertical: verticalXXL!.vertical
+    homePadding = EdgeInsets.only(
+      top: verticalXXL!.vertical,
+      right: horizontalL!.horizontal,
+      left: horizontalL!.horizontal,
     );
 
     zero = EdgeInsets.zero;

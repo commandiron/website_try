@@ -8,7 +8,7 @@ class Products extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 800,
-      color: Colors.green,
+      color: Colors.white,
     );
   }
 }

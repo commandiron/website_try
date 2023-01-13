@@ -7,7 +7,7 @@ class ScrollProvider extends ChangeNotifier {
 
   scrollDesktop(int index) {
     double offset = index == 1
-        ? 800
+        ? 1000
         : index == 2
             ? 800
             : index == 3

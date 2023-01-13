@@ -1,3 +1,4 @@
+import 'package:demirli_tech_website/utils/body_elements.dart';
 import 'package:flutter/material.dart';
 
 class AppBody extends StatelessWidget {
@@ -5,12 +6,9 @@ class AppBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        width: double.infinity,
-        height: 3000,
-        child: Center(child: Text("App Body"),)
-      ),
+    return ListView.builder(
+      itemCount: BodyElements.views.length,
+      itemBuilder: (context, index) => BodyElements.views[index],
     );
   }
 }

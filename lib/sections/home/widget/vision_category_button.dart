@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../configs/app_text.dart';
+import '../../../configs/app_text.dart';
 
 class VisionCategoryButton extends StatefulWidget {
   const VisionCategoryButton (

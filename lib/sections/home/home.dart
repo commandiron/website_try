@@ -1,7 +1,6 @@
 import 'package:demirli_tech_website/sections/home/home_desktop.dart';
 import 'package:flutter/material.dart';
 import '../../responsive/responsive.dart';
-import 'home_mobile.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -9,8 +8,8 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Responsive(
-      mobile: HomeMobile(),
-      tablet: HomeMobile(),
+      mobile: HomeDesktop(),
+      tablet: HomeDesktop(),
       desktop: HomeDesktop()
     );
   }

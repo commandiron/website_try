@@ -1,3 +1,4 @@
+import 'package:demirli_tech_website/configs/app_size.dart';
 import 'package:flutter/material.dart';
 
 class Contact extends StatelessWidget {
@@ -7,7 +8,7 @@ class Contact extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 1000,
+      height: AppSize.contactSectionHeight!,
       color: Colors.red,
     );
   }

@@ -1,8 +1,7 @@
 import 'package:demirli_tech_website/sections/home/widget/home_background.dart';
+import 'package:demirli_tech_website/sections/home/widget/home_expanded_divider.dart';
+import 'package:demirli_tech_website/sections/home/widget/home_title.dart';
 import 'package:flutter/material.dart';
-
-import '../../configs/app_space.dart';
-import '../../configs/app_text.dart';
 import 'widget/vision_category_button.dart';
 
 class HomeDesktop extends StatelessWidget {
@@ -14,46 +13,20 @@ class HomeDesktop extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              FractionallySizedBox(
-                widthFactor: 0.5,
-                child: Text(
-                  "İnşaat sektöründe mobil tabanlı teknoloji çözümleri sunuyoruz.",
-                  style: AppText.h1b!.copyWith(
-                      color: Colors.white
-                  ),
-                ),
-              ),
-              AppSpace.yLarge!,
-              Text(
-                "Uçtan uca tüm inşaat sektörünün otomasyonu için gelin beraber çalışalım.",
-                style: AppText.h2!.copyWith(
-                    color: Colors.white
-                ),
-              ),
-            ],
-          ),
+          const HomeTitle(),
           Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    VisionCategoryButton(title: "Fizibilite", isActive: true,),
-                    Expanded(child: Divider(color: Theme.of(context).colorScheme.primary, height: 2, thickness: 2,),),
-                    VisionCategoryButton(title: "Tasarım",),
-                    Expanded(child: Divider(color: Theme.of(context).colorScheme.primary, height: 2, thickness: 2,),),
-                    VisionCategoryButton(title: "Uygulama", isActive: true,),
-                    Expanded(child: Divider(color: Theme.of(context).colorScheme.primary, height: 2, thickness: 2,),),
-                    VisionCategoryButton(title: "Kontrol",),
-                    Expanded(child: Divider(color: Theme.of(context).colorScheme.primary, height: 2, thickness: 2,),),
-                    VisionCategoryButton(title: "Bakım",),
-                  ],
-                )
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                VisionCategoryButton(title: "Fizibilite", isActive: true,),
+                HomeExpandedDivider(),
+                VisionCategoryButton(title: "Tasarım",),
+                HomeExpandedDivider(),
+                VisionCategoryButton(title: "Uygulama", isActive: true,),
+                HomeExpandedDivider(),
+                VisionCategoryButton(title: "Kontrol",),
+                HomeExpandedDivider(),
+                VisionCategoryButton(title: "Bakım",),
               ],
             )
           )

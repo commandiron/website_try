@@ -7,7 +7,6 @@ import 'app_space.dart';
 import 'app_text.dart';
 
 class AppConfig {
-
   static init(BuildContext context) {
     AppSize.init();
     AppText.init();

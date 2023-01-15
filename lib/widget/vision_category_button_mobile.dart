@@ -1,9 +1,10 @@
+import 'package:demirli_tech_website/configs/app_padding.dart';
 import 'package:flutter/material.dart';
 
 import '../configs/app_text.dart';
 
-class VisionCategoryButton extends StatefulWidget {
-  const VisionCategoryButton (
+class VisionCategoryButtonMobile extends StatefulWidget {
+  const VisionCategoryButtonMobile (
     {
       required this.title, 
       this.isActive = false,
@@ -15,10 +16,10 @@ class VisionCategoryButton extends StatefulWidget {
   final bool isActive;
 
   @override
-  State<VisionCategoryButton> createState() => _VisionCategoryButtonState();
+  State<VisionCategoryButtonMobile> createState() => _VisionCategoryButtonState();
 }
 
-class _VisionCategoryButtonState extends State<VisionCategoryButton> {
+class _VisionCategoryButtonState extends State<VisionCategoryButtonMobile> {
 
   bool _isOnHover = false;
 
@@ -34,14 +35,19 @@ class _VisionCategoryButtonState extends State<VisionCategoryButton> {
         });
       },
       child: CircleAvatar(
-        radius: 80,
+        radius: 36,
         backgroundColor: _isOnHover
           ? Theme.of(context).colorScheme.primary.withOpacity(0.75)
           : Theme.of(context).colorScheme.primaryContainer.withOpacity(0.75),
-        child: Text(
-          widget.title,
-          style: AppText.h2!.copyWith(
-            color: Colors.white
+        child: Padding(
+          padding: AppPadding.allS!,
+          child: FittedBox(
+            child: Text(
+              widget.title,
+              style: AppText.b2!.copyWith(
+                color: Colors.white
+              ),
+            ),
           ),
         ),
       ),

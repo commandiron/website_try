@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../configs/app_padding.dart';
+import '../../configs/app_size.dart';
+import '../../configs/app_space.dart';
 import '../../provider/drawer_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -15,12 +18,9 @@ class NavBarTabletMobile extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      height: 120,
-      color: Theme.of(context).primaryColor.withOpacity(0.75),
-      padding: EdgeInsets.symmetric(
-          horizontal: 28,
-          vertical: 32
-      ),
+      height: AppSize.navBarSize,
+      color: Theme.of(context).colorScheme.primaryContainer.withOpacity(0.75),
+      padding: AppPadding.navBarPadding,
       child: Row(
         children: [
           IconButton(
@@ -30,9 +30,10 @@ class NavBarTabletMobile extends StatelessWidget {
             },
             icon: const Icon(
               Icons.menu,
+              color: Colors.white,
             ),
           ),
-          Expanded(child: SizedBox(width: double.infinity)),
+          AppSpace.xExpanded!,
           NavBarLogo()
         ],
       ),

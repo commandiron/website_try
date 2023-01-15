@@ -3,33 +3,46 @@ import 'package:flutter/material.dart';
 import 'home_expanded_divider.dart';
 
 class HomeVisionCategories extends StatelessWidget {
-  const HomeVisionCategories({super.key});
+  const HomeVisionCategories({required this.radius, required this.style, super.key});
+
+  final double radius;
+  final TextStyle style;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: const [
+      children: [
         VisionCategoryButton(
+          radius: radius,
           title: "Fizibilite",
+          style: style,
           isActive: true,
         ),
-        HomeExpandedDivider(),
+        const HomeExpandedDivider(),
         VisionCategoryButton(
+          radius: radius,
           title: "Tasarım",
+          style: style,
         ),
-        HomeExpandedDivider(),
+        const HomeExpandedDivider(),
         VisionCategoryButton(
+          radius: radius,
           title: "Uygulama",
+          style: style,
           isActive: true,
         ),
-        HomeExpandedDivider(),
+        const HomeExpandedDivider(),
         VisionCategoryButton(
+          radius: radius,
           title: "Kontrol",
+          style: style,
         ),
-        HomeExpandedDivider(),
+        const HomeExpandedDivider(),
         VisionCategoryButton(
+          radius: radius,
           title: "Bakım",
+          style: style,
         ),
       ],
     );

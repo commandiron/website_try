@@ -3,7 +3,9 @@ import '../../../configs/app_space.dart';
 import '../../../configs/app_text.dart';
 
 class HomeTitle extends StatelessWidget {
-  const HomeTitle({super.key});
+  const HomeTitle({required this.titleWidthFactor, super.key});
+
+  final double titleWidthFactor;
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class HomeTitle extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         FractionallySizedBox(
-          widthFactor: 0.5,
+          widthFactor: titleWidthFactor,
           child: Text(
             "İnşaat sektöründe mobil tabanlı teknoloji çözümleri sunuyoruz.",
             style: AppText.h1b!.copyWith(color: Colors.white),

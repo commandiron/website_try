@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 
 import '../../configs/app_text.dart';
 
-class HomeDesktop extends StatelessWidget {
-  const HomeDesktop({Key? key}) : super(key: key);
+class HomeMobile extends StatelessWidget {
+  const HomeMobile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,12 +15,12 @@ class HomeDesktop extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const HomeTitle(
-            titleWidthFactor: 0.5,
+            titleWidthFactor: 1.0,
           ),
           Expanded(
             child: HomeVisionCategories(
-              radius: 80,
-              style: AppText.h2!.copyWith(color: Colors.white)
+              radius: 36,
+              style: AppText.b2!.copyWith(color: Colors.white),
             )
           )
         ]

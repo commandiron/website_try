@@ -6,6 +6,7 @@ import 'provider/drawer_provider.dart';
 import 'provider/scroll_provider.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

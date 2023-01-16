@@ -21,7 +21,7 @@ class HomeBackground extends StatelessWidget {
       ),
       child: ClipRRect(
         child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+          filter: ImageFilter.blur(sigmaX: 7, sigmaY: 7),
           child: Container(
             color: Colors.black.withOpacity(0.5),
             child: Padding(

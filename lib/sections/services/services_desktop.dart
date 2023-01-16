@@ -11,7 +11,7 @@ class ServicesDesktop extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: AppSize.servicesSectionHeight,
-      color: Theme.of(context).colorScheme.primaryContainer,
+      color: Theme.of(context).colorScheme.secondary,
       alignment: Alignment.center,
       child: Column(
         children: [

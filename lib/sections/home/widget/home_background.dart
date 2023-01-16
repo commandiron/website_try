@@ -15,13 +15,13 @@ class HomeBackground extends StatelessWidget {
       height: AppSize.homeSectionHeight!,
       decoration: const BoxDecoration(
         image: DecorationImage(
-            image: AssetImage("assets/construction_technology_.jpg"),
-            fit: BoxFit.cover,
-            colorFilter: ColorFilter.mode(Colors.black, BlendMode.color)),
+          image: AssetImage("assets/construction_technology_.jpg"),
+          fit: BoxFit.cover,
+        ),
       ),
       child: ClipRRect(
         child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
+          filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
           child: Container(
             color: Colors.black.withOpacity(0.5),
             child: Padding(

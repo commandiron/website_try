@@ -11,6 +11,7 @@ class AppPadding {
   static EdgeInsets? allXXL;
   static EdgeInsets? allXXXL;
 
+  static EdgeInsets? verticalXS;
   static EdgeInsets? verticalS;
   static EdgeInsets? verticalM;
   static EdgeInsets? verticalL;
@@ -24,7 +25,8 @@ class AppPadding {
   static EdgeInsets? symmetric;
 
   static EdgeInsets? navBarPadding;
-  static EdgeInsets? navBarActionButtonPadding;
+  static EdgeInsets? navBarTextButtonPadding;
+  static EdgeInsets? navBarElevatedButtonPadding;
   static EdgeInsets? homePadding;
   static EdgeInsets? productPadding;
 
@@ -38,6 +40,9 @@ class AppPadding {
     allXXL = const EdgeInsets.all(128);
     allXXXL = const EdgeInsets.all(256);
 
+    verticalXS = const EdgeInsets.symmetric(
+        vertical: 4
+    );
     verticalS = const EdgeInsets.symmetric(
         vertical: 8
     );
@@ -69,8 +74,12 @@ class AppPadding {
         vertical: verticalS!.vertical
     );
 
-    navBarActionButtonPadding = EdgeInsets.symmetric(
-        vertical: verticalS!.vertical
+    navBarTextButtonPadding = EdgeInsets.symmetric(
+      vertical: verticalS!.vertical
+    );
+
+    navBarElevatedButtonPadding = EdgeInsets.symmetric(
+      vertical: verticalXS!.vertical,
     );
 
     homePadding = EdgeInsets.only(

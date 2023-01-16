@@ -26,17 +26,20 @@ class NavBarActionButton extends StatelessWidget {
     return Padding(
       padding: AppPadding.horizontalS!,
       child: highlighted
-        ? ElevatedButton(
-          onPressed: () {
-            scrollProvider.scrollDesktop(index);
-          },
-          child: Padding(
-            padding: AppPadding.navBarActionButtonPadding!,
-            child: Text(
-              label,
-              style: AppText.b1!
-            ),
-          )
+        ? Padding(
+          padding: AppPadding.horizontalL!,
+          child: ElevatedButton(
+            onPressed: () {
+              scrollProvider.scrollDesktop(index);
+            },
+            child: Padding(
+              padding: AppPadding.navBarActionButtonPadding!,
+              child: Text(
+                label,
+                style: AppText.b1!
+              ),
+            )
+          ),
         )
         : TextButton(
         onPressed: () {

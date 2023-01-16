@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 
 import '../../configs/app_padding.dart';
 import '../../configs/app_size.dart';
-import '../../configs/app_space.dart';
 
 class NavBarDesktop extends StatelessWidget {
   const NavBarDesktop({Key? key}) : super(key: key);
@@ -20,16 +19,33 @@ class NavBarDesktop extends StatelessWidget {
       child: Row(
         children: [
           const NavBarLogo(),
-          AppSpace.horizontalExpanded!,
-          ...BodySections.names.asMap().entries.map(
-            (sectionName) {
-              return NavBarActionButton(
-                label: sectionName.value,
-                index: sectionName.key,
-                highlighted: sectionName.value == "İletişim",
-              );
-            }
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ...BodySections.names.asMap().entries.map(
+                  (sectionName) {
+                    if(sectionName.value != "İletişim") {
+                      return NavBarActionButton(
+                        label: sectionName.value,
+                        index: sectionName.key,
+                      );
+                    } else {
+                      return const SizedBox.shrink();
+                    }
+                  }
+                ),
+              ],
+            )
           ),
+          SizedBox(
+            width: AppSize.logoWidth!,
+            child: const NavBarActionButton(
+              label: "İletişim",
+              index: 4,
+              highlighted: true,
+            ),
+          )
         ],
       ),
     );

@@ -20,22 +20,25 @@ class NavBarDesktop extends StatelessWidget {
         children: [
           const NavBarLogo(),
           Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ...BodySections.names.asMap().entries.map(
-                  (sectionName) {
-                    if(sectionName.value != "İletişim") {
-                      return NavBarActionButton(
-                        label: sectionName.value,
-                        index: sectionName.key,
-                      );
-                    } else {
-                      return const SizedBox.shrink();
+            child: FittedBox(
+              fit: BoxFit.contain,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ...BodySections.names.asMap().entries.map(
+                    (sectionName) {
+                      if(sectionName.value != "İletişim") {
+                        return NavBarActionButton(
+                          label: sectionName.value,
+                          index: sectionName.key,
+                        );
+                      } else {
+                        return const SizedBox.shrink();
+                      }
                     }
-                  }
-                ),
-              ],
+                  ),
+                ],
+              ),
             )
           ),
           SizedBox(

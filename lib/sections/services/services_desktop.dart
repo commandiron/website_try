@@ -18,7 +18,7 @@ class ServicesDesktop extends StatelessWidget {
           Container(
             height: AppSize.navBarSize,
             alignment: Alignment.center,
-            child: Text("Servisler", style: AppText.h1!.copyWith(color: Colors.white)),
+            child: Text("Hizmetler", style: AppText.h1!.copyWith(color: Colors.white)),
           ),
         ],
       ),

@@ -97,7 +97,9 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
                             Expanded(
                               flex: 2,
                               child: Container(
-                                padding: AppPadding.allXXL,
+                                alignment: Alignment.topCenter,
+                                padding: AppPadding.horizontalXXXL!
+                                  .add(AppPadding.verticalL!),
                                 child: Image.asset("assets/beson_spash.png",),
                               )
                             ),

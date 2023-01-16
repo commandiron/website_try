@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 
 class AppSpace {
-  static Widget? xSmall;
-  static Widget? ySmall;
-  static Widget? xMedium;
-  static Widget? yMedium;
-  static Widget? xLarge;
-  static Widget? yLarge;
-  static Widget? xExpanded;
-  static Widget? yExpanded;
+  static Widget? horizontalS;
+  static Widget? verticalS;
+  static Widget? horizontalM;
+  static Widget? verticalM;
+  static Widget? horizontalL;
+  static Widget? verticalL;
+  static Widget? horizontalExpanded;
+  static Widget? verticalExpanded;
 
   static EdgeInsets? z;
 
   static void init() {
-    xSmall = const SizedBox(width: 4);
-    ySmall = const SizedBox(height: 4);
+    horizontalS = const SizedBox(width: 4);
+    verticalS = const SizedBox(height: 4);
 
-    xMedium = const SizedBox(width: 8);
-    yMedium = const SizedBox(height: 8);
+    horizontalM = const SizedBox(width: 8);
+    verticalM = const SizedBox(height: 8);
 
-    xLarge = const SizedBox(width: 16);
-    yLarge = const SizedBox(height: 16);
+    horizontalL = const SizedBox(width: 16);
+    verticalL = const SizedBox(height: 16);
 
-    xExpanded = const Expanded(child: SizedBox(width: double.infinity));
-    yExpanded = const Expanded(child: SizedBox(height: double.infinity));
+    horizontalExpanded = const Expanded(child: SizedBox(width: double.infinity));
+    verticalExpanded = const Expanded(child: SizedBox(height: double.infinity));
   }
 }

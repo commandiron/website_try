@@ -33,7 +33,7 @@ class NavBarTabletMobile extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          AppSpace.xExpanded!,
+          AppSpace.horizontalExpanded!,
           NavBarLogo()
         ],
       ),

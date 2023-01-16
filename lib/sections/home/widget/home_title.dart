@@ -19,7 +19,7 @@ class HomeTitle extends StatelessWidget {
             style: AppText.h1b!.copyWith(color: Colors.white),
           ),
         ),
-        AppSpace.yLarge!,
+        AppSpace.verticalL!,
         Text(
           "Uçtan uca tüm inşaat sektörünün inovasyonu için gelin beraber çalışalım.",
           style: AppText.h2!.copyWith(color: Colors.white),

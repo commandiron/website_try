@@ -20,7 +20,7 @@ class NavBarDesktop extends StatelessWidget {
       child: Row(
         children: [
           const NavBarLogo(),
-          AppSpace.xExpanded!,
+          AppSpace.verticalL!,
           ...BodySections.names.asMap().entries.map(
             (sectionName) => NavBarActionButton(
               label: sectionName.value,

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class AppPadding {
@@ -20,11 +19,11 @@ class AppPadding {
   static EdgeInsets? horizontalM;
   static EdgeInsets? horizontalL;
 
+  static EdgeInsets? verticalXXLhorizontalL;
+
   static EdgeInsets? symmetric;
 
-  static EdgeInsets? navBarPadding;
-  static EdgeInsets? navBarTextButtonPadding;
-  static EdgeInsets? navBarElevatedButtonPadding;
+  static EdgeInsetsGeometry? navBarPadding;
   static EdgeInsets? homePadding;
 
   static EdgeInsets? zero;
@@ -37,47 +36,18 @@ class AppPadding {
     allXXL = const EdgeInsets.all(128);
     allXXXL = const EdgeInsets.all(256);
 
-    verticalXS = const EdgeInsets.symmetric(
-        vertical: 4
-    );
-    verticalS = const EdgeInsets.symmetric(
-        vertical: 8
-    );
-    verticalM = const EdgeInsets.symmetric(
-        vertical: 16
-    );
-    verticalL = const EdgeInsets.symmetric(
-        vertical: 32
-    );
-    verticalXL = const EdgeInsets.symmetric(
-        vertical: 64
-    );
-    verticalXXL = const EdgeInsets.symmetric(
-        vertical: 128
-    );
+    verticalXS = const EdgeInsets.symmetric(vertical: 4);
+    verticalS = const EdgeInsets.symmetric(vertical: 8);
+    verticalM = const EdgeInsets.symmetric(vertical: 16);
+    verticalL = const EdgeInsets.symmetric(vertical: 32);
+    verticalXL = const EdgeInsets.symmetric(vertical: 64);
+    verticalXXL = const EdgeInsets.symmetric(vertical: 128);
 
-    horizontalS = const EdgeInsets.symmetric(
-      horizontal: 8
-    );
-    horizontalM = const EdgeInsets.symmetric(
-        horizontal: 16
-    );
-    horizontalL = const EdgeInsets.symmetric(
-        horizontal: 32
-    );
+    horizontalS = const EdgeInsets.symmetric(horizontal: 8);
+    horizontalM = const EdgeInsets.symmetric(horizontal: 16);
+    horizontalL = const EdgeInsets.symmetric(horizontal: 32);
 
-    navBarPadding = EdgeInsets.symmetric(
-        horizontal: horizontalM!.horizontal,
-        vertical: verticalS!.vertical
-    );
-
-    navBarTextButtonPadding = EdgeInsets.symmetric(
-      vertical: verticalS!.vertical
-    );
-
-    navBarElevatedButtonPadding = EdgeInsets.symmetric(
-      vertical: verticalXS!.vertical,
-    );
+    navBarPadding = horizontalL!.add(verticalM!);
 
     homePadding = EdgeInsets.only(
       top: verticalXXL!.vertical,

@@ -17,7 +17,7 @@ class HomeVisionCategories extends StatelessWidget {
           radius: radius,
           title: "Fizibilite",
           style: style,
-          isActive: true,
+          hasApp: true,
         ),
         const HomeExpandedDivider(),
         VisionCategoryButton(
@@ -30,7 +30,7 @@ class HomeVisionCategories extends StatelessWidget {
           radius: radius,
           title: "Uygulama",
           style: style,
-          isActive: true,
+          hasApp: true,
         ),
         const HomeExpandedDivider(),
         VisionCategoryButton(

@@ -19,7 +19,7 @@ class HomeMobile extends StatelessWidget {
           ),
           Expanded(
             child: HomeVisionCategories(
-              radius: 36,
+              radius: 32,
               style: AppText.b2!.copyWith(color: Colors.white),
             )
           )

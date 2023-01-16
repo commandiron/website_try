@@ -1,21 +1,19 @@
 import 'package:demirli_tech_website/configs/app_padding.dart';
 import 'package:flutter/material.dart';
 
-import '../../../configs/app_text.dart';
-
 class VisionCategoryButton extends StatefulWidget {
   const VisionCategoryButton(
       {required this.radius,
       required this.title,
       required this.style,
-      this.isActive = false,
+      this.hasApp = false,
       Key? key})
       : super(key: key);
 
   final double radius;
   final String title;
   final TextStyle style;
-  final bool isActive;
+  final bool hasApp;
 
   @override
   State<VisionCategoryButton> createState() => _VisionCategoryButtonState();
@@ -27,7 +25,7 @@ class _VisionCategoryButtonState extends State<VisionCategoryButton> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: widget.isActive ? () {} : null,
+      onTap: widget.hasApp ? () {} : null,
       onHover: (value) {
         setState(() {
           _isOnHover = value;

@@ -21,7 +21,7 @@ class HomeTitle extends StatelessWidget {
         ),
         AppSpace.yLarge!,
         Text(
-          "Uçtan uca tüm inşaat sektörünün otomasyonu için gelin beraber çalışalım.",
+          "Uçtan uca tüm inşaat sektörünün inovasyonu için gelin beraber çalışalım.",
           style: AppText.h2!.copyWith(color: Colors.white),
         ),
       ],

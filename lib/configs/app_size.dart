@@ -11,7 +11,7 @@ class AppSize {
     logoWidth = 256;
     navBarSize = 96;
     homeSectionHeight = 960;
-    productsSectionHeight = 960;
+    productsSectionHeight = 1088;
     servicesSectionHeight = 960;
     aboutSectionHeight = 960;
     contactSectionHeight = 960;

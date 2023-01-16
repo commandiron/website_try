@@ -18,6 +18,8 @@ class AppPadding {
   static EdgeInsets? horizontalS;
   static EdgeInsets? horizontalM;
   static EdgeInsets? horizontalL;
+  static EdgeInsets? horizontalXL;
+  static EdgeInsets? horizontalXXL;
 
   static EdgeInsets? verticalXXLhorizontalL;
 
@@ -46,6 +48,10 @@ class AppPadding {
     horizontalS = const EdgeInsets.symmetric(horizontal: 8);
     horizontalM = const EdgeInsets.symmetric(horizontal: 16);
     horizontalL = const EdgeInsets.symmetric(horizontal: 32);
+    horizontalXL = const EdgeInsets.symmetric(horizontal: 64);
+    horizontalXXL = const EdgeInsets.symmetric(horizontal: 128);
+
+
 
     navBarPadding = horizontalL!.add(verticalM!);
 

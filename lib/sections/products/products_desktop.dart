@@ -73,7 +73,7 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
                                   width: 96,
                                   child: Image.asset("assets/beson_logo.png",),
                                 ),
-                                AppSpace.verticalL!,
+                                AppSpace.verticalXL!,
                                 Container(
                                   padding: AppPadding.horizontalS,
                                   child: Column(

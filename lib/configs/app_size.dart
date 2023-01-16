@@ -8,8 +8,8 @@ class AppSize {
   static void init() {
     navBarSize = 112;
     homeSectionHeight = 1000;
-    productsSectionHeight = 800;
-    aboutSectionHeight = 800;
-    contactSectionHeight = 800;
+    productsSectionHeight = 1000;
+    aboutSectionHeight = 1000;
+    contactSectionHeight = 1000;
   }
 }

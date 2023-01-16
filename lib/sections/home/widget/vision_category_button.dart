@@ -34,8 +34,8 @@ class _VisionCategoryButtonState extends State<VisionCategoryButton> {
       child: CircleAvatar(
         radius: widget.radius,
         backgroundColor: _isOnHover
-            ? Theme.of(context).colorScheme.primary.withOpacity(0.75)
-            : Theme.of(context).colorScheme.primaryContainer.withOpacity(0.75),
+          ? Theme.of(context).colorScheme.primary.withOpacity(0.75)
+          : Theme.of(context).colorScheme.primaryContainer.withOpacity(0.75),
         child: Padding(
           padding: AppPadding.allS!,
           child: FittedBox(

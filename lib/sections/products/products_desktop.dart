@@ -18,7 +18,10 @@ class ProductsDesktop extends StatelessWidget {
           Container(
             height: AppSize.navBarSize,
             alignment: Alignment.center,
-            child: Text("Ürünler", style: AppText.h1!.copyWith(color: Theme.of(context).colorScheme.secondary)),
+            child: Text(
+              "Ürünler",
+              style: AppText.h1!.copyWith(color: Theme.of(context).colorScheme.secondary)
+            ),
           ),
         ],
       ),

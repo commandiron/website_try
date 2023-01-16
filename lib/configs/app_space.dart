@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class AppSpace {
   static Widget? horizontalS;
-  static Widget? verticalS;
   static Widget? horizontalM;
-  static Widget? verticalM;
   static Widget? horizontalL;
+  static Widget? verticalS;
+  static Widget? verticalM;
   static Widget? verticalL;
   static Widget? horizontalExpanded;
   static Widget? verticalExpanded;
@@ -14,12 +14,11 @@ class AppSpace {
 
   static void init() {
     horizontalS = const SizedBox(width: 4);
-    verticalS = const SizedBox(height: 4);
-
     horizontalM = const SizedBox(width: 8);
-    verticalM = const SizedBox(height: 8);
-
     horizontalL = const SizedBox(width: 16);
+
+    verticalS = const SizedBox(height: 4);
+    verticalM = const SizedBox(height: 8);
     verticalL = const SizedBox(height: 16);
 
     horizontalExpanded = const Expanded(child: SizedBox(width: double.infinity));

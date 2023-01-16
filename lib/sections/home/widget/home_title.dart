@@ -15,6 +15,7 @@ class HomeTitle extends StatefulWidget {
 class _HomeTitleState extends State<HomeTitle> {
   Offset _offset = const Offset(-0.1, 0);
   double _opacity = 0.0;
+
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback(
@@ -27,6 +28,7 @@ class _HomeTitleState extends State<HomeTitle> {
     );
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return AnimatedSlide(

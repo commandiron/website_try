@@ -18,7 +18,7 @@ class NavBarLogo extends StatelessWidget {
       },
       child: SizedBox(
         width: AppSize.logoWidth,
-        child: Image.asset("assets/demirli_tech_logo_transparentbg_white_2.png"),
+        child: Image.asset("assets/demirli_tech_logo_transparentbg_white.png"),
       )
     );
   }

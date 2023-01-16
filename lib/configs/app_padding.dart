@@ -1,8 +1,6 @@
 
 import 'package:flutter/material.dart';
 
-import 'app_size.dart';
-
 class AppPadding {
   static EdgeInsets? allS;
   static EdgeInsets? allM;
@@ -28,7 +26,6 @@ class AppPadding {
   static EdgeInsets? navBarTextButtonPadding;
   static EdgeInsets? navBarElevatedButtonPadding;
   static EdgeInsets? homePadding;
-  static EdgeInsets? productPadding;
 
   static EdgeInsets? zero;
 
@@ -84,12 +81,6 @@ class AppPadding {
 
     homePadding = EdgeInsets.only(
       top: verticalXXL!.vertical,
-      right: horizontalL!.horizontal,
-      left: horizontalL!.horizontal,
-    );
-
-    productPadding = EdgeInsets.only(
-      top: AppSize.navBarSize!,
       right: horizontalL!.horizontal,
       left: horizontalL!.horizontal,
     );

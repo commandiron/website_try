@@ -1,16 +1,16 @@
-import 'package:demirli_tech_website/configs/app_size.dart';
+import 'package:demirli_tech_website/sections/products/products_desktop.dart';
 import 'package:flutter/material.dart';
+import '../../responsive/responsive.dart';
 
 class Products extends StatelessWidget {
   const Products({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: AppSize.productsSectionHeight,
-      color: Theme.of(context).colorScheme.primaryContainer,
-      alignment: Alignment.topCenter,
+    return const Responsive(
+      mobile: ProductsDesktop(),
+      tablet: ProductsDesktop(),
+      desktop: ProductsDesktop()
     );
   }
 }

@@ -8,12 +8,12 @@ class AppSize {
   static double? contactSectionHeight;
 
   static void init() {
-    logoWidth = 260;
-    navBarSize = 100;
-    homeSectionHeight = 1000;
-    productsSectionHeight = 1000;
-    servicesSectionHeight = 1000;
-    aboutSectionHeight = 1000;
-    contactSectionHeight = 1000;
+    logoWidth = 256;
+    navBarSize = 96;
+    homeSectionHeight = 960;
+    productsSectionHeight = 960;
+    servicesSectionHeight = 960;
+    aboutSectionHeight = 960;
+    contactSectionHeight = 960;
   }
 }

@@ -30,10 +30,10 @@ class _HomeTitleState extends State<HomeTitle> {
   Widget build(BuildContext context) {
     return AnimatedSlide(
       offset: _offset,
-      duration: Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 500),
       child: AnimatedOpacity(
         opacity: _opacity,
-        duration: Duration(milliseconds: 1000),
+        duration: const Duration(milliseconds: 1000),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

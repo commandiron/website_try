@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'app_padding.dart';
 import 'app_size.dart';
 import 'app_space.dart';
+import 'app_strings.dart';
 import 'app_text.dart';
 
 class AppConfig {
@@ -13,5 +14,6 @@ class AppConfig {
     AppSpace.init();
     AppPadding.init();
     AppButton.init(context);
+    AppStrings.init();
   }
 }

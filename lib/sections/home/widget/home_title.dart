@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../configs/app_space.dart';
+import '../../../configs/app_strings.dart';
 import '../../../configs/app_text.dart';
 
 class HomeTitle extends StatefulWidget {
@@ -40,13 +41,13 @@ class _HomeTitleState extends State<HomeTitle> {
             FractionallySizedBox(
               widthFactor: widget.titleWidthFactor,
               child: Text(
-                "İnşaat sektöründe mobil tabanlı teknoloji çözümleri sunuyoruz.",
+                AppStrings.homeTitle!,
                 style: AppText.h1b!.copyWith(color: Colors.white),
               ),
             ),
             AppSpace.verticalL!,
             Text(
-              "Uçtan uca tüm inşaat sektörünün inovasyonu için gelin beraber çalışalım.",
+              AppStrings.homeSubTitle!,
               style: AppText.h2!.copyWith(color: Colors.white),
             ),
           ],

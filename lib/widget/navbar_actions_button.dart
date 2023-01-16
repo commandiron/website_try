@@ -36,7 +36,7 @@ class NavBarActionButton extends StatelessWidget {
               padding: AppPadding.navBarActionButtonPadding!,
               child: Text(
                 label,
-                style: AppText.b1!
+                style: AppText.b2!
               ),
             )
           ),
@@ -50,7 +50,7 @@ class NavBarActionButton extends StatelessWidget {
           padding: AppPadding.navBarActionButtonPadding!,
           child: Text(
             label,
-            style: AppText.b1!
+            style: AppText.b2!
           ),
         )
       ),

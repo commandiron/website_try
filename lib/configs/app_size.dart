@@ -9,7 +9,7 @@ class AppSize {
 
   static void init() {
     logoWidth = 260;
-    navBarSize = 112;
+    navBarSize = 100;
     homeSectionHeight = 1000;
     productsSectionHeight = 1000;
     servicesSectionHeight = 1000;

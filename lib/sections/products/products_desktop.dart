@@ -1,5 +1,7 @@
 
+import 'package:demirli_tech_website/configs/app_padding.dart';
 import 'package:demirli_tech_website/configs/app_size.dart';
+import 'package:demirli_tech_website/configs/app_space.dart';
 import 'package:flutter/material.dart';
 import '../../configs/app_text.dart';
 
@@ -11,9 +13,8 @@ class ProductsDesktop extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: AppSize.productsSectionHeight,
-      color: Color(0xffFCFCFC),
-      alignment: Alignment.center,
-      child: Column(
+      color: Theme.of(context).colorScheme.secondary,
+      child: Stack(
         children: [
           Container(
             height: AppSize.navBarSize,
@@ -21,10 +22,22 @@ class ProductsDesktop extends StatelessWidget {
             child: Text(
               "Ürünler",
               style: AppText.h1!.copyWith(
-                color: Theme.of(context).colorScheme.secondary
+                color: Colors.white
               )
             ),
           ),
+          Container(
+            alignment: Alignment.centerRight,
+            padding: AppPadding.horizontalL,
+            child: IconButton(
+              onPressed: () {},
+              icon: Icon(
+                Icons.arrow_forward_ios,
+                size: 64,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+            )
+          )
         ],
       ),
     );

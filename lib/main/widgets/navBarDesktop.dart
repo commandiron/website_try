@@ -20,12 +20,15 @@ class NavBarDesktop extends StatelessWidget {
       child: Row(
         children: [
           const NavBarLogo(),
-          AppSpace.verticalL!,
+          AppSpace.horizontalExpanded!,
           ...BodySections.names.asMap().entries.map(
-            (sectionName) => NavBarActionButton(
-              label: sectionName.value,
-              index: sectionName.key
-            )
+            (sectionName) {
+              return NavBarActionButton(
+                label: sectionName.value,
+                index: sectionName.key,
+                highlighted: sectionName.value == "İletişim",
+              );
+            }
           ),
         ],
       ),

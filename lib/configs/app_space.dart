@@ -4,6 +4,8 @@ class AppSpace {
   static Widget? horizontalS;
   static Widget? horizontalM;
   static Widget? horizontalL;
+  static Widget? horizontalXL;
+  static Widget? horizontalXXL;
   static Widget? verticalS;
   static Widget? verticalM;
   static Widget? verticalL;
@@ -16,6 +18,8 @@ class AppSpace {
     horizontalS = const SizedBox(width: 4);
     horizontalM = const SizedBox(width: 8);
     horizontalL = const SizedBox(width: 16);
+    horizontalXL = const SizedBox(width: 32);
+    horizontalXXL = const SizedBox(width: 64);
 
     verticalS = const SizedBox(height: 4);
     verticalM = const SizedBox(height: 8);

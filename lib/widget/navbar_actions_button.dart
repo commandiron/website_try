@@ -7,14 +7,16 @@ import '../provider/scroll_provider.dart';
 
 class NavBarActionButton extends StatelessWidget {
 
-  final String label;
-  final int index;
-
   const NavBarActionButton({
     Key? key,
     required this.label,
     required this.index,
+    this.highlighted = false
   }) : super(key: key);
+
+  final String label;
+  final int index;
+  final bool highlighted;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,20 @@ class NavBarActionButton extends StatelessWidget {
 
     return Padding(
       padding: AppPadding.horizontalS!,
-      child: TextButton(
+      child: highlighted
+        ? ElevatedButton(
+          onPressed: () {
+            scrollProvider.scrollDesktop(index);
+          },
+          child: Padding(
+            padding: AppPadding.navBarActionButtonPadding!,
+            child: Text(
+              label,
+              style: AppText.b1!
+            ),
+          )
+        )
+        : TextButton(
         onPressed: () {
           scrollProvider.scrollDesktop(index);
         },
@@ -32,7 +47,7 @@ class NavBarActionButton extends StatelessWidget {
           padding: AppPadding.navBarActionButtonPadding!,
           child: Text(
             label,
-            style: AppText.h3!
+            style: AppText.b1!
           ),
         )
       ),

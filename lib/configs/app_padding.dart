@@ -70,7 +70,6 @@ class AppPadding {
     );
 
     navBarActionButtonPadding = EdgeInsets.symmetric(
-        horizontal: horizontalS!.horizontal,
         vertical: verticalS!.vertical
     );
 

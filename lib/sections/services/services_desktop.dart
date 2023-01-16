@@ -3,14 +3,14 @@ import 'package:demirli_tech_website/configs/app_size.dart';
 import 'package:flutter/material.dart';
 import '../../configs/app_text.dart';
 
-class ProductsDesktop extends StatelessWidget {
-  const ProductsDesktop({Key? key}) : super(key: key);
+class ServicesDesktop extends StatelessWidget {
+  const ServicesDesktop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: AppSize.productsSectionHeight,
+      height: AppSize.servicesSectionHeight,
       color: Theme.of(context).colorScheme.primaryContainer,
       alignment: Alignment.center,
       child: Column(
@@ -18,7 +18,7 @@ class ProductsDesktop extends StatelessWidget {
           Container(
             height: AppSize.navBarSize,
             alignment: Alignment.center,
-            child: Text("Ürünler", style: AppText.h1!.copyWith(color: Colors.white)),
+            child: Text("Servisler", style: AppText.h1!.copyWith(color: Colors.white)),
           ),
         ],
       ),

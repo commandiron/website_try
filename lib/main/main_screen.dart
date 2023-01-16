@@ -4,10 +4,10 @@ import 'package:provider/provider.dart';
 
 import '../configs/app_config.dart';
 import '../provider/drawer_provider.dart';
-import 'widgets/app_body.dart';
-import 'widgets/app_drawer.dart';
-import 'widgets/navBarDesktop.dart';
-import 'widgets/navBarTabletMobile.dart';
+import 'widget/app_body.dart';
+import 'widget/app_drawer.dart';
+import 'widget/navBarDesktop.dart';
+import 'widget/navBarTabletMobile.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);

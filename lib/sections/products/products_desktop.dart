@@ -20,7 +20,9 @@ class ProductsDesktop extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               "Ürünler",
-              style: AppText.h1!.copyWith(color: Theme.of(context).colorScheme.secondary)
+              style: AppText.h1!.copyWith(
+                color: Theme.of(context).colorScheme.secondary
+              )
             ),
           ),
         ],

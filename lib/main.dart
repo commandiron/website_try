@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'configs/core_theme.dart';
 import 'main/main_screen.dart';
+import 'provider/carousel_provider.dart';
 import 'provider/drawer_provider.dart';
 import 'provider/scroll_provider.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => DrawerProvider()),
         ChangeNotifierProvider(create: (_) => ScrollProvider()),
+        ChangeNotifierProvider(create: (_) => CarouselProvider()),
       ],
       child: const MaterialChild()
     );

@@ -2,15 +2,14 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:demirli_tech_website/configs/app_padding.dart';
 import 'package:demirli_tech_website/configs/app_size.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../../configs/app_text.dart';
 import '../../model/product.dart';
+import '../../provider/carousel_provider.dart';
 import 'widget/carousel_item_mobile.dart';
 
 class ProductsMobile extends StatefulWidget {
-  const ProductsMobile({required this.carouselKey, required this.carouselController, Key? key}) : super(key: key);
-
-  final CarouselController carouselController;
-  final Key carouselKey;
+  const ProductsMobile({Key? key}) : super(key: key);
 
   @override
   State<ProductsMobile> createState() => _ProductsMobileState();
@@ -19,6 +18,7 @@ class ProductsMobile extends StatefulWidget {
 class _ProductsMobileState extends State<ProductsMobile> {
   @override
   Widget build(BuildContext context) {
+    final carouselProvider = Provider.of<CarouselProvider>(context);
     return Container(
       width: double.infinity,
       height: AppSize.productsSectionHeight,
@@ -26,8 +26,8 @@ class _ProductsMobileState extends State<ProductsMobile> {
       child: Stack(
         children: [
           buildTitle(),
-          buildCarousel(),
-          buildNextArrow()
+          buildCarousel(carouselProvider.key, carouselProvider.controller),
+          buildNextArrow(carouselProvider.controller)
         ],
       ),
     );
@@ -42,13 +42,13 @@ class _ProductsMobileState extends State<ProductsMobile> {
     );
   }
 
-  Widget buildCarousel() {
+  Widget buildCarousel(Key key, CarouselController controller) {
     return Padding(
       padding: AppPadding.verticalXXL!,
       child: CarouselSlider.builder(
-        key: widget.carouselKey,
+        key: key,
         itemCount: Product.products.length,
-        carouselController: widget.carouselController,
+        carouselController: controller,
         options: CarouselOptions(
           viewportFraction: 1.0,
           height: AppSize.productsSectionHeight,
@@ -60,13 +60,13 @@ class _ProductsMobileState extends State<ProductsMobile> {
     );
   }
 
-  Widget buildNextArrow() {
+  Widget buildNextArrow(CarouselController controller) {
     return Container(
       alignment: Alignment.centerRight,
       padding: AppPadding.horizontalL,
       child: InkWell(
         onTap: () {
-          widget.carouselController.nextPage();
+          controller.nextPage();
         },
         child: Icon(
           Icons.arrow_forward_ios,

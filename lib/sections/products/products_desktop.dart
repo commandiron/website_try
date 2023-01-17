@@ -14,16 +14,10 @@ class ProductsDesktop extends StatefulWidget {
 
 class _ProductsDesktopState extends State<ProductsDesktop> {
   late final CarouselController _carouselController;
-  Offset _offset = Offset(0.1, 0);
 
   @override
   void initState() {
     _carouselController = CarouselController();
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      setState(() {
-        _offset = Offset.zero;
-      });
-    });
     super.initState();
   }
 

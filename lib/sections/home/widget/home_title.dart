@@ -19,7 +19,8 @@ class _HomeTitleState extends State<HomeTitle> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback(
-      (timeStamp) {
+      (timeStamp) async {
+        await Future.delayed(const Duration(seconds: 1));
         setState(() {
           _offset = Offset.zero;
           _opacity = 1.0;

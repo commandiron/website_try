@@ -19,7 +19,8 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback(
-      (timeStamp) {
+      (timeStamp) async {
+        await Future.delayed(const Duration(seconds: 1));
         setState(() {
           _opacity = 1.0;
         });

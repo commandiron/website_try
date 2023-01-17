@@ -1,37 +1,18 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:demirli_tech_website/configs/app_assets.dart';
 import 'package:flutter/material.dart';
 
+import '../../../configs/app_assets.dart';
 import '../../../configs/app_padding.dart';
-import '../../../configs/app_size.dart';
 import '../../../configs/app_space.dart';
 import '../../../configs/app_text.dart';
 import '../../../model/product.dart';
 
-class ProductsSlider extends StatelessWidget {
-  const ProductsSlider({required this.carouselController, Key? key}) : super(key: key);
+class CarouselItemDesktop extends StatelessWidget {
+  const CarouselItemDesktop({required this.product, Key? key}) : super(key: key);
 
-  final CarouselController carouselController;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: AppPadding.verticalXXL!,
-      child: CarouselSlider.builder(
-        itemCount: Product.products.length,
-        carouselController: carouselController,
-        options: CarouselOptions(
-          viewportFraction: 1.0,
-          height: AppSize.productsSectionHeight,
-        ),
-        itemBuilder: (context, index, realIndex) {
-          return buildCarouselItem(Product.products[index]);
-        },
-      ),
-    );
-  }
-
-  Widget buildCarouselItem(Product product) {
     return Container(
       alignment: Alignment.topLeft,
       padding: AppPadding.horizontalXXL,
@@ -56,7 +37,8 @@ class ProductsSlider extends StatelessWidget {
                       Text(
                         product.title,
                         style: AppText.h2b!.copyWith(
-                            color: Colors.white),
+                          color: Colors.white
+                        ),
                       ),
                       AppSpace.verticalXL!,
                       Text(
@@ -84,8 +66,8 @@ class ProductsSlider extends StatelessWidget {
           AppSpace.horizontalXL!,
           Expanded(
             child: Container(
-              alignment: Alignment.topCenter,
-              child: Image.asset(product.imageAssetPath)
+                alignment: Alignment.topCenter,
+                child: Image.asset(product.imageAssetPath)
             ),
           ),
           AppSpace.horizontalXL!,

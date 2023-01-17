@@ -1,19 +1,20 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:demirli_tech_website/configs/app_padding.dart';
 import 'package:demirli_tech_website/configs/app_size.dart';
-import 'package:demirli_tech_website/sections/products/widget/carousel_item_desktop.dart';
 import 'package:flutter/material.dart';
+
 import '../../configs/app_text.dart';
 import '../../model/product.dart';
+import 'widget/carousel_item_mobile.dart';
 
-class ProductsDesktop extends StatefulWidget {
-  const ProductsDesktop({Key? key}) : super(key: key);
+class ProductsMobile extends StatefulWidget {
+  const ProductsMobile({Key? key}) : super(key: key);
 
   @override
-  State<ProductsDesktop> createState() => _ProductsDesktopState();
+  State<ProductsMobile> createState() => _ProductsMobileState();
 }
 
-class _ProductsDesktopState extends State<ProductsDesktop> {
+class _ProductsMobileState extends State<ProductsMobile> {
   late final CarouselController _carouselController;
 
   @override
@@ -57,7 +58,7 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
           height: AppSize.productsSectionHeight,
         ),
         itemBuilder: (context, index, realIndex) {
-          return CarouselItemDesktop(product: Product.products[index]);
+          return CarouselItemMobile(product: Product.products[index]);
         },
       ),
     );

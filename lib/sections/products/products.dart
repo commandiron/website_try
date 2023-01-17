@@ -13,14 +13,22 @@ class Products extends StatefulWidget {
 
 class _ProductsState extends State<Products> {
 
-  final CarouselController _carouselController = CarouselController();
+  late CarouselController _carouselController;
+  late GlobalKey _uniqueKey;
+
+  @override
+  void initState() {
+    _carouselController = CarouselController();
+    _uniqueKey = GlobalKey();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Responsive(
-      mobile: ProductsMobile(carouselController: _carouselController),
-      tablet: ProductsMobile(carouselController: _carouselController),
-      desktop: ProductsDesktop(carouselController: _carouselController)
+      mobile: ProductsMobile(carouselKey: _uniqueKey,carouselController: _carouselController),
+      tablet: ProductsMobile(carouselKey: _uniqueKey,carouselController: _carouselController),
+      desktop: ProductsDesktop(carouselKey: _uniqueKey, carouselController: _carouselController)
     );
   }
 }

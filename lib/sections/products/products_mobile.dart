@@ -7,9 +7,10 @@ import '../../model/product.dart';
 import 'widget/carousel_item_mobile.dart';
 
 class ProductsMobile extends StatefulWidget {
-  const ProductsMobile({required this.carouselController, Key? key}) : super(key: key);
+  const ProductsMobile({required this.carouselKey, required this.carouselController, Key? key}) : super(key: key);
 
   final CarouselController carouselController;
+  final Key carouselKey;
 
   @override
   State<ProductsMobile> createState() => _ProductsMobileState();
@@ -45,6 +46,7 @@ class _ProductsMobileState extends State<ProductsMobile> {
     return Padding(
       padding: AppPadding.verticalXXL!,
       child: CarouselSlider.builder(
+        key: widget.carouselKey,
         itemCount: Product.products.length,
         carouselController: widget.carouselController,
         options: CarouselOptions(

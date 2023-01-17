@@ -7,9 +7,10 @@ import '../../configs/app_text.dart';
 import '../../model/product.dart';
 
 class ProductsDesktop extends StatefulWidget {
-  const ProductsDesktop({required this.carouselController, Key? key}) : super(key: key);
+  const ProductsDesktop({required this.carouselKey, required this.carouselController, Key? key}) : super(key: key);
 
   final CarouselController carouselController;
+  final Key carouselKey;
 
   @override
   State<ProductsDesktop> createState() => _ProductsDesktopState();
@@ -45,6 +46,7 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
     return Padding(
       padding: AppPadding.verticalXXL!,
       child: CarouselSlider.builder(
+        key: widget.carouselKey,
         itemCount: Product.products.length,
         carouselController: widget.carouselController,
         options: CarouselOptions(

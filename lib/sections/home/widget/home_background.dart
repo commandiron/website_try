@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:demirli_tech_website/configs/app_assets.dart';
 import 'package:demirli_tech_website/configs/app_size.dart';
 import 'package:flutter/material.dart';
 import '../../../configs/app_padding.dart';
@@ -13,9 +14,9 @@ class HomeBackground extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: AppSize.homeSectionHeight!,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/construction_technology_.jpg"),
+          image: AssetImage(AppAssets.homeBackgroundPath!),
           fit: BoxFit.cover,
         ),
       ),

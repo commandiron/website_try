@@ -1,3 +1,4 @@
+import 'package:demirli_tech_website/configs/app_assets.dart';
 import 'package:demirli_tech_website/configs/app_button.dart';
 import 'package:flutter/material.dart';
 
@@ -15,5 +16,6 @@ class AppConfig {
     AppPadding.init();
     AppButton.init(context);
     AppStrings.init();
+    AppAssets.init();
   }
 }

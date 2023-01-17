@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:demirli_tech_website/configs/app_assets.dart';
 import 'package:flutter/material.dart';
 
 import '../../../configs/app_padding.dart';
@@ -66,11 +67,11 @@ class ProductsSlider extends StatelessWidget {
                       ),
                       AppSpace.verticalXL!,
                       Image.asset(
-                        "assets/app_store_badge.png",
+                        AppAssets.appStoreBadgePath!,
                       ),
                       AppSpace.verticalXL!,
                       Image.asset(
-                        "assets/google_play_badge.png",
+                        AppAssets.googlePlayBadgePath!,
                       ),
                     ]
                   ),

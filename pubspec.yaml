@@ -25,6 +25,11 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+    - assets/images/
+    - assets/images/badges/app_store_badge.png
+    - assets/images/badges/google_play_badge.png
+    - assets/images/products/beson_logo.png
+    - assets/images/products/beson_spash.png
 
   fonts:
     - family: Poppins

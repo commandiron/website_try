@@ -1,3 +1,4 @@
+import 'package:demirli_tech_website/configs/app_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -18,7 +19,7 @@ class NavBarLogo extends StatelessWidget {
       },
       child: SizedBox(
         width: AppSize.logoWidth,
-        child: Image.asset("assets/demirli_tech_logo_transparentbg_white.png"),
+        child: Image.asset(AppAssets.companyIconPath!),
       )
     );
   }

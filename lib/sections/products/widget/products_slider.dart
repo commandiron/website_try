@@ -68,10 +68,12 @@ class ProductsSlider extends StatelessWidget {
                       AppSpace.verticalXL!,
                       Image.asset(
                         AppAssets.appStoreBadgePath!,
+                        width: 160,
                       ),
-                      AppSpace.verticalXL!,
+                      AppSpace.verticalL!,
                       Image.asset(
                         AppAssets.googlePlayBadgePath!,
+                        width: 160,
                       ),
                     ]
                   ),

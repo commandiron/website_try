@@ -28,8 +28,9 @@ flutter:
     - assets/images/
     - assets/images/badges/app_store_badge.png
     - assets/images/badges/google_play_badge.png
-    - assets/images/products/beson_logo.png
-    - assets/images/products/example_cover_for_demirli_tech.png
+    - assets/images/products/konut_maliyet/beson_logo.png
+    - assets/images/products/konut_maliyet/example_cover_for_demirli_tech.png
+    - assets/images/products/konut_plan/sefim_logo.png
 
   fonts:
     - family: Poppins

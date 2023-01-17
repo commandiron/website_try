@@ -29,7 +29,7 @@ flutter:
     - assets/images/badges/app_store_badge.png
     - assets/images/badges/google_play_badge.png
     - assets/images/products/beson_logo.png
-    - assets/images/products/beson_spash.png
+    - assets/images/products/example_cover_for_demirli_tech.png
 
   fonts:
     - family: Poppins

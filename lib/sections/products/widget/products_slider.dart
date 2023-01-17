@@ -79,9 +79,14 @@ class ProductsSlider extends StatelessWidget {
               ],
             ),
           ),
+          AppSpace.horizontalXL!,
           Expanded(
-            child: Image.asset(product.imageAssetPath),
-          )
+            child: Container(
+              alignment: Alignment.topCenter,
+              child: Image.asset(product.imageAssetPath)
+            ),
+          ),
+          AppSpace.horizontalXL!,
         ],
       )
     );

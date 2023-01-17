@@ -15,10 +15,13 @@ class ServicesDesktop extends StatelessWidget {
       alignment: Alignment.center,
       child: Column(
         children: [
+          Divider(
+            color: Colors.white,
+          ),
           Container(
             height: AppSize.navBarSize,
             alignment: Alignment.center,
-            child: Text("Hizmetler", style: AppText.h1!.copyWith(color: Colors.white)),
+            child: Text("Hizmetler", style: AppText.h1?.copyWith(color: Colors.white)),
           ),
         ],
       ),

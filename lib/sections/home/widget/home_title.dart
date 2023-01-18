@@ -16,7 +16,7 @@ class HomeTitle extends StatefulWidget {
 }
 
 class _HomeTitleState extends State<HomeTitle> {
-  Offset _offset = const Offset(-0.1, 0);
+  Offset _offset = const Offset(-0.05, 0);
   double _opacity = 0.0;
 
   @override
@@ -48,7 +48,7 @@ class _HomeTitleState extends State<HomeTitle> {
       } else {
         if(mounted) {
           setState(() {
-            _offset = const Offset(-0.1, 0);
+            _offset = const Offset(-0.05, 0);
             _opacity = 0.0;
           });
         }

@@ -26,7 +26,7 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
     if(AppConfig.animationEnabled!) {
       Provider.of<ScrollProvider>(context).addOffsetListener(
         (offset) {
-          if(offset >= AppSize.productsStartOffset! / 2 && offset < AppSize.productsOffset!) {
+          if(offset >= AppSize.productsAnimationStartOffset! && offset < AppSize.productsAnimationEndOffset!) {
             if(mounted) {
               setState(() {
                 _opacity = 1.0;

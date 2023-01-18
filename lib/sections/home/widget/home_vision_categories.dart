@@ -24,8 +24,7 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
     if(AppConfig.animationEnabled!) {
       Provider.of<ScrollProvider>(context).addOffsetListener(
         (offset) {
-          if (offset >= AppSize.homeStartOffset! &&
-              offset < AppSize.homeOffset!) {
+          if (offset >= AppSize.homeAnimationStartOffset! && offset < AppSize.homeAnimationEndOffset!) {
             if (mounted) {
               setState(() {
                 _opacity = 1.0;

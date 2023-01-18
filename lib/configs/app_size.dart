@@ -4,19 +4,16 @@ class AppSize {
   static double? bodyDividerHeight;
 
   static double? homeSectionHeight;
-  static double? homeStartOffset;
-  static double? homeEndOffset;
-  static double? homeOffset;
+  static double? homeAnimationStartOffset;
+  static double? homeAnimationEndOffset;
 
   static double? productsSectionHeight;
-  static double? productsStartOffset;
-  static double? productsEndOffset;
-  static double? productsOffset;
+  static double? productsAnimationStartOffset;
+  static double? productsAnimationEndOffset;
 
   static double? servicesSectionHeight;
-  static double? servicesStartOffset;
-  static double? servicesEndOffset;
-  static double? servicesOffset;
+  static double? servicesAnimationStartOffset;
+  static double? servicesAnimationEndOffset;
 
   static double? aboutSectionHeight;
   static double? contactSectionHeight;
@@ -27,19 +24,16 @@ class AppSize {
     bodyDividerHeight = 2;
 
     homeSectionHeight = 960;
-    homeStartOffset = 0;
-    homeEndOffset = homeStartOffset! + homeSectionHeight!;
-    homeOffset = (homeStartOffset! +  homeEndOffset!) / 2;
+    homeAnimationStartOffset = 0;
+    homeAnimationEndOffset = AppSize.homeSectionHeight! / 2;
 
     productsSectionHeight = 960;
-    productsStartOffset = homeEndOffset;
-    productsEndOffset = productsStartOffset! + productsSectionHeight!;
-    productsOffset = (productsStartOffset! +  productsEndOffset!) / 2;
+    productsAnimationStartOffset = AppSize.homeSectionHeight! / 2;
+    productsAnimationEndOffset = AppSize.homeSectionHeight! +  AppSize.productsSectionHeight! / 2;
 
     servicesSectionHeight = 720;
-    servicesStartOffset = productsEndOffset;
-    servicesEndOffset = servicesStartOffset! + servicesSectionHeight!;
-    servicesOffset = (servicesStartOffset! +  servicesEndOffset!) / 2;
+    servicesAnimationStartOffset = AppSize.homeSectionHeight! +  AppSize.productsSectionHeight! / 2;
+    servicesAnimationEndOffset = AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! / 2;
 
     aboutSectionHeight = 960;
 

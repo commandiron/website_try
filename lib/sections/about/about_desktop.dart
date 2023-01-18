@@ -3,8 +3,8 @@ import 'package:demirli_tech_website/configs/app_size.dart';
 import 'package:flutter/material.dart';
 import '../../configs/app_text.dart';
 
-class ServicesDesktop extends StatelessWidget {
-  const ServicesDesktop({Key? key}) : super(key: key);
+class AboutDesktop extends StatelessWidget {
+  const AboutDesktop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class ServicesDesktop extends StatelessWidget {
           Container(
             height: AppSize.navBarSize,
             alignment: Alignment.center,
-            child: Text("Hizmetler", style: AppText.h1?.copyWith(color: Colors.white)),
+            child: Text("Hakkımızda", style: AppText.h1?.copyWith(color: Colors.white)),
           ),
         ],
       ),

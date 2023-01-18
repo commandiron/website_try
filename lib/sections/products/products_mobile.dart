@@ -61,7 +61,7 @@ class _ProductsMobileState extends State<ProductsMobile> {
         border: Border(
           top: BorderSide(
             color: Theme.of(context).colorScheme.primary,
-            width: 4
+            width: AppSize.bodyDividerHeight!
           )
         )
       ),

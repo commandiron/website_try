@@ -61,7 +61,7 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
         border: Border(
           top: BorderSide(
             color: Theme.of(context).colorScheme.primary,
-            width: 2
+            width: AppSize.bodyDividerHeight!
           )
         )
       ),

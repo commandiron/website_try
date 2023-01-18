@@ -1,15 +1,16 @@
-import 'package:demirli_tech_website/configs/app_size.dart';
 import 'package:flutter/material.dart';
+import '../../responsive/responsive.dart';
+import 'about_desktop.dart';
 
 class About extends StatelessWidget {
   const About({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: AppSize.aboutSectionHeight,
-      color: Colors.blue,
+    return const Responsive(
+      mobile: AboutDesktop(),
+      tablet: AboutDesktop(),
+      desktop: AboutDesktop()
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DrawerProvider extends ChangeNotifier {
-  final scaffoldKey = GlobalKey<ScaffoldState>();
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
 
-  GlobalKey<ScaffoldState> get key => scaffoldKey;
+  GlobalKey<ScaffoldState> get key => _scaffoldKey;
 }

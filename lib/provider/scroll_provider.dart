@@ -3,12 +3,12 @@ import 'package:flutter/cupertino.dart';
 import '../configs/app_size.dart';
 
 class ScrollProvider extends ChangeNotifier {
-  final scrollController = ScrollController();
+  final _scrollController = ScrollController();
 
-  ScrollController get controller => scrollController;
+  ScrollController get controller => _scrollController;
 
   double get offset {
-    return scrollController.offset;
+    return _scrollController.offset;
   }
 
 

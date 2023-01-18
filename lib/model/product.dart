@@ -13,7 +13,6 @@ class Product {
     }
   );
 
-
   static List<Product> products = [
     Product(
       logoAssetPath: "assets/images/products/konut_maliyet/beson_logo.png",

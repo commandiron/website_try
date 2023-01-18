@@ -4,6 +4,6 @@ class AppStrings {
 
   static void init() {
     homeTitle = "İnşaat sektöründe mobil tabanlı teknoloji çözümleri sunuyoruz.";
-    homeSubTitle = "Uçtan uca tüm inşaat sektörünün inovasyonu için gelin beraber çalışalım.";
+    homeSubTitle = "Uçtan uca tüm inşaat sektörünün inovasyonu ve yapay zeka uygulamaları için gelin beraber çalışalım.";
   }
 }

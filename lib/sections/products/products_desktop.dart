@@ -22,21 +22,7 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
   double _opacity = 0.0;
 
   @override
-  void initState() {
-    WidgetsBinding.instance.addPostFrameCallback(
-      (timeStamp) async {
-        await Future.delayed(const Duration(milliseconds: 500));
-        setState(() {
-          _opacity = 1.0;
-        });
-      }
-    );
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
-
     final scrollController = Provider.of<ScrollProvider>(context).controller;
     scrollController.addListener(() {
       if(scrollController.offset >= AppSize.productsStartOffset! / 2 && scrollController.offset < AppSize.productsOffset!) {

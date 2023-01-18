@@ -6,10 +6,23 @@ import '../../../configs/app_space.dart';
 import '../../../configs/app_text.dart';
 import '../../../model/product.dart';
 
-class CarouselItemDesktop extends StatelessWidget {
+class CarouselItemDesktop extends StatefulWidget {
   const CarouselItemDesktop({required this.product, Key? key}) : super(key: key);
 
   final Product product;
+
+  @override
+  State<CarouselItemDesktop> createState() => _CarouselItemDesktopState();
+}
+
+class _CarouselItemDesktopState extends State<CarouselItemDesktop> {
+
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    precacheImage(AssetImage(widget.product.logoAssetPath), context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +40,7 @@ class CarouselItemDesktop extends StatelessWidget {
                 SizedBox(
                   width: 96,
                   height: 96,
-                  child: Image.asset(product.logoAssetPath),
+                  child: Image.asset(widget.product.logoAssetPath),
                 ),
                 AppSpace.verticalXL!,
                 Container(
@@ -36,14 +49,14 @@ class CarouselItemDesktop extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        product.title,
+                        widget.product.title,
                         style: AppText.h2b!.copyWith(
                           color: Colors.white
                         ),
                       ),
                       AppSpace.verticalXL!,
                       Text(
-                        product.body,
+                        widget.product.body,
                         style: AppText.b2!.copyWith(
                           color: Colors.white
                         ),
@@ -68,7 +81,7 @@ class CarouselItemDesktop extends StatelessWidget {
           Expanded(
             child: Container(
                 alignment: Alignment.topCenter,
-                child: Image.asset(product.imageAssetPath)
+                child: Image.asset(widget.product.imageAssetPath)
             ),
           ),
           AppSpace.horizontalXL!,

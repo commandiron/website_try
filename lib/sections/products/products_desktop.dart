@@ -25,9 +25,9 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
   void calculateOpacity() {
     if(AppConfig.animationEnabled!) {
       Provider.of<ScrollProvider>(context).addOffsetListener(
-        (offset) {
-          if(offset >= AppSize.productsAnimationStartOffset!
-              && offset < AppSize.productsAnimationEndOffset!) {
+        (endOffset) {
+          if(endOffset >= AppSize.homeSectionHeight! + AppSize.productsSectionHeight! / 2
+              && endOffset < AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight!) {
             if(mounted) {
               setState(() {
                 _opacity = 1.0;

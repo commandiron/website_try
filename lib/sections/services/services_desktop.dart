@@ -21,9 +21,9 @@ class _ServicesDesktopState extends State<ServicesDesktop> {
   void calculateRotation() {
     if(AppConfig.animationEnabled!) {
       Provider.of<ScrollProvider>(context).addOffsetListener(
-        (offset) {
-          if(offset >= AppSize.servicesAnimationStartOffset!
-              && offset < AppSize.servicesAnimationEndOffset!) {
+        (endOffset) {
+          if(endOffset >= AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! / 2
+              && endOffset < AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! + AppSize.aboutSectionHeight!) {
             if(mounted) {
               setState(() {
                 _opacity = 1.0;

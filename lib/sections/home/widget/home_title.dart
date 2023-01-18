@@ -46,10 +46,8 @@ class _HomeTitleState extends State<HomeTitle> {
         }
       );
     } else {
-      setState(() {
-        _offset = Offset.zero;
-        _opacity = 1.0;
-      });
+      _offset = Offset.zero;
+      _opacity = 1.0;
     }
   }
 

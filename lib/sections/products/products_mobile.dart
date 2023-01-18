@@ -46,9 +46,7 @@ class _ProductsMobileState extends State<ProductsMobile> {
         },
       );
     } else {
-      setState(() {
-        _opacity = 1.0;
-      });
+      _opacity = 1.0;
     }
   }
 

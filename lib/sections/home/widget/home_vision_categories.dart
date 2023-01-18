@@ -46,9 +46,7 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
         }
       );
     } else {
-      setState(() {
-        _opacity = 1.0;
-      });
+      _opacity = 1.0;
     }
   }
 
@@ -84,15 +82,15 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
 
   Widget renderVisionButtons() {
     return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: VisionCategory.visionCategories.map(
-                (visionCategory) => VisionCategoryButton(
-              radius: widget.radius,
-              title: visionCategory.title,
-              style: widget.style,
-              hasApp: true,
-            )
-        ).toList()
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: VisionCategory.visionCategories.map(
+        (visionCategory) => VisionCategoryButton(
+          radius: widget.radius,
+          title: visionCategory.title,
+          style: widget.style,
+          hasApp: true,
+        )
+      ).toList()
     );
   }
 }

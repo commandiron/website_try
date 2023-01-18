@@ -48,7 +48,7 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
       color: Theme.of(context).colorScheme.secondary,
       child: AnimatedOpacity(
         opacity: _opacity,
-        duration: const Duration(milliseconds: 1000),
+        duration: const Duration(seconds: 1),
         child: Stack(
           children: [
             buildTitle(),

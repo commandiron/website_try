@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../configs/app_config.dart';
 import '../../../configs/app_size.dart';
+import '../../../model/vision_category.dart';
 import 'home_expanded_divider.dart';
 
 class HomeVisionCategories extends StatefulWidget {
@@ -59,42 +60,39 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
     return AnimatedOpacity(
       opacity: _opacity,
       duration: const Duration(seconds: 1),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      child: Stack(
+        alignment: Alignment.center,
         children: [
-          VisionCategoryButton(
-            radius: widget.radius,
-            title: "Fizibilite",
-            style: widget.style,
-            hasApp: true,
-          ),
-          const HomeExpandedDivider(),
-          VisionCategoryButton(
-            radius: widget.radius,
-            title: "Tasarım",
-            style: widget.style,
-          ),
-          const HomeExpandedDivider(),
-          VisionCategoryButton(
-            radius: widget.radius,
-            title: "Uygulama",
-            style: widget.style,
-            hasApp: true,
-          ),
-          const HomeExpandedDivider(),
-          VisionCategoryButton(
-            radius: widget.radius,
-            title: "Kontrol",
-            style: widget.style,
-          ),
-          const HomeExpandedDivider(),
-          VisionCategoryButton(
-            radius: widget.radius,
-            title: "Bakım",
-            style: widget.style,
-          ),
+          renderLine(),
+          renderVisionButtons()
         ],
       ),
+    );
+  }
+
+  Widget renderLine() {
+    List<Widget> list = <Widget>[];
+    for(var i = 0; i < VisionCategory.visionCategories.length - 1; i++){
+      list.add(SizedBox(width: widget.radius * 2,));
+      list.add(const HomeExpandedDivider());
+      if(i == VisionCategory.visionCategories.length - 2) {
+        list.add(SizedBox(width: widget.radius * 2,));
+      }
+    }
+    return Row(children: list);
+  }
+
+  Widget renderVisionButtons() {
+    return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: VisionCategory.visionCategories.map(
+                (visionCategory) => VisionCategoryButton(
+              radius: widget.radius,
+              title: visionCategory.title,
+              style: widget.style,
+              hasApp: true,
+            )
+        ).toList()
     );
   }
 }

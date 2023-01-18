@@ -23,22 +23,24 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
 
   @override
   Widget build(BuildContext context) {
-    final scrollController = Provider.of<ScrollProvider>(context).controller;
-    scrollController.addListener(() {
-      if(scrollController.offset >= AppSize.productsStartOffset! / 2 && scrollController.offset < AppSize.productsOffset!) {
-        if(mounted) {
-          setState(() {
-            _opacity = 1.0;
-          });
-        }
-      } else {
-        if(mounted) {
-          setState(() {
-            _opacity = 0.0;
-          });
+
+    Provider.of<ScrollProvider>(context).addOffsetListener(
+      (offset) {
+        if(offset >= AppSize.productsStartOffset! / 2 && offset < AppSize.productsOffset!) {
+          if(mounted) {
+            setState(() {
+              _opacity = 1.0;
+            });
+          }
+        } else {
+          if(mounted) {
+            setState(() {
+              _opacity = 0.0;
+            });
+          }
         }
       }
-    });
+    );
 
     final carouselProvider = Provider.of<CarouselProvider>(context);
 

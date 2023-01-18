@@ -35,22 +35,24 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
   @override
   Widget build(BuildContext context) {
 
-    final scrollController = Provider.of<ScrollProvider>(context).controller;
-    scrollController.addListener(() {
-      if(scrollController.offset >= AppSize.homeStartOffset! && scrollController.offset < AppSize.homeOffset!) {
-        if(mounted) {
-          setState(() {
-            _opacity = 1.0;
-          });
-        }
-      } else {
-        if(mounted) {
-          setState(() {
-            _opacity = 0.0;
-          });
+    Provider.of<ScrollProvider>(context).addOffsetListener(
+      (offset) {
+        if (offset >= AppSize.homeStartOffset! &&
+            offset < AppSize.homeOffset!) {
+          if (mounted) {
+            setState(() {
+              _opacity = 1.0;
+            });
+          }
+        } else {
+          if (mounted) {
+            setState(() {
+              _opacity = 0.0;
+            });
+          }
         }
       }
-    });
+    );
 
     return AnimatedOpacity(
       opacity: _opacity,

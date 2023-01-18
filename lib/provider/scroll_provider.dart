@@ -7,6 +7,11 @@ class ScrollProvider extends ChangeNotifier {
 
   ScrollController get controller => scrollController;
 
+  double get offset {
+    return scrollController.offset;
+  }
+
+
   scrollDesktop(int index) {
     print(index);
     double offset =

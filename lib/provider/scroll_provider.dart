@@ -12,6 +12,7 @@ class ScrollProvider extends ChangeNotifier {
   }
 
   void addOffsetListener(Function(double offset) listener) {
+    listener(_scrollController.offset);
     controller.addListener(() {
       listener(_scrollController.offset);
     });

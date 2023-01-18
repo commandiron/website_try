@@ -20,37 +20,27 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
   double _opacity = 0.0;
 
   @override
-  void initState() {
-    WidgetsBinding.instance.addPostFrameCallback(
-      (timeStamp) async {
-        await Future.delayed(const Duration(milliseconds: 500));
-        setState(() {
-          _opacity = 1.0;
-        });
-      }
-    );
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
-
     Provider.of<ScrollProvider>(context).addOffsetListener(
       (offset) {
-        if (offset >= AppSize.homeStartOffset! &&
-            offset < AppSize.homeOffset!) {
-          if (mounted) {
-            setState(() {
-              _opacity = 1.0;
-            });
+        WidgetsBinding.instance.addPostFrameCallback(
+          (timeStamp) {
+            if (offset >= AppSize.homeStartOffset! &&
+                offset < AppSize.homeOffset!) {
+              if (mounted) {
+                setState(() {
+                  _opacity = 1.0;
+                });
+              }
+            } else {
+              if (mounted) {
+                setState(() {
+                  _opacity = 0.0;
+                });
+              }
+            }
           }
-        } else {
-          if (mounted) {
-            setState(() {
-              _opacity = 0.0;
-            });
-          }
-        }
+        );
       }
     );
 

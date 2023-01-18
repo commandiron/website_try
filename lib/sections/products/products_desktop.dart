@@ -26,19 +26,23 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
 
     Provider.of<ScrollProvider>(context).addOffsetListener(
       (offset) {
-        if(offset >= AppSize.productsStartOffset! / 2 && offset < AppSize.productsOffset!) {
-          if(mounted) {
-            setState(() {
-              _opacity = 1.0;
-            });
+        WidgetsBinding.instance.addPostFrameCallback(
+          (timeStamp) {
+            if(offset >= AppSize.productsStartOffset! / 2 && offset < AppSize.productsOffset!) {
+              if(mounted) {
+                setState(() {
+                  _opacity = 1.0;
+                });
+              }
+            } else {
+              if(mounted) {
+                setState(() {
+                  _opacity = 0.0;
+                });
+              }
+            }
           }
-        } else {
-          if(mounted) {
-            setState(() {
-              _opacity = 0.0;
-            });
-          }
-        }
+        );
       }
     );
 

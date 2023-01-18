@@ -55,20 +55,6 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
 
     calculateOpacity();
 
-    return AnimatedOpacity(
-      opacity: _opacity,
-      duration: const Duration(seconds: 1),
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          renderLine(),
-          renderVisionButtons()
-        ],
-      ),
-    );
-  }
-
-  Widget renderLine() {
     List<Widget> list = <Widget>[];
     for(var i = 0; i < VisionCategory.visionCategories.length - 1; i++){
       list.add(SizedBox(width: widget.radius * 2,));
@@ -77,20 +63,30 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
         list.add(SizedBox(width: widget.radius * 2,));
       }
     }
-    return Row(children: list);
-  }
 
-  Widget renderVisionButtons() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: VisionCategory.visionCategories.map(
-        (visionCategory) => VisionCategoryButton(
-          radius: widget.radius,
-          title: visionCategory.title,
-          style: widget.style,
-          hasApp: true,
-        )
-      ).toList()
+    return AnimatedOpacity(
+      opacity: _opacity,
+      duration: const Duration(seconds: 1),
+      onEnd: () {
+        print("onEnd");
+      },
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Row(children: list),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: VisionCategory.visionCategories.map(
+              (visionCategory) => VisionCategoryButton(
+                radius: widget.radius,
+                title: visionCategory.title,
+                style: widget.style,
+                hasApp: true,
+              )
+            ).toList()
+          ),
+        ],
+      ),
     );
   }
 }

@@ -26,8 +26,8 @@ class AppConfig {
     ];
 
     services = [
-      "Akıllı İnşaat Uygulamaları"
       "Design & Development",
+      "Akıllı İnşaat Uygulamaları",
       "Şantiye Tasarımı",
     ];
 

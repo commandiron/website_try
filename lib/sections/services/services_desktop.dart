@@ -1,4 +1,6 @@
 
+import 'package:demirli_tech_website/configs/app_config.dart';
+import 'package:demirli_tech_website/configs/app_padding.dart';
 import 'package:demirli_tech_website/configs/app_size.dart';
 import 'package:flutter/material.dart';
 import '../../configs/app_text.dart';
@@ -21,13 +23,41 @@ class ServicesDesktop extends StatelessWidget {
           )
         )
       ),
-      child: Column(
+      child: Stack(
         children: [
           Container(
             height: AppSize.navBarSize,
             alignment: Alignment.center,
             child: Text("Hizmetler", style: AppText.h1?.copyWith(color: Colors.white)),
           ),
+          Expanded(
+            child: Padding(
+              padding: AppPadding.allXL!,
+              child: Row(
+                children: AppConfig.services!.map(
+                  (title) => Expanded(
+                    child: Padding(
+                      padding: AppPadding.allXL!,
+                      child: Container(
+                        height: double.infinity,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.all(Radius.circular(30)),
+                          border: Border.all(
+                            color: Theme.of(context).colorScheme.primary,
+                          )
+                        ),
+                        child: Text(
+                          title,
+                          style: AppText.h2?.copyWith(color: Theme.of(context).colorScheme.primary,),
+                        )
+                      ),
+                    )
+                  )
+                ).toList()
+              ),
+            )
+          )
         ],
       ),
     );

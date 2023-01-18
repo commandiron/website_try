@@ -24,25 +24,21 @@ class _HomeTitleState extends State<HomeTitle> {
     if(AppConfig.animationEnabled!) {
       Provider.of<ScrollProvider>(context).addOffsetListener(
         (offset) {
-          WidgetsBinding.instance.addPostFrameCallback(
-            (timeStamp) {
-              if(offset >= AppSize.homeStartOffset! && offset < AppSize.homeOffset!) {
-                if(mounted) {
-                  setState(() {
-                    _offset = Offset.zero;
-                    _opacity = 1.0;
-                  });
-                }
-              } else {
-                if(mounted) {
-                  setState(() {
-                    _offset = const Offset(-0.05, 0);
-                    _opacity = 0.0;
-                  });
-                }
-              }
+          if(offset >= AppSize.homeStartOffset! && offset < AppSize.homeOffset!) {
+            if(mounted) {
+              setState(() {
+                _offset = Offset.zero;
+                _opacity = 1.0;
+              });
             }
-          );
+          } else {
+            if(mounted) {
+              setState(() {
+                _offset = const Offset(-0.05, 0);
+                _opacity = 0.0;
+              });
+            }
+          }
         }
       );
     } else {

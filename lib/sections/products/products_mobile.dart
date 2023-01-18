@@ -26,23 +26,19 @@ class _ProductsMobileState extends State<ProductsMobile> {
     if(AppConfig.animationEnabled!) {
       Provider.of<ScrollProvider>(context).addOffsetListener(
         (offset) {
-          WidgetsBinding.instance.addPostFrameCallback(
-            (timeStamp) {
-              if(offset >= AppSize.productsStartOffset! / 2 && offset < AppSize.productsOffset!) {
-                if(mounted) {
-                  setState(() {
-                    _opacity = 1.0;
-                  });
-                }
-              } else {
-                if(mounted) {
-                  setState(() {
-                    _opacity = 0.0;
-                  });
-                }
-              }
+          if(offset >= AppSize.productsStartOffset! / 2 && offset < AppSize.productsOffset!) {
+            if(mounted) {
+              setState(() {
+                _opacity = 1.0;
+              });
             }
-          );
+          } else {
+            if(mounted) {
+              setState(() {
+                _opacity = 0.0;
+              });
+            }
+          }
         },
       );
     } else {

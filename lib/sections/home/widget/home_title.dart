@@ -60,7 +60,7 @@ class _HomeTitleState extends State<HomeTitle> {
       duration: const Duration(milliseconds: 500),
       child: AnimatedOpacity(
         opacity: _opacity,
-        duration: const Duration(milliseconds: 1000),
+        duration: const Duration(seconds: 1),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

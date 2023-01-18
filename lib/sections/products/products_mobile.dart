@@ -1,12 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:demirli_tech_website/configs/app_padding.dart';
 import 'package:demirli_tech_website/configs/app_size.dart';
+import 'package:demirli_tech_website/sections/products/widget/products_title.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../configs/app_text.dart';
 import '../../model/product.dart';
 import '../../provider/carousel_provider.dart';
+import '../../provider/scroll_provider.dart';
 import 'widget/carousel_item_mobile.dart';
+import 'widget/products_next_arrow.dart';
 
 class ProductsMobile extends StatefulWidget {
   const ProductsMobile({Key? key}) : super(key: key);
@@ -16,29 +18,63 @@ class ProductsMobile extends StatefulWidget {
 }
 
 class _ProductsMobileState extends State<ProductsMobile> {
+
+  double _opacity = 0.0;
+
+  @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback(
+      (timeStamp) async {
+        await Future.delayed(const Duration(milliseconds: 500));
+        setState(() {
+          _opacity = 1.0;
+        });
+      }
+    );
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+
+    final scrollController = Provider.of<ScrollProvider>(context).controller;
+    scrollController.addListener(() {
+      if(scrollController.offset >= AppSize.productsStartOffset! / 2 && scrollController.offset < AppSize.productsOffset!) {
+        if(mounted) {
+          setState(() {
+            _opacity = 1.0;
+          });
+        }
+      } else {
+        if(mounted) {
+          setState(() {
+            _opacity = 0.0;
+          });
+        }
+      }
+    });
+
     final carouselProvider = Provider.of<CarouselProvider>(context);
+
     return Container(
       width: double.infinity,
       height: AppSize.productsSectionHeight,
       color: Theme.of(context).colorScheme.secondary,
-      child: Stack(
-        children: [
-          buildTitle(),
-          buildCarousel(carouselProvider.key, carouselProvider.controller),
-          buildNextArrow(carouselProvider.controller)
-        ],
+      child: AnimatedOpacity(
+        opacity: _opacity,
+        duration: const Duration(seconds: 1),
+        child: Stack(
+          children: [
+            const ProductsTitle(),
+            buildCarousel(carouselProvider.key, carouselProvider.controller),
+            ProductsNextArrow(
+              onTap:() {
+                carouselProvider.controller.nextPage();
+              }
+            )
+          ],
+        ),
       ),
-    );
-  }
-
-  Widget buildTitle() {
-    return Container(
-      height: AppSize.navBarSize,
-      alignment: Alignment.center,
-      child: Text("Ürünler",
-          style: AppText.h1!.copyWith(color: Colors.white)),
     );
   }
 
@@ -57,23 +93,6 @@ class _ProductsMobileState extends State<ProductsMobile> {
           return CarouselItemMobile(product: Product.products[index]);
         },
       ),
-    );
-  }
-
-  Widget buildNextArrow(CarouselController controller) {
-    return Container(
-      alignment: Alignment.centerRight,
-      padding: AppPadding.horizontalL,
-      child: InkWell(
-        onTap: () {
-          controller.nextPage();
-        },
-        child: Icon(
-          Icons.arrow_forward_ios,
-          size: 64,
-          color: Theme.of(context).colorScheme.primary,
-        ),
-      )
     );
   }
 }

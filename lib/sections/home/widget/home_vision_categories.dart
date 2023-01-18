@@ -54,7 +54,7 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
 
     return AnimatedOpacity(
       opacity: _opacity,
-      duration: const Duration(milliseconds: 1000),
+      duration: const Duration(seconds: 1),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

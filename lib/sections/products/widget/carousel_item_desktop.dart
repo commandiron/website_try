@@ -17,6 +17,7 @@ class CarouselItemDesktop extends StatefulWidget {
 
 class _CarouselItemDesktopState extends State<CarouselItemDesktop> {
 
+  double _imageOpacity = 0.5;
 
   @override
   void didChangeDependencies() {
@@ -80,8 +81,23 @@ class _CarouselItemDesktopState extends State<CarouselItemDesktop> {
           AppSpace.horizontalXL!,
           Expanded(
             child: Container(
-                alignment: Alignment.topCenter,
-                child: Image.asset(widget.product.imageAssetPath)
+              alignment: Alignment.topCenter,
+              child: ColorFiltered(
+                colorFilter: ColorFilter.mode(Colors.black.withOpacity(_imageOpacity), BlendMode.srcATop),
+                child: InkWell(
+                  onTap: () {},
+                  onHover: (value) {
+                    setState(() {
+                      if(value){
+                        _imageOpacity = 0.1;
+                      } else {
+                        _imageOpacity = 0.5;
+                      }
+                    });
+                  },
+                  child: Image.asset(widget.product.imageAssetPath)
+                )
+              )
             ),
           ),
           AppSpace.horizontalXL!,

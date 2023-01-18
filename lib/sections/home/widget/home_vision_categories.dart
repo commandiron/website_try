@@ -67,9 +67,6 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
     return AnimatedOpacity(
       opacity: _opacity,
       duration: const Duration(seconds: 1),
-      onEnd: () {
-        print("onEnd");
-      },
       child: Stack(
         alignment: Alignment.center,
         children: [

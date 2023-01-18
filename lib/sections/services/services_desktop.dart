@@ -11,13 +11,18 @@ class ServicesDesktop extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: AppSize.servicesSectionHeight,
-      color: Theme.of(context).colorScheme.secondary,
       alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.secondary,
+        border: Border(
+          top: BorderSide(
+            color: Theme.of(context).colorScheme.primary,
+            width: 2
+          )
+        )
+      ),
       child: Column(
         children: [
-          const Divider(
-            color: Colors.white,
-          ),
           Container(
             height: AppSize.navBarSize,
             alignment: Alignment.center,

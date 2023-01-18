@@ -56,7 +56,15 @@ class _ProductsMobileState extends State<ProductsMobile> {
     return Container(
       width: double.infinity,
       height: AppSize.productsSectionHeight,
-      color: Theme.of(context).colorScheme.secondary,
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.secondary,
+        border: Border(
+          top: BorderSide(
+            color: Theme.of(context).colorScheme.primary,
+            width: 4
+          )
+        )
+      ),
       child: AnimatedOpacity(
         opacity: _opacity,
         duration: const Duration(seconds: 1),

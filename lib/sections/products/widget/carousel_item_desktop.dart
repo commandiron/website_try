@@ -26,6 +26,7 @@ class CarouselItemDesktop extends StatelessWidget {
               children: [
                 SizedBox(
                   width: 96,
+                  height: 96,
                   child: Image.asset(product.logoAssetPath),
                 ),
                 AppSpace.verticalXL!,

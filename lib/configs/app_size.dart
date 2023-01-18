@@ -2,15 +2,22 @@ class AppSize {
   static double? logoWidth;
   static double? navBarSize;
   static double? bodyDividerHeight;
+
   static double? homeSectionHeight;
   static double? homeStartOffset;
   static double? homeEndOffset;
   static double? homeOffset;
+
   static double? productsSectionHeight;
   static double? productsStartOffset;
   static double? productsEndOffset;
   static double? productsOffset;
+
   static double? servicesSectionHeight;
+  static double? servicesStartOffset;
+  static double? servicesEndOffset;
+  static double? servicesOffset;
+
   static double? aboutSectionHeight;
   static double? contactSectionHeight;
 
@@ -30,6 +37,9 @@ class AppSize {
     productsOffset = (productsStartOffset! +  productsEndOffset!) / 2;
 
     servicesSectionHeight = 720;
+    servicesStartOffset = productsEndOffset;
+    servicesEndOffset = servicesStartOffset! + servicesSectionHeight!;
+    servicesOffset = (servicesStartOffset! +  servicesEndOffset!) / 2;
 
     aboutSectionHeight = 960;
 

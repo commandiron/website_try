@@ -15,7 +15,7 @@ class ServicesDesktop extends StatelessWidget {
       alignment: Alignment.center,
       child: Column(
         children: [
-          Divider(
+          const Divider(
             color: Colors.white,
           ),
           Container(

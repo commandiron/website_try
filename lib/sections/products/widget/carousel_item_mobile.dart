@@ -6,10 +6,22 @@ import '../../../configs/app_space.dart';
 import '../../../configs/app_text.dart';
 import '../../../model/product.dart';
 
-class CarouselItemMobile extends StatelessWidget {
+class CarouselItemMobile extends StatefulWidget {
   const CarouselItemMobile({required this.product, Key? key}) : super(key: key);
 
   final Product product;
+
+  @override
+  State<CarouselItemMobile> createState() => _CarouselItemMobileState();
+}
+
+class _CarouselItemMobileState extends State<CarouselItemMobile> {
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    precacheImage(AssetImage(widget.product.logoAssetPath), context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +32,18 @@ class CarouselItemMobile extends StatelessWidget {
         children: [
           SizedBox(
             width: 96,
-            child: Image.asset(product.logoAssetPath),
+            child: Image.asset(widget.product.logoAssetPath),
           ),
           AppSpace.verticalL!,
           Text(
-            product.title,
+            widget.product.title,
             style: AppText.h2b!.copyWith(
                 color: Colors.white
             ),
           ),
           AppSpace.verticalXL!,
           Image.asset(
-            product.imageAssetPath,
+            widget.product.imageAssetPath,
             height: 360,
           ),
           AppSpace.verticalXL!,

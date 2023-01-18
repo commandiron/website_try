@@ -2,6 +2,7 @@ import 'package:demirli_tech_website/provider/scroll_provider.dart';
 import 'package:demirli_tech_website/sections/home/widget/vision_category_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../../configs/app_config.dart';
 import '../../../configs/app_size.dart';
 import 'home_expanded_divider.dart';
 
@@ -20,28 +21,34 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
   double _opacity = 0.0;
 
   void calculateOpacity() {
-    Provider.of<ScrollProvider>(context).addOffsetListener(
-      (offset) {
-        WidgetsBinding.instance.addPostFrameCallback(
-          (timeStamp) {
-            if (offset >= AppSize.homeStartOffset! &&
-                offset < AppSize.homeOffset!) {
-              if (mounted) {
-                setState(() {
-                  _opacity = 1.0;
-                });
-              }
-            } else {
-              if (mounted) {
-                setState(() {
-                  _opacity = 0.0;
-                });
+    if(AppConfig.animationEnabled!) {
+      Provider.of<ScrollProvider>(context).addOffsetListener(
+        (offset) {
+          WidgetsBinding.instance.addPostFrameCallback(
+            (timeStamp) {
+              if (offset >= AppSize.homeStartOffset! &&
+                  offset < AppSize.homeOffset!) {
+                if (mounted) {
+                  setState(() {
+                    _opacity = 1.0;
+                  });
+                }
+              } else {
+                if (mounted) {
+                  setState(() {
+                    _opacity = 0.0;
+                  });
+                }
               }
             }
-          }
-        );
-      }
-    );
+          );
+        }
+      );
+    } else {
+      setState(() {
+        _opacity = 1.0;
+      });
+    }
   }
 
   @override

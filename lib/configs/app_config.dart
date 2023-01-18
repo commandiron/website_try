@@ -9,7 +9,11 @@ import 'app_strings.dart';
 import 'app_text.dart';
 
 class AppConfig {
+
+  static bool? animationEnabled;
+
   static init(BuildContext context) {
+    animationEnabled = true;
     AppSize.init();
     AppText.init();
     AppSpace.init();

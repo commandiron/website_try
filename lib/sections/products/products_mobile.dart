@@ -4,6 +4,7 @@ import 'package:demirli_tech_website/configs/app_size.dart';
 import 'package:demirli_tech_website/sections/products/widget/products_title.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../configs/app_config.dart';
 import '../../model/product.dart';
 import '../../provider/carousel_provider.dart';
 import '../../provider/scroll_provider.dart';
@@ -22,27 +23,33 @@ class _ProductsMobileState extends State<ProductsMobile> {
   double _opacity = 0.0;
 
   void calculateOpacity() {
-    Provider.of<ScrollProvider>(context).addOffsetListener(
-      (offset) {
-        WidgetsBinding.instance.addPostFrameCallback(
-          (timeStamp) {
-            if(offset >= AppSize.productsStartOffset! / 2 && offset < AppSize.productsOffset!) {
-              if(mounted) {
-                setState(() {
-                  _opacity = 1.0;
-                });
-              }
-            } else {
-              if(mounted) {
-                setState(() {
-                  _opacity = 0.0;
-                });
+    if(AppConfig.animationEnabled!) {
+      Provider.of<ScrollProvider>(context).addOffsetListener(
+        (offset) {
+          WidgetsBinding.instance.addPostFrameCallback(
+            (timeStamp) {
+              if(offset >= AppSize.productsStartOffset! / 2 && offset < AppSize.productsOffset!) {
+                if(mounted) {
+                  setState(() {
+                    _opacity = 1.0;
+                  });
+                }
+              } else {
+                if(mounted) {
+                  setState(() {
+                    _opacity = 0.0;
+                  });
+                }
               }
             }
-          }
-        );
-      },
-    );
+          );
+        },
+      );
+    } else {
+      setState(() {
+        _opacity = 1.0;
+      });
+    }
   }
 
   @override

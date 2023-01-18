@@ -28,11 +28,11 @@ class AppSize {
     homeAnimationEndOffset = AppSize.homeSectionHeight! / 2;
 
     productsSectionHeight = 960;
-    productsAnimationStartOffset = AppSize.homeSectionHeight! / 2;
+    productsAnimationStartOffset = homeAnimationEndOffset;
     productsAnimationEndOffset = AppSize.homeSectionHeight! +  AppSize.productsSectionHeight! / 2;
 
     servicesSectionHeight = 720;
-    servicesAnimationStartOffset = AppSize.homeSectionHeight! +  AppSize.productsSectionHeight! / 2;
+    servicesAnimationStartOffset = productsAnimationEndOffset;
     servicesAnimationEndOffset = AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! / 2;
 
     aboutSectionHeight = 960;

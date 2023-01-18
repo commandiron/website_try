@@ -13,7 +13,6 @@ class ScrollProvider extends ChangeNotifier {
 
 
   scrollDesktop(int index) {
-    print(index);
     double offset =
     index == 0
       ? 0

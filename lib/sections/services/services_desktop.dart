@@ -51,7 +51,6 @@ class _ServicesDesktopState extends State<ServicesDesktop> {
     return Container(
       width: double.infinity,
       height: AppSize.servicesSectionHeight,
-      alignment: Alignment.topCenter,
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.secondary,
         border: Border(
@@ -68,35 +67,31 @@ class _ServicesDesktopState extends State<ServicesDesktop> {
             alignment: Alignment.center,
             child: Text("Hizmetler", style: AppText.h1?.copyWith(color: Colors.white)),
           ),
-          Padding(
-            padding: AppPadding.allXL!,
-            child: Row(
-              children: AppConfig.services!.map(
-                (title) => Expanded(
-                  child: Padding(
-                    padding: AppPadding.allXL!,
-                    child: AnimatedOpacity(
-                      opacity: _opacity,
-                      duration: const Duration(seconds: 1),
-                      child: Container(
-                        height: double.infinity,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.all(Radius.circular(30)),
-                          border: Border.all(
-                            color: Theme.of(context).colorScheme.primary,
-                          )
-                        ),
-                        child: Text(
-                          title,
-                          style: AppText.h2?.copyWith(color: Theme.of(context).colorScheme.primary,),
-                        )
-                      ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: AppConfig.services!.map(
+              (title) => AnimatedOpacity(
+                opacity: _opacity,
+                duration: const Duration(seconds: 1),
+                child: Center(
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 400,
+                    width: 400,
+                    decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.all(Radius.circular(30)),
+                      border: Border.all(
+                        color: Theme.of(context).colorScheme.primary,
+                      )
                     ),
-                  )
-                )
-              ).toList()
-            ),
+                    child: Text(
+                      title,
+                      style: AppText.h2?.copyWith(color: Theme.of(context).colorScheme.primary,),
+                    )
+                  ),
+                ),
+              )
+            ).toList()
           )
         ],
       ),

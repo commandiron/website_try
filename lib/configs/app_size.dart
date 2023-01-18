@@ -21,7 +21,7 @@ class AppSize {
   static void init() {
     logoWidth = 256;
     navBarSize = 96;
-    bodyDividerHeight = 2;
+    bodyDividerHeight = 0;
 
     homeSectionHeight = 960;
     productsSectionHeight = 960;

@@ -69,7 +69,21 @@ class _ProductsMobileState extends State<ProductsMobile> {
         child: Stack(
           children: [
             const ProductsTitle(),
-            buildCarousel(carouselProvider.key, carouselProvider.controller),
+            Padding(
+              padding: AppPadding.verticalXXL!,
+              child: CarouselSlider.builder(
+                key: carouselProvider.key,
+                itemCount: Product.products.length,
+                carouselController: carouselProvider.controller,
+                options: CarouselOptions(
+                  viewportFraction: 1.0,
+                  height: AppSize.productsSectionHeight,
+                ),
+                itemBuilder: (context, index, realIndex) {
+                  return CarouselItemMobile(product: Product.products[index]);
+                },
+              ),
+            ),
             ProductsNextArrow(
               onTap:() {
                 carouselProvider.controller.nextPage();
@@ -77,24 +91,6 @@ class _ProductsMobileState extends State<ProductsMobile> {
             )
           ],
         ),
-      ),
-    );
-  }
-
-  Widget buildCarousel(Key key, CarouselController controller) {
-    return Padding(
-      padding: AppPadding.verticalXXL!,
-      child: CarouselSlider.builder(
-        key: key,
-        itemCount: Product.products.length,
-        carouselController: controller,
-        options: CarouselOptions(
-          viewportFraction: 1.0,
-          height: AppSize.productsSectionHeight,
-        ),
-        itemBuilder: (context, index, realIndex) {
-          return CarouselItemMobile(product: Product.products[index]);
-        },
       ),
     );
   }

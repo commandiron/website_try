@@ -24,8 +24,8 @@ class _HomeTitleState extends State<HomeTitle> {
     if(AppConfig.animationEnabled!) {
       Provider.of<ScrollProvider>(context).addOffsetListener(
         (endOffset) {
-          if(endOffset >= AppSize.homeSectionHeight! / 2
-              && endOffset < AppSize.homeSectionHeight! +  AppSize.productsSectionHeight!) {
+          if(endOffset >= AppSize.homeAnimationStartOffset!
+              && endOffset < AppSize.homeAnimationEndOffset!) {
             if(mounted) {
               setState(() {
                 _offset = Offset.zero;

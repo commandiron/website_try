@@ -24,19 +24,18 @@ class AppSize {
     bodyDividerHeight = 2;
 
     homeSectionHeight = 960;
-    homeAnimationStartOffset = 0;
-    homeAnimationEndOffset = AppSize.homeSectionHeight! / 2;
-
     productsSectionHeight = 960;
-    productsAnimationStartOffset = homeAnimationEndOffset;
-    productsAnimationEndOffset = AppSize.homeSectionHeight! +  AppSize.productsSectionHeight! / 2;
-
     servicesSectionHeight = 720;
-    servicesAnimationStartOffset = productsAnimationEndOffset;
-    servicesAnimationEndOffset = AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! / 2;
-
     aboutSectionHeight = 960;
-
     contactSectionHeight = 960;
+
+    homeAnimationStartOffset = 0;
+    homeAnimationEndOffset = AppSize.homeSectionHeight! +  AppSize.productsSectionHeight!;
+
+    productsAnimationStartOffset = AppSize.homeSectionHeight! + AppSize.productsSectionHeight! / 2;
+    productsAnimationEndOffset = AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight!;
+
+    servicesAnimationStartOffset = AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! / 2;
+    servicesAnimationEndOffset =  AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! + AppSize.aboutSectionHeight!;
   }
 }

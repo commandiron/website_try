@@ -22,8 +22,8 @@ class _ServicesDesktopState extends State<ServicesDesktop> {
     if(AppConfig.animationEnabled!) {
       Provider.of<ScrollProvider>(context).addOffsetListener(
         (endOffset) {
-          if(endOffset >= AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! / 2
-              && endOffset < AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! + AppSize.aboutSectionHeight!) {
+          if(endOffset >= AppSize.servicesAnimationStartOffset!
+              && endOffset < AppSize.servicesAnimationEndOffset!) {
             if(mounted) {
               setState(() {
                 _opacity = 1.0;

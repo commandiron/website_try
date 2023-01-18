@@ -26,8 +26,8 @@ class _ProductsMobileState extends State<ProductsMobile> {
     if(AppConfig.animationEnabled!) {
       Provider.of<ScrollProvider>(context).addOffsetListener(
         (endOffset) {
-          if(endOffset >= AppSize.homeSectionHeight! + AppSize.productsSectionHeight! / 2
-              && endOffset < AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight!) {
+          if(endOffset >= AppSize.productsAnimationStartOffset!
+              && endOffset < AppSize.productsAnimationEndOffset!) {
             if(mounted) {
               setState(() {
                 _opacity = 1.0;

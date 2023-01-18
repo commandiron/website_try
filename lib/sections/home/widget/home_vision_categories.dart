@@ -19,8 +19,7 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
 
   double _opacity = 0.0;
 
-  @override
-  Widget build(BuildContext context) {
+  void calculateOpacity() {
     Provider.of<ScrollProvider>(context).addOffsetListener(
       (offset) {
         WidgetsBinding.instance.addPostFrameCallback(
@@ -43,6 +42,12 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
         );
       }
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+
+    calculateOpacity();
 
     return AnimatedOpacity(
       opacity: _opacity,

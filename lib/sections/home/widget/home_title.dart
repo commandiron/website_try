@@ -19,8 +19,7 @@ class _HomeTitleState extends State<HomeTitle> {
   Offset _offset = const Offset(-0.05, 0);
   double _opacity = 0.0;
 
-  @override
-  Widget build(BuildContext context) {
+  void calculateAnimationValues() {
     Provider.of<ScrollProvider>(context).addOffsetListener(
       (offset) {
         WidgetsBinding.instance.addPostFrameCallback(
@@ -44,6 +43,12 @@ class _HomeTitleState extends State<HomeTitle> {
         );
       }
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+
+    calculateAnimationValues();
 
     return AnimatedSlide(
       offset: _offset,

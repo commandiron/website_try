@@ -21,8 +21,7 @@ class _ProductsMobileState extends State<ProductsMobile> {
 
   double _opacity = 0.0;
 
-  @override
-  Widget build(BuildContext context) {
+  void calculateOpacity() {
     Provider.of<ScrollProvider>(context).addOffsetListener(
       (offset) {
         WidgetsBinding.instance.addPostFrameCallback(
@@ -44,6 +43,12 @@ class _ProductsMobileState extends State<ProductsMobile> {
         );
       },
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+
+    calculateOpacity();
 
     final carouselProvider = Provider.of<CarouselProvider>(context);
 

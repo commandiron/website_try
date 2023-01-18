@@ -27,7 +27,7 @@ class AppSize {
     productsEndOffset = productsStartOffset! + productsSectionHeight!;
     productsOffset = (productsStartOffset! +  productsEndOffset!) / 2;
 
-    servicesSectionHeight = 512;
+    servicesSectionHeight = 960;
 
     aboutSectionHeight = 960;
 

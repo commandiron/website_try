@@ -1,5 +1,6 @@
 
 import 'package:demirli_tech_website/configs/app_config.dart';
+import 'package:demirli_tech_website/configs/app_padding.dart';
 import 'package:demirli_tech_website/configs/app_size.dart';
 import 'package:demirli_tech_website/model/company_service.dart';
 import 'package:demirli_tech_website/sections/services/widget/company_service_item.dart';
@@ -55,27 +56,38 @@ class _ServicesTabletState extends State<ServicesTablet> {
       height: AppSize.servicesSectionHeight,
       color: Theme.of(context).colorScheme.secondaryContainer,
       child: Stack(
+        alignment: Alignment.center,
         children: [
-          Container(
-            height: AppSize.navBarSize,
-            alignment: Alignment.center,
-            child: Text("Hizmetler", style: AppText.h1?.copyWith(color: Colors.white)),
+          Align(
+            alignment: Alignment.topCenter,
+            child: Container(
+              height: AppSize.navBarSize,
+              alignment: Alignment.center,
+              child: Text("Hizmetler", style: AppText.h1?.copyWith(color: Colors.white)),
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: CompanyService.companyServices.map(
-              (companyService) {
-                return AnimatedOpacity(
-                  opacity: _opacity,
-                  duration: const Duration(seconds: 1),
-                  child: CompanyServiceItem(
-                    width: 300,
-                    height: 300,
-                    companyService: companyService
-                  )
-                );
-              }
-            ).toList()
+          Expanded(
+            child: FittedBox(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: CompanyService.companyServices.map(
+                  (companyService) {
+                    return AnimatedOpacity(
+                      opacity: _opacity,
+                      duration: const Duration(seconds: 1),
+                      child: Padding(
+                        padding: AppPadding.horizontalM!,
+                        child: CompanyServiceItem(
+                          width: 300,
+                          height: 300,
+                          companyService: companyService
+                        ),
+                      )
+                    );
+                  }
+                ).toList()
+              ),
+            ),
           )
         ],
       ),

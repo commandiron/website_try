@@ -56,29 +56,36 @@ class _ServicesMobileState extends State<ServicesMobile> {
       height: AppSize.servicesSectionHeight,
       color: Theme.of(context).colorScheme.secondaryContainer,
       child: Stack(
+        alignment: Alignment.center,
         children: [
-          Container(
-            height: AppSize.navBarSize,
-            alignment: Alignment.center,
-            child: Text("Hizmetler", style: AppText.h1?.copyWith(color: Colors.white)),
+          Align(
+            alignment: Alignment.topCenter,
+            child: Container(
+              height: AppSize.navBarSize,
+              alignment: Alignment.center,
+              child: Text("Hizmetler", style: AppText.h1?.copyWith(color: Colors.white)),
+            ),
           ),
-          Padding(
-            padding: AppPadding.verticalXL!,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: CompanyService.companyServices.map(
-                (companyService) {
-                  return AnimatedOpacity(
-                    opacity: _opacity,
-                    duration: const Duration(seconds: 1),
-                    child: CompanyServiceItem(
-                      width: 220,
-                      height: 220,
-                      companyService: companyService
-                    )
-                  );
-                }
-              ).toList()
+          Expanded(
+            child: FittedBox(
+              child: Column(
+                children: CompanyService.companyServices.map(
+                  (companyService) {
+                    return AnimatedOpacity(
+                      opacity: _opacity,
+                      duration: const Duration(seconds: 1),
+                      child: Padding(
+                        padding: AppPadding.horizontalM!,
+                        child: CompanyServiceItem(
+                          width: 180,
+                          height: 180,
+                          companyService: companyService
+                        ),
+                      )
+                    );
+                  }
+                ).toList()
+              ),
             ),
           )
         ],

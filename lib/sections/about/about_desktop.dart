@@ -11,16 +11,8 @@ class AboutDesktop extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: AppSize.servicesSectionHeight,
+      color: Theme.of(context).colorScheme.primaryContainer,
       alignment: Alignment.center,
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primaryContainer,
-        border: Border(
-          top: BorderSide(
-            color: Theme.of(context).colorScheme.primary,
-            width: AppSize.bodyDividerHeight!
-          )
-        )
-      ),
       child: Column(
         children: [
           Container(

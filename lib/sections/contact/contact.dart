@@ -9,7 +9,7 @@ class Contact extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: AppSize.contactSectionHeight!,
-      color: Colors.red,
+      color: Colors.white,
     );
   }
 }

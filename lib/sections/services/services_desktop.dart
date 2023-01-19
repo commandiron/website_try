@@ -17,6 +17,7 @@ class ServicesDesktop extends StatefulWidget {
 
 class _ServicesDesktopState extends State<ServicesDesktop> {
 
+  ColorFilter _colorFilter = ColorFilter.mode(Colors.white, BlendMode.srcATop);
   double _opacity = 0.0;
 
   void calculateRotation() {
@@ -71,40 +72,66 @@ class _ServicesDesktopState extends State<ServicesDesktop> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: CompanyService.companyServices.map(
-              (companyService) => AnimatedOpacity(
-                opacity: _opacity,
-                duration: const Duration(seconds: 1),
-                child: Center(
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: 400,
-                    width: 400,
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(Radius.circular(30)),
-                      border: Border.all(
-                        color: Theme.of(context).colorScheme.primary,
+              (companyService) {
+                return AnimatedOpacity(
+                  opacity: _opacity,
+                  duration: const Duration(seconds: 1),
+                  child: Center(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 400,
+                      width: 400,
+                      decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(30)),
+                        border: Border.all(
+                          color:
+                            Theme.of(context).colorScheme.primary,
+                        )
+                      ),
+                      child: Stack(
+                        children: [
+                          Container(
+                            padding: AppPadding.verticalL,
+                            alignment: Alignment.topCenter,
+                            child: Text(
+                              companyService.title,
+                              style: AppText.h2
+                                  ?.copyWith(color: Colors.white),
+                            ),
+                          ),
+                          Container(
+                            padding: AppPadding.verticalXXL,
+                            alignment: Alignment.center,
+                            child: ColorFiltered(
+                              colorFilter: _colorFilter,
+                              child: InkWell(
+                                onTap: () {},
+                                onHover: (value) {
+                                  setState(() {
+                                    if (value) {
+                                      _colorFilter = const ColorFilter.mode(
+                                        Colors.transparent,
+                                        BlendMode.color
+                                      );
+                                    } else {
+                                      _colorFilter = const ColorFilter.mode(
+                                        Colors.white,
+                                        BlendMode.srcATop
+                                      );
+                                    }
+                                  });
+                                },
+                                child: Image.asset(companyService.logoAssetPath)
+                              )
+                            )
+                          )
+                        ],
                       )
                     ),
-                    child: Stack(
-                      children: [
-                        Container(
-                          padding: AppPadding.verticalL,
-                          alignment: Alignment.topCenter,
-                          child: Text(
-                            companyService.title,
-                            style: AppText.h2?.copyWith(color: Theme.of(context).colorScheme.primary,),
-                          ),
-                        ),
-                        Container(
-                          padding: AppPadding.verticalXXL,
-                            alignment: Alignment.center,
-                            child: Image.asset(companyService.logoAssetPath)
-                        )
-                      ],
-                    )
                   ),
-                ),
-              )
+                );
+              }
             ).toList()
           )
         ],

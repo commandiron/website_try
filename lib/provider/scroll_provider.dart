@@ -18,7 +18,7 @@ class ScrollProvider extends ChangeNotifier {
     });
   }
 
-  scrollDesktop(int index) {
+  scroll(int index) {
     double offset =
     index == 0
       ? 0

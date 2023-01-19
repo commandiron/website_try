@@ -30,7 +30,7 @@ class NavBarActionButton extends StatelessWidget {
           padding: AppPadding.horizontalM!,
           child: ElevatedButton(
             onPressed: () {
-              scrollProvider.scrollDesktop(index);
+              scrollProvider.scroll(index);
             },
             child: Padding(
               padding: AppPadding.verticalS!,
@@ -43,7 +43,7 @@ class NavBarActionButton extends StatelessWidget {
         )
         : TextButton(
         onPressed: () {
-          scrollProvider.scrollDesktop(index);
+          scrollProvider.scroll(index);
         },
         style: AppButton.navBarActionButtonStyle,
         child: Padding(

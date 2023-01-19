@@ -27,7 +27,7 @@ class _LogoItemState extends State<LogoItem> {
       alignment: Alignment.center,
       child: InkWell(
         onTap: () {
-          scrollProvider.scrollDesktop(4);
+          scrollProvider.scroll(4);
         },
         onHover: (value) {
           setState(() {

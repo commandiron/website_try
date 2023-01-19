@@ -15,7 +15,7 @@ class NavBarLogo extends StatelessWidget {
 
     return InkWell(
       onTap: (){
-        scrollProvider.scrollDesktop(0);
+        scrollProvider.scroll(0);
       },
       child: SizedBox(
         width: AppSize.logoWidth,

@@ -7,7 +7,7 @@ import 'package:demirli_tech_website/sections/products/widget/products_title.dar
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../configs/app_config.dart';
-import '../../model/product.dart';
+import '../../model/company_product.dart';
 import '../../provider/carousel_provider.dart';
 import '../../provider/scroll_provider.dart';
 
@@ -76,14 +76,14 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
               padding: AppPadding.verticalXXL!,
               child: CarouselSlider.builder(
                 key: carouselProvider.key,
-                itemCount: Product.products.length,
+                itemCount: CompanyProduct.companyProducts.length,
                 carouselController: carouselProvider.controller,
                 options: CarouselOptions(
                   viewportFraction: 1.0,
                   height: AppSize.productsSectionHeight,
                 ),
                 itemBuilder: (context, index, realIndex) {
-                  return CarouselItemDesktop(product: Product.products[index]);
+                  return CarouselItemDesktop(product: CompanyProduct.companyProducts[index]);
                 },
               ),
             ),

@@ -2,6 +2,7 @@
 import 'package:demirli_tech_website/configs/app_config.dart';
 import 'package:demirli_tech_website/configs/app_padding.dart';
 import 'package:demirli_tech_website/configs/app_size.dart';
+import 'package:demirli_tech_website/model/company_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../configs/app_text.dart';
@@ -69,8 +70,8 @@ class _ServicesDesktopState extends State<ServicesDesktop> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: AppConfig.services!.map(
-              (title) => AnimatedOpacity(
+            children: CompanyService.companyServices.map(
+              (companyService) => AnimatedOpacity(
                 opacity: _opacity,
                 duration: const Duration(seconds: 1),
                 child: Center(
@@ -84,9 +85,22 @@ class _ServicesDesktopState extends State<ServicesDesktop> {
                         color: Theme.of(context).colorScheme.primary,
                       )
                     ),
-                    child: Text(
-                      title,
-                      style: AppText.h2?.copyWith(color: Theme.of(context).colorScheme.primary,),
+                    child: Stack(
+                      children: [
+                        Container(
+                          padding: AppPadding.verticalL,
+                          alignment: Alignment.topCenter,
+                          child: Text(
+                            companyService.title,
+                            style: AppText.h2?.copyWith(color: Theme.of(context).colorScheme.primary,),
+                          ),
+                        ),
+                        Container(
+                          padding: AppPadding.verticalXXL,
+                            alignment: Alignment.center,
+                            child: Image.asset(companyService.logoAssetPath)
+                        )
+                      ],
                     )
                   ),
                 ),

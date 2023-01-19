@@ -4,12 +4,12 @@ import '../../../configs/app_assets.dart';
 import '../../../configs/app_padding.dart';
 import '../../../configs/app_space.dart';
 import '../../../configs/app_text.dart';
-import '../../../model/product.dart';
+import '../../../model/company_product.dart';
 
 class CarouselItemMobile extends StatefulWidget {
   const CarouselItemMobile({required this.product, Key? key}) : super(key: key);
 
-  final Product product;
+  final CompanyProduct product;
 
   @override
   State<CarouselItemMobile> createState() => _CarouselItemMobileState();

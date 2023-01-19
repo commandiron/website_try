@@ -9,14 +9,14 @@ import 'package:provider/provider.dart';
 import '../../configs/app_text.dart';
 import '../../provider/scroll_provider.dart';
 
-class ServicesDesktop extends StatefulWidget {
-  const ServicesDesktop({Key? key}) : super(key: key);
+class ServicesTablet extends StatefulWidget {
+  const ServicesTablet({Key? key}) : super(key: key);
 
   @override
-  State<ServicesDesktop> createState() => _ServicesDesktopState();
+  State<ServicesTablet> createState() => _ServicesTabletState();
 }
 
-class _ServicesDesktopState extends State<ServicesDesktop> {
+class _ServicesTabletState extends State<ServicesTablet> {
   
   double _opacity = 0.0;
 
@@ -62,15 +62,15 @@ class _ServicesDesktopState extends State<ServicesDesktop> {
             child: Text("Hizmetler", style: AppText.h1?.copyWith(color: Colors.white)),
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: CompanyService.companyServices.map(
               (companyService) {
                 return AnimatedOpacity(
                   opacity: _opacity,
                   duration: const Duration(seconds: 1),
                   child: CompanyServiceItem(
-                    width: 400,
-                    height: 400,
+                    width: 300,
+                    height: 300,
                     companyService: companyService
                   )
                 );

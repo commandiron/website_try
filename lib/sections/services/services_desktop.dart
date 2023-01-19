@@ -3,6 +3,7 @@ import 'package:demirli_tech_website/configs/app_config.dart';
 import 'package:demirli_tech_website/configs/app_padding.dart';
 import 'package:demirli_tech_website/configs/app_size.dart';
 import 'package:demirli_tech_website/model/company_service.dart';
+import 'package:demirli_tech_website/sections/services/logo_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../configs/app_text.dart';
@@ -16,8 +17,7 @@ class ServicesDesktop extends StatefulWidget {
 }
 
 class _ServicesDesktopState extends State<ServicesDesktop> {
-
-  ColorFilter _colorFilter = ColorFilter.mode(Colors.white, BlendMode.srcATop);
+  
   double _opacity = 0.0;
 
   void calculateRotation() {
@@ -96,36 +96,10 @@ class _ServicesDesktopState extends State<ServicesDesktop> {
                             alignment: Alignment.topCenter,
                             child: Text(
                               companyService.title,
-                              style: AppText.h2
-                                  ?.copyWith(color: Colors.white),
+                              style: AppText.h2?.copyWith(color: Colors.white),
                             ),
                           ),
-                          Container(
-                            padding: AppPadding.verticalXXL,
-                            alignment: Alignment.center,
-                            child: ColorFiltered(
-                              colorFilter: _colorFilter,
-                              child: InkWell(
-                                onTap: () {},
-                                onHover: (value) {
-                                  setState(() {
-                                    if (value) {
-                                      _colorFilter = const ColorFilter.mode(
-                                        Colors.transparent,
-                                        BlendMode.color
-                                      );
-                                    } else {
-                                      _colorFilter = const ColorFilter.mode(
-                                        Colors.white,
-                                        BlendMode.srcATop
-                                      );
-                                    }
-                                  });
-                                },
-                                child: Image.asset(companyService.logoAssetPath)
-                              )
-                            )
-                          )
+                          LogoItem(logoAssetPath: companyService.logoAssetPath)
                         ],
                       )
                     ),

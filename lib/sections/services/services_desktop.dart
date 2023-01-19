@@ -54,7 +54,7 @@ class _ServicesDesktopState extends State<ServicesDesktop> {
       width: double.infinity,
       height: AppSize.servicesSectionHeight,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primaryContainer,
+        color: Theme.of(context).colorScheme.secondaryContainer,
         border: Border(
           top: BorderSide(
             color: Theme.of(context).colorScheme.primary,

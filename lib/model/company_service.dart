@@ -17,10 +17,7 @@ class CompanyService {
     CompanyService(
       logoAssetPath: "assets/images/design_development_icon_512.png",
       title: "Design & Development",
-      highlightedIconColorList: [
-        Color(0xff03D8DE),
-        Color(0xffFB01FF),
-      ]
+      highlightedIconColorList: [Colors.transparent, Colors.transparent,]
     ),
     CompanyService(
       logoAssetPath: "assets/images/smart_construction_icon_512.png",
@@ -28,9 +25,9 @@ class CompanyService {
       highlightedIconColorList: [Color(0xffF48B0B), Color(0xffF48B0B),]
     ),
     CompanyService(
-      logoAssetPath: "assets/images/smart_construction_icon_512.png",
+      logoAssetPath: "assets/images/robot_icon_512.png",
       title: "Yapay Zeka Araştırma ve Uygulama",
-      highlightedIconColorList: [Color(0xffF48B0B), Color(0xffF48B0B),]
+      highlightedIconColorList: [Colors.transparent, Colors.transparent,]
     ),
   ];
 }

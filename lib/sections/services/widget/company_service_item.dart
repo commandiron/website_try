@@ -12,7 +12,6 @@ class CompanyServiceItem extends StatefulWidget {
     {
       required this.width,
       required this.height,
-
       required this.companyService,
       Key? key
     }

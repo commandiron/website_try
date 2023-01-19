@@ -1,6 +1,7 @@
 import 'package:demirli_tech_website/sections/body_sections.dart';
-import 'package:demirli_tech_website/widget/nav_bar_logo.dart';
-import 'package:demirli_tech_website/widget/navbar_actions_button.dart';
+import 'package:demirli_tech_website/widget/nav_bar/contact_icon_button.dart';
+import 'package:demirli_tech_website/widget/nav_bar/nav_bar_logo.dart';
+import 'package:demirli_tech_website/widget/nav_bar/navbar_actions_button.dart';
 import 'package:flutter/material.dart';
 
 import '../../configs/app_padding.dart';
@@ -41,6 +42,8 @@ class NavBarDesktop extends StatelessWidget {
               ),
             )
           ),
+          ContactIconButton(imagePath: "assets/images/instagram_icon_26.png", onTap:() {},),
+          ContactIconButton(imagePath: "assets/images/whatsapp_icon_26.png", onTap:() {},),
           SizedBox(
             width: AppSize.logoWidth!,
             child: const NavBarActionButton(

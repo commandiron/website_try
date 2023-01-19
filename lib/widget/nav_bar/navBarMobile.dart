@@ -6,10 +6,10 @@ import '../../configs/app_space.dart';
 import '../../provider/drawer_provider.dart';
 import 'package:provider/provider.dart';
 
-import '../../widget/nav_bar_logo.dart';
+import 'nav_bar_logo.dart';
 
-class NavBarTabletMobile extends StatelessWidget {
-  const NavBarTabletMobile({Key? key}) : super(key: key);
+class NavBarMobile extends StatelessWidget {
+  const NavBarMobile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

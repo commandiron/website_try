@@ -2,8 +2,8 @@ import 'package:demirli_tech_website/configs/app_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../configs/app_size.dart';
-import '../provider/scroll_provider.dart';
+import '../../configs/app_size.dart';
+import '../../provider/scroll_provider.dart';
 
 class NavBarLogo extends StatelessWidget {
   const NavBarLogo({Key? key}) : super(key: key);

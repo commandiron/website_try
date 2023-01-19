@@ -6,8 +6,8 @@ import '../configs/app_config.dart';
 import '../provider/drawer_provider.dart';
 import 'widget/app_body.dart';
 import 'widget/app_drawer.dart';
-import 'widget/navBarDesktop.dart';
-import 'widget/navBarTabletMobile.dart';
+import '../widget/nav_bar/navBarDesktop.dart';
+import '../widget/nav_bar/navBarMobile.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -32,7 +32,7 @@ class _MainScreenState extends State<MainScreen> {
           const AppBody(),
           Responsive.isDesktop(context)
             ? const NavBarDesktop()
-            : const NavBarTabletMobile()
+            : const NavBarMobile()
         ],
       )
     );

@@ -1,5 +1,6 @@
 import 'package:demirli_tech_website/sections/products/products_desktop.dart';
 import 'package:demirli_tech_website/sections/products/products_mobile.dart';
+import 'package:demirli_tech_website/sections/products/products_tablet.dart';
 import 'package:flutter/material.dart';
 
 import '../../responsive/responsive.dart';
@@ -17,7 +18,7 @@ class _ProductsState extends State<Products> {
   Widget build(BuildContext context) {
     return const Responsive(
       mobile: ProductsMobile(),
-      tablet: ProductsMobile(),
+      tablet: ProductsTablet(),
       desktop: ProductsDesktop()
     );
   }

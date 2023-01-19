@@ -45,10 +45,7 @@ class _CompanyServiceItemState extends State<CompanyServiceItem> {
         onHover: (value) {
           setState(() {
             if (value) {
-              _iconColorFilter = const ColorFilter.mode(
-                  Colors.transparent,
-                  BlendMode.color
-              );
+              _iconColorFilter = widget.companyService.highlightedIconColorFilter;
               _textColor = Theme.of(context).colorScheme.primary;
               _cardElevation = 20.0;
               _frameColorOpacity = 1.0;

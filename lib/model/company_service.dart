@@ -1,17 +1,15 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class CompanyService {
   String title;
   String logoAssetPath;
-  ColorFilter highlightedIconColorFilter;
+  List<Color> highlightedIconColorList;
 
   CompanyService(
       {
         required this.title,
         required this.logoAssetPath,
-        required this.highlightedIconColorFilter
+        required this.highlightedIconColorList
       }
       );
 
@@ -19,26 +17,20 @@ class CompanyService {
     CompanyService(
       logoAssetPath: "assets/images/design_development_icon_512.png",
       title: "Design & Development",
-      highlightedIconColorFilter: const ColorFilter.mode(
-        Colors.transparent,
-        BlendMode.color
-      )
+      highlightedIconColorList: [
+        Color(0xff03D8DE),
+        Color(0xffFB01FF),
+      ]
     ),
     CompanyService(
       logoAssetPath: "assets/images/smart_construction_icon_512.png",
       title: "Akıll İnşaat Uygulamaları",
-      highlightedIconColorFilter: const ColorFilter.mode(
-        Color(0xffF48B0B),
-        BlendMode.srcATop
-      )
+      highlightedIconColorList: [Color(0xffF48B0B), Color(0xffF48B0B),]
     ),
     CompanyService(
       logoAssetPath: "assets/images/smart_construction_icon_512.png",
       title: "Yapay Zeka Araştırma ve Uygulama",
-      highlightedIconColorFilter: const ColorFilter.mode(
-          Colors.red,
-          BlendMode.srcATop
-      )
+      highlightedIconColorList: [Color(0xffF48B0B), Color(0xffF48B0B),]
     ),
   ];
 }

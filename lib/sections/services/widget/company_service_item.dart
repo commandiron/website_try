@@ -28,7 +28,7 @@ class CompanyServiceItem extends StatefulWidget {
 class _CompanyServiceItemState extends State<CompanyServiceItem> {
 
   Color _textColor = Colors.white;
-  ColorFilter _iconColorFilter = const ColorFilter.mode(Colors.white, BlendMode.srcATop);
+  List<Color> _iconColorList = [Colors.white, Colors.white];
   double _cardElevation = 0;
   double _frameColorOpacity = 0.5;
 
@@ -45,15 +45,12 @@ class _CompanyServiceItemState extends State<CompanyServiceItem> {
         onHover: (value) {
           setState(() {
             if (value) {
-              _iconColorFilter = widget.companyService.highlightedIconColorFilter;
+              _iconColorList = widget.companyService.highlightedIconColorList;
               _textColor = Theme.of(context).colorScheme.primary;
               _cardElevation = 20.0;
               _frameColorOpacity = 1.0;
             } else {
-              _iconColorFilter = const ColorFilter.mode(
-                  Colors.white,
-                  BlendMode.srcATop
-              );
+              _iconColorList = [Colors.white, Colors.white];
               _textColor = Colors.white;
               _cardElevation = 0;
               _frameColorOpacity = 0.5;
@@ -91,12 +88,19 @@ class _CompanyServiceItemState extends State<CompanyServiceItem> {
                   child: Center(
                     child: FractionallySizedBox(
                       widthFactor: 0.5,
-                      child: ColorFiltered(
-                        colorFilter: _iconColorFilter,
+                      child: ShaderMask(
+                        shaderCallback: (bounds) {
+                          return LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: _iconColorList,
+                          ).createShader(bounds);
+                        },
+                        blendMode: BlendMode.srcATop,
                         child: Image.asset(
-                          widget.companyService.logoAssetPath
+                          widget.companyService.logoAssetPath,
                         ),
-                      ),
+                      )
                     ),
                   ),
                 )

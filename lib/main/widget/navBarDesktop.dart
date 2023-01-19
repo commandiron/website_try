@@ -14,7 +14,7 @@ class NavBarDesktop extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: AppSize.navBarSize,
-      color: Theme.of(context).colorScheme.secondary.withOpacity(0.0),
+      color: Theme.of(context).colorScheme.primaryContainer.withOpacity(0.0),
       padding: AppPadding.navBarPadding,
       child: Row(
         children: [

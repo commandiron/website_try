@@ -58,7 +58,7 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
       width: double.infinity,
       height: AppSize.productsSectionHeight,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.secondary,
+        color: Theme.of(context).colorScheme.primaryContainer,
         border: Border(
           top: BorderSide(
             color: Theme.of(context).colorScheme.primary,

@@ -24,7 +24,7 @@ class HomeBackground extends StatelessWidget {
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
           child: Container(
-            color: Theme.of(context).colorScheme.secondary.withOpacity(0.4),
+            color: Theme.of(context).colorScheme.primaryContainer.withOpacity(0.4),
             child: Padding(
               padding: AppPadding.homePadding!, 
               child: child

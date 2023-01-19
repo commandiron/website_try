@@ -27,7 +27,9 @@ class CompanyServiceItem extends StatefulWidget {
 
 class _CompanyServiceItemState extends State<CompanyServiceItem> {
 
-  ColorFilter _colorFilter = const ColorFilter.mode(Colors.white, BlendMode.srcATop);
+  Color _textColor = Colors.white;
+  ColorFilter _iconColorFilter = const ColorFilter.mode(Colors.white, BlendMode.srcATop);
+  double _cardElevation = 0;
   double _frameColorOpacity = 0.5;
 
   @override
@@ -43,60 +45,67 @@ class _CompanyServiceItemState extends State<CompanyServiceItem> {
         onHover: (value) {
           setState(() {
             if (value) {
-              _colorFilter = const ColorFilter.mode(
+              _iconColorFilter = const ColorFilter.mode(
                   Colors.transparent,
                   BlendMode.color
               );
+              _textColor = Theme.of(context).colorScheme.primary;
+              _cardElevation = 20.0;
               _frameColorOpacity = 1.0;
             } else {
-              _colorFilter = const ColorFilter.mode(
+              _iconColorFilter = const ColorFilter.mode(
                   Colors.white,
                   BlendMode.srcATop
               );
+              _textColor = Colors.white;
+              _cardElevation = 0;
               _frameColorOpacity = 0.5;
             }
           });
         },
-        child: Container(
-          alignment: Alignment.center,
-          width: widget.width,
-          height: widget.height,
-          decoration: BoxDecoration(
+        child: Card(
+          color: Theme.of(context).colorScheme.secondaryContainer,
+          elevation: _cardElevation,
+          shape: RoundedRectangleBorder(
             borderRadius: const BorderRadius.all(Radius.circular(30)),
-            border: Border.all(
-              color:
-              Theme.of(context).colorScheme.primary.withOpacity(_frameColorOpacity),
+            side: BorderSide(
+              color: Theme.of(context).colorScheme.primary.withOpacity(_frameColorOpacity)
             )
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              AppSpace.verticalL!,
-              Container(
-                padding: AppPadding.horizontalL,
-                alignment: Alignment.topCenter,
-                child: FittedBox(
-                  child: Text(
-                    widget.companyService.title,
-                    style: AppText.h2?.copyWith(color: Colors.white),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Center(
-                  child: FractionallySizedBox(
-                    widthFactor: 0.5,
-                    child: ColorFiltered(
-                      colorFilter: _colorFilter,
-                      child: Image.asset(
-                        widget.companyService.logoAssetPath
-                      ),
+          child: Container(
+            alignment: Alignment.center,
+            width: widget.width,
+            height: widget.height,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                AppSpace.verticalL!,
+                Container(
+                  padding: AppPadding.horizontalL,
+                  alignment: Alignment.topCenter,
+                  child: FittedBox(
+                    child: Text(
+                      widget.companyService.title,
+                      style: AppText.h2?.copyWith(color: _textColor),
                     ),
                   ),
                 ),
-              )
-            ],
-          )
+                Expanded(
+                  child: Center(
+                    child: FractionallySizedBox(
+                      widthFactor: 0.5,
+                      child: ColorFiltered(
+                        colorFilter: _iconColorFilter,
+                        child: Image.asset(
+                          widget.companyService.logoAssetPath
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            )
+          ),
         ),
       ),
     );

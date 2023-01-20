@@ -86,7 +86,7 @@ class _CompanyServiceItemState extends State<CompanyServiceItem> {
               Expanded(
                 child: Center(
                   child: FractionallySizedBox(
-                    widthFactor: 0.5,
+                    widthFactor: 0.40,
                     child: ShaderMask(
                       shaderCallback: (bounds) {
                         return LinearGradient(

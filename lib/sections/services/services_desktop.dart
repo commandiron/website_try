@@ -66,27 +66,25 @@ class _ServicesDesktopState extends State<ServicesDesktop> {
               child: Text("Hizmetler", style: AppText.h1?.copyWith(color: Colors.white)),
             ),
           ),
-          Expanded(
-            child: FittedBox(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: CompanyService.companyServices.map(
-                  (companyService) {
-                    return AnimatedOpacity(
-                      opacity: _opacity,
-                      duration: const Duration(seconds: 1),
-                      child: Padding(
-                        padding: AppPadding.horizontalL!,
-                        child: CompanyServiceItem(
-                          width: 400,
-                          height: 400,
-                          companyService: companyService
-                        ),
-                      )
-                    );
-                  }
-                ).toList()
-              ),
+          FittedBox(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: CompanyService.companyServices.map(
+                (companyService) {
+                  return AnimatedOpacity(
+                    opacity: _opacity,
+                    duration: const Duration(seconds: 1),
+                    child: Padding(
+                      padding: AppPadding.horizontalL!,
+                      child: CompanyServiceItem(
+                        width: 400,
+                        height: 400,
+                        companyService: companyService
+                      ),
+                    )
+                  );
+                }
+              ).toList()
             ),
           )
         ],

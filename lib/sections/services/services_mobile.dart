@@ -66,26 +66,24 @@ class _ServicesMobileState extends State<ServicesMobile> {
               child: Text("Hizmetler", style: AppText.h1?.copyWith(color: Colors.white)),
             ),
           ),
-          Expanded(
-            child: FittedBox(
-              child: Column(
-                children: CompanyService.companyServices.map(
-                  (companyService) {
-                    return AnimatedOpacity(
-                      opacity: _opacity,
-                      duration: const Duration(seconds: 1),
-                      child: Padding(
-                        padding: AppPadding.horizontalM!,
-                        child: CompanyServiceItem(
-                          width: 180,
-                          height: 180,
-                          companyService: companyService
-                        ),
-                      )
-                    );
-                  }
-                ).toList()
-              ),
+          FittedBox(
+            child: Column(
+              children: CompanyService.companyServices.map(
+                (companyService) {
+                  return AnimatedOpacity(
+                    opacity: _opacity,
+                    duration: const Duration(seconds: 1),
+                    child: Padding(
+                      padding: AppPadding.horizontalM!,
+                      child: CompanyServiceItem(
+                        width: 180,
+                        height: 180,
+                        companyService: companyService
+                      ),
+                    )
+                  );
+                }
+              ).toList()
             ),
           )
         ],

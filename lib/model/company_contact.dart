@@ -1,5 +1,3 @@
-import '../helper/constants.dart';
-
 class CompanyContact {
   String url;
   String imagePath;
@@ -13,11 +11,11 @@ class CompanyContact {
 
   static List<CompanyContact> companyContacts = [
     CompanyContact(
-      url: companyInstagramUrl,
+      url: "https://instagram.com/emirdemirli/",
       imagePath: "assets/images/instagram_icon_26.png",
     ),
     CompanyContact(
-      url: companyWhatsappUrl,
+      url: "https://api.whatsapp.com/send?phone=905355085552",
       imagePath: "assets/images/whatsapp_icon_26.png",
     ),
   ];

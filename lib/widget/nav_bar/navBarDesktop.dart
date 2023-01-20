@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 import '../../configs/app_padding.dart';
 import '../../configs/app_size.dart';
-import '../../helper/constants.dart';
+import '../../model/company_contact.dart';
 
 class NavBarDesktop extends StatelessWidget {
   const NavBarDesktop({Key? key}) : super(key: key);
@@ -44,13 +44,15 @@ class NavBarDesktop extends StatelessWidget {
               ),
             )
           ),
-          ContactIconButton(
-            imagePath: "assets/images/instagram_icon_26.png",
-            onTap:() => openURL(companyInstagramUrl),
-          ),
-          ContactIconButton(
-            imagePath: "assets/images/whatsapp_icon_26.png",
-            onTap:() => openURL(companyWhatsappUrl),
+          Row(
+            children: CompanyContact.companyContacts.map(
+              (companyContact) {
+                return ContactIconButton(
+                  imagePath: companyContact.imagePath,
+                  onTap: () => openURL(companyContact.url),
+                );
+              }
+            ).toList(),
           ),
           SizedBox(
             width: AppSize.logoWidth!,

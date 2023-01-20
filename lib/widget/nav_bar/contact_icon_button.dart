@@ -37,7 +37,7 @@ class _ContactIconButtonState extends State<ContactIconButton> {
         padding: AppPadding.horizontalS!,
         child: ColorFiltered(
           colorFilter: ColorFilter.mode(
-            _isOnHover ? widget.imageOriginalColor : Colors.grey.shade300,
+            _isOnHover ? widget.imageOriginalColor : Colors.grey.shade200,
             BlendMode.srcATop
           ),
           child: Image.asset(

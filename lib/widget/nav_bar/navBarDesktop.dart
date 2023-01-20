@@ -49,6 +49,7 @@ class NavBarDesktop extends StatelessWidget {
               (companyContact) {
                 return ContactIconButton(
                   imagePath: companyContact.imagePath,
+                  imageOriginalColor: companyContact.imageOriginalColor,
                   onTap: () => openURL(companyContact.url),
                 );
               }

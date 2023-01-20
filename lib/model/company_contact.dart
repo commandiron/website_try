@@ -11,12 +11,16 @@ class CompanyContact {
 
   static List<CompanyContact> companyContacts = [
     CompanyContact(
+      url: "https://linkedin.com/in/emirdemirli/",
+      imagePath: "assets/images/linkedin_icon_26.png",
+    ),
+    CompanyContact(
       url: "https://instagram.com/emirdemirli/",
       imagePath: "assets/images/instagram_icon_26.png",
     ),
     CompanyContact(
       url: "https://facebook.com/emirdemirli",
-      imagePath: "assets/images/facebook_icon_512.png",
+      imagePath: "assets/images/facebook_icon_26.png",
     ),
     CompanyContact(
       url: "https://api.whatsapp.com/send?phone=905355085552",

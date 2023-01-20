@@ -17,17 +17,17 @@ class CompanyService {
     CompanyService(
       logoAssetPath: "assets/images/design_development_icon_512.png",
       title: "Design & Development",
-      highlightedIconColorList: [Colors.transparent, Colors.transparent,]
+      highlightedIconColorList: [Color(0xff02D9DE), Color(0xffFC00FF),]
     ),
     CompanyService(
       logoAssetPath: "assets/images/smart_construction_icon_512.png",
       title: "Akıll İnşaat Uygulamaları",
-      highlightedIconColorList: [Color(0xffF48B0B), Color(0xffF48B0B),]
+      highlightedIconColorList: [Color(0xff02D9DE), Color(0xffFC00FF),]
     ),
     CompanyService(
       logoAssetPath: "assets/images/robot_icon_512.png",
       title: "Yapay Zeka Araştırma ve Uygulama",
-      highlightedIconColorList: [Colors.transparent, Colors.transparent,]
+      highlightedIconColorList: [Color(0xff02D9DE), Color(0xffFC00FF),]
     ),
   ];
 }

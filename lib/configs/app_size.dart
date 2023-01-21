@@ -19,7 +19,7 @@ class AppSize {
   static double? contactSectionHeight;
 
   static void init() {
-    logoWidth = 256;
+    logoWidth = 256 - 32;
     navBarSize = 96;
     bodyDividerHeight = 0;
 
@@ -27,7 +27,7 @@ class AppSize {
     productsSectionHeight = 960;
     servicesSectionHeight = 720;
     aboutSectionHeight = 960;
-    contactSectionHeight = 360;
+    contactSectionHeight = 480;
 
     homeAnimationStartOffset = 0;
     homeAnimationEndOffset = AppSize.homeSectionHeight! +  AppSize.productsSectionHeight!;

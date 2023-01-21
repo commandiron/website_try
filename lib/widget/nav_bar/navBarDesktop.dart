@@ -1,3 +1,4 @@
+import 'package:demirli_tech_website/configs/app_space.dart';
 import 'package:demirli_tech_website/helper/url_launcher.dart';
 import 'package:demirli_tech_website/sections/body_sections.dart';
 import 'package:demirli_tech_website/widget/nav_bar/contact_icon_button.dart';
@@ -21,6 +22,7 @@ class NavBarDesktop extends StatelessWidget {
       padding: AppPadding.navBarPadding,
       child: Row(
         children: [
+          AppSpace.horizontalXL!,
           const NavBarLogo(),
           Expanded(
             child: FittedBox(
@@ -62,7 +64,8 @@ class NavBarDesktop extends StatelessWidget {
               index: 4,
               highlighted: true,
             ),
-          )
+          ),
+          AppSpace.horizontalXL!,
         ],
       ),
     );

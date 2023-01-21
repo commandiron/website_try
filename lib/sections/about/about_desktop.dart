@@ -9,6 +9,7 @@ import 'package:provider/provider.dart';
 import '../../configs/app_config.dart';
 import '../../configs/app_text.dart';
 import '../../provider/scroll_provider.dart';
+import 'widget/about_title.dart';
 
 class AboutDesktop extends StatefulWidget {
   const AboutDesktop({Key? key}) : super(key: key);
@@ -61,14 +62,7 @@ class _AboutDesktopState extends State<AboutDesktop> {
         duration: const Duration(seconds: 1),
         child: Column(
           children: [
-            Container(
-              height: AppSize.navBarSize,
-              alignment: Alignment.center,
-              child: Text(
-                "Hakkımızda",
-                style: AppText.h1?.copyWith(color: Colors.white)
-              ),
-            ),
+            const AboutTitle(),
             Row(
               children: [
                 AppSpace.horizontalExpanded!,

@@ -16,6 +16,9 @@ class AppSize {
   static double? servicesAnimationEndOffset;
 
   static double? aboutSectionHeight;
+  static double? aboutAnimationStartOffset;
+  static double? aboutAnimationEndOffset;
+
   static double? contactSectionHeight;
 
   static void init() {
@@ -37,5 +40,8 @@ class AppSize {
 
     servicesAnimationStartOffset = AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! / 2;
     servicesAnimationEndOffset =  AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! + AppSize.aboutSectionHeight!;
+
+    aboutAnimationStartOffset = AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! + AppSize.aboutSectionHeight! / 2;
+    aboutAnimationEndOffset =  AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! + AppSize.aboutSectionHeight! + AppSize.contactSectionHeight!;
   }
 }

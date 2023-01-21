@@ -5,15 +5,15 @@ import '../../configs/app_padding.dart';
 class ContactIconButton extends StatefulWidget {
   const ContactIconButton(
     {
-      required this.imagePath,
-      required this.imageOriginalColor,
+      required this.iconPath,
+      required this.iconOriginalColor,
       required this.onTap,
       Key? key
     }
   ) : super(key: key);
 
-  final String imagePath;
-  final Color imageOriginalColor;
+  final String iconPath;
+  final Color iconOriginalColor;
   final void Function() onTap;
 
   @override
@@ -37,11 +37,11 @@ class _ContactIconButtonState extends State<ContactIconButton> {
         padding: AppPadding.horizontalS!,
         child: ColorFiltered(
           colorFilter: ColorFilter.mode(
-            _isOnHover ? widget.imageOriginalColor : Colors.grey.shade200,
+            _isOnHover ? widget.iconOriginalColor : Colors.grey.shade200,
             BlendMode.srcATop
           ),
           child: Image.asset(
-            widget.imagePath,
+            widget.iconPath,
             width: 20,
           ),
         ),

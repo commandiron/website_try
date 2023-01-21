@@ -5,34 +5,18 @@ import 'app_padding.dart';
 import 'app_size.dart';
 import 'app_space.dart';
 import 'app_strings.dart';
-import 'app_text.dart';
+import 'app_text_style.dart';
 
 class AppConfig {
 
   static bool? animationEnabled;
-  static List<String>? visionCategories;
-  static List<String>? services;
 
   static init(BuildContext context) {
 
     animationEnabled = true;
 
-    visionCategories = [
-      "Fizibilite",
-      "Tasarım",
-      "Uygulama",
-      "Kontrol",
-      "Bakım"
-    ];
-
-    services = [
-      "Design & Development",
-      "Akıllı İnşaat Uygulamaları",
-      "Şantiye Tasarımı",
-    ];
-
     AppSize.init();
-    AppText.init();
+    AppTextStyle.init();
     AppSpace.init();
     AppPadding.init();
     AppButton.init(context);

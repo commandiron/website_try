@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../configs/app_assets.dart';
 import '../../../configs/app_padding.dart';
 import '../../../configs/app_space.dart';
-import '../../../configs/app_text.dart';
+import '../../../configs/app_text_style.dart';
 import '../../../model/company_product.dart';
 
 class CarouselItemTablet extends StatefulWidget {
@@ -41,7 +41,7 @@ class _CarouselItemTabletState extends State<CarouselItemTablet> {
               AppSpace.verticalL!,
               Text(
                 widget.product.title,
-                style: AppText.h2b!.copyWith(
+                style: AppTextStyle.h2b!.copyWith(
                     color: Colors.white
                 ),
               ),
@@ -82,7 +82,7 @@ class _CarouselItemTabletState extends State<CarouselItemTablet> {
             child: SingleChildScrollView(
               child: Text(
                 widget.product.body,
-                style: AppText.b2!.copyWith(
+                style: AppTextStyle.b2!.copyWith(
                     color: Colors.white
                 ),
               ),

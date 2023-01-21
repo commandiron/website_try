@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../configs/app_config.dart';
-import '../../configs/app_text.dart';
+import '../../configs/app_text_style.dart';
 import '../../provider/scroll_provider.dart';
 import 'widget/about_title.dart';
 
@@ -56,6 +56,15 @@ class _AboutTabletState extends State<AboutTablet> {
       width: double.infinity,
       height: AppSize.servicesSectionHeight,
       color: Theme.of(context).colorScheme.primaryContainer,
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.primaryContainer,
+        border: Border(
+          top: BorderSide(
+              color: Theme.of(context).colorScheme.primary,
+              width: AppSize.bodyDividerHeight!
+          )
+        )
+      ),
       alignment: Alignment.center,
       child: AnimatedOpacity(
         opacity: _opacity,
@@ -74,7 +83,7 @@ class _AboutTabletState extends State<AboutTablet> {
                   flex: 3,
                   child: Text(
                     AppStrings.aboutText!,
-                    style: AppText.b2?.copyWith(color: Colors.white),
+                    style: AppTextStyle.b2?.copyWith(color: Colors.white),
                   ),
                 ),
                 AppSpace.horizontalExpanded!,

@@ -3,7 +3,7 @@ import 'package:demirli_tech_website/configs/app_size.dart';
 import 'package:demirli_tech_website/configs/app_strings.dart';
 import 'package:flutter/material.dart';
 
-import '../../configs/app_text.dart';
+import '../../configs/app_text_style.dart';
 
 class ContactDesktop extends StatelessWidget {
   const ContactDesktop({Key? key}) : super(key: key);
@@ -13,15 +13,23 @@ class ContactDesktop extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: AppSize.contactSectionHeight!,
-      color: Colors.white,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border(
+          top: BorderSide(
+            color: Theme.of(context).colorScheme.primary,
+            width: AppSize.bodyDividerHeight!
+          )
+        )
+      ),
       child: Stack(
         children: [
           Column(
             children: [
               Container(
-                height: AppSize.navBarSize,
+                height: AppSize.navBarHeight,
                 alignment: Alignment.center,
-                child: Text("İletişim", style: AppText.h1!),
+                child: Text("İletişim", style: AppTextStyle.h1!),
               ),
             ],
           ),
@@ -30,7 +38,7 @@ class ContactDesktop extends StatelessWidget {
             padding: AppPadding.allM,
             child: Text(
               AppStrings.contactFooter!,
-              style: AppText.b2!.copyWith(color: Colors.grey),
+              style: AppTextStyle.b2!.copyWith(color: Colors.grey),
             ),
           ),
         ],

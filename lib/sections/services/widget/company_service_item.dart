@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../configs/app_padding.dart';
-import '../../../configs/app_text.dart';
+import '../../../configs/app_text_style.dart';
 import '../../../model/company_service.dart';
 import '../../../provider/scroll_provider.dart';
 
@@ -79,7 +79,7 @@ class _CompanyServiceItemState extends State<CompanyServiceItem> {
                 child: FittedBox(
                   child: Text(
                     widget.companyService.title,
-                    style: AppText.h2?.copyWith(color: _textColor),
+                    style: AppTextStyle.h2?.copyWith(color: _textColor),
                   ),
                 ),
               ),

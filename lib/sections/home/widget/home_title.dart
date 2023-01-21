@@ -4,7 +4,7 @@ import '../../../configs/app_config.dart';
 import '../../../configs/app_size.dart';
 import '../../../configs/app_space.dart';
 import '../../../configs/app_strings.dart';
-import '../../../configs/app_text.dart';
+import '../../../configs/app_text_style.dart';
 import '../../../provider/scroll_provider.dart';
 
 class HomeTitle extends StatefulWidget {
@@ -66,13 +66,13 @@ class _HomeTitleState extends State<HomeTitle> {
               widthFactor: widget.titleWidthFactor,
               child: Text(
                 AppStrings.homeTitle!,
-                style: AppText.h1b!.copyWith(color: Colors.white),
+                style: AppTextStyle.h1b!.copyWith(color: Colors.white),
               ),
             ),
             AppSpace.verticalL!,
             Text(
               AppStrings.homeSubTitle!,
-              style: AppText.h2!.copyWith(color: Colors.white),
+              style: AppTextStyle.h2!.copyWith(color: Colors.white),
             ),
           ],
         ),

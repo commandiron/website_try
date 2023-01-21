@@ -2,7 +2,7 @@ import 'package:demirli_tech_website/configs/app_button.dart';
 import 'package:demirli_tech_website/configs/app_padding.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../configs/app_text.dart';
+import '../../configs/app_text_style.dart';
 import '../../provider/scroll_provider.dart';
 
 class NavBarActionButton extends StatelessWidget {
@@ -36,7 +36,7 @@ class NavBarActionButton extends StatelessWidget {
               padding: AppPadding.verticalS!,
               child: Text(
                 label,
-                style: AppText.b2!
+                style: AppTextStyle.b2!
               ),
             )
           ),
@@ -50,7 +50,7 @@ class NavBarActionButton extends StatelessWidget {
           padding: AppPadding.verticalM!,
           child: Text(
             label,
-            style: AppText.l1!
+            style: AppTextStyle.l1!
           ),
         )
       ),

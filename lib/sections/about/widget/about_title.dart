@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../configs/app_size.dart';
-import '../../../configs/app_text.dart';
+import '../../../configs/app_text_style.dart';
 
 class AboutTitle extends StatelessWidget {
   const AboutTitle({Key? key}) : super(key: key);
@@ -9,11 +9,11 @@ class AboutTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: AppSize.navBarSize,
+      height: AppSize.navBarHeight,
       alignment: Alignment.center,
       child: Text(
         "Hakkımızda",
-        style: AppText.h1?.copyWith(color: Colors.white)
+        style: AppTextStyle.h1?.copyWith(color: Colors.white)
       ),
     );
   }

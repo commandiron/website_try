@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../configs/app_assets.dart';
 import '../../../configs/app_padding.dart';
 import '../../../configs/app_space.dart';
-import '../../../configs/app_text.dart';
+import '../../../configs/app_text_style.dart';
 import '../../../model/company_product.dart';
 
 class CarouselItemMobile extends StatefulWidget {
@@ -39,7 +39,7 @@ class _CarouselItemMobileState extends State<CarouselItemMobile> {
           AppSpace.verticalL!,
           Text(
             widget.product.title,
-            style: AppText.h2b!.copyWith(
+            style: AppTextStyle.h2b!.copyWith(
                 color: Colors.white
             ),
           ),

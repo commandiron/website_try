@@ -1,6 +1,6 @@
 class AppSize {
   static double? logoWidth;
-  static double? navBarSize;
+  static double? navBarHeight;
   static double? bodyDividerHeight;
 
   static double? homeSectionHeight;
@@ -23,7 +23,7 @@ class AppSize {
 
   static void init() {
     logoWidth = 256;
-    navBarSize = 96;
+    navBarHeight = 96;
     bodyDividerHeight = 0;
 
     homeSectionHeight = 960;

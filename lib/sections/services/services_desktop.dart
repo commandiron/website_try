@@ -7,7 +7,7 @@ import 'package:demirli_tech_website/sections/services/widget/company_service_it
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../configs/app_text.dart';
+import '../../configs/app_text_style.dart';
 import '../../provider/scroll_provider.dart';
 
 class ServicesDesktop extends StatefulWidget {
@@ -54,16 +54,24 @@ class _ServicesDesktopState extends State<ServicesDesktop> {
     return Container(
       width: double.infinity,
       height: AppSize.servicesSectionHeight,
-      color: Theme.of(context).colorScheme.secondaryContainer,
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.secondaryContainer,
+        border: Border(
+            top: BorderSide(
+                color: Theme.of(context).colorScheme.primary,
+                width: AppSize.bodyDividerHeight!
+            )
+        )
+      ),
       child: Stack(
         alignment: Alignment.center,
         children: [
           Align(
             alignment: Alignment.topCenter,
             child: Container(
-              height: AppSize.navBarSize,
+              height: AppSize.navBarHeight,
               alignment: Alignment.center,
-              child: Text("Hizmetler", style: AppText.h1?.copyWith(color: Colors.white)),
+              child: Text("Hizmetler", style: AppTextStyle.h1?.copyWith(color: Colors.white)),
             ),
           ),
           FittedBox(

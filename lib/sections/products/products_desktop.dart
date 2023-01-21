@@ -10,6 +10,7 @@ import '../../configs/app_config.dart';
 import '../../model/company_product.dart';
 import '../../provider/carousel_provider.dart';
 import '../../provider/scroll_provider.dart';
+import 'widget/products_base.dart';
 
 class ProductsDesktop extends StatefulWidget {
   const ProductsDesktop({Key? key}) : super(key: key);
@@ -54,18 +55,7 @@ class _ProductsDesktopState extends State<ProductsDesktop> {
 
     final carouselProvider = Provider.of<CarouselProvider>(context);
 
-    return Container(
-      width: double.infinity,
-      height: AppSize.productsSectionHeight,
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primaryContainer,
-        border: Border(
-          top: BorderSide(
-            color: Theme.of(context).colorScheme.primary,
-            width: AppSize.bodyDividerHeight!
-          )
-        )
-      ),
+    return ProductsBase(
       child: AnimatedOpacity(
         opacity: _opacity,
         duration: const Duration(seconds: 1),

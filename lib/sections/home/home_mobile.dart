@@ -1,16 +1,16 @@
-import 'package:demirli_tech_website/sections/home/widget/home_background.dart';
+import 'package:demirli_tech_website/sections/home/widget/home_base.dart';
 import 'package:demirli_tech_website/sections/home/widget/home_title.dart';
 import 'package:demirli_tech_website/sections/home/widget/home_vision_categories.dart';
 import 'package:flutter/material.dart';
 
-import '../../configs/app_text.dart';
+import '../../configs/app_text_style.dart';
 
 class HomeMobile extends StatelessWidget {
   const HomeMobile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return HomeBackground(
+    return HomeBase(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -20,7 +20,7 @@ class HomeMobile extends StatelessWidget {
           Expanded(
             child: HomeVisionCategories(
               radius: 32,
-              style: AppText.b2!.copyWith(color: Colors.white),
+              style: AppTextStyle.b2!.copyWith(color: Colors.white),
             )
           )
         ]

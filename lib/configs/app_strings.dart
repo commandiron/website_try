@@ -2,6 +2,8 @@ class AppStrings {
   static String? homeTitle;
   static String? homeSubTitle;
 
+  static List<String>? visionCategories;
+
   static String? aboutText;
 
   static String? contactFooter;
@@ -9,6 +11,14 @@ class AppStrings {
   static void init() {
     homeTitle = "İnşaat sektöründe mobil tabanlı teknoloji çözümleri sunuyoruz.";
     homeSubTitle = "Uçtan uca tüm inşaat sektörünün inovasyonu ve yapay zeka uygulamaları için gelin beraber çalışalım.";
+
+    visionCategories = [
+      "Fizibilite",
+      "Tasarım",
+      "Uygulama",
+      "Kontrol",
+      "Bakım"
+    ];
 
     aboutText =
       "Demirli Tech, 2023 yılında inşaat sektörüne yönelik mobil uygulamalar üreten, "

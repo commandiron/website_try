@@ -4,8 +4,8 @@ import 'package:demirli_tech_website/configs/app_size.dart';
 import 'package:flutter/material.dart';
 import '../../../configs/app_padding.dart';
 
-class HomeBackground extends StatelessWidget {
-  const HomeBackground({required this.child, super.key});
+class HomeBase extends StatelessWidget {
+  const HomeBase({required this.child, super.key});
 
   final Widget child;
 

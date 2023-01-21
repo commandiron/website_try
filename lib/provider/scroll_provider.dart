@@ -23,13 +23,13 @@ class ScrollProvider extends ChangeNotifier {
     index == 0
       ? 0
       : index == 1
-        ? AppSize.homeSectionHeight! - AppSize.navBarSize!
+        ? AppSize.homeSectionHeight! - AppSize.navBarHeight!
         : index == 2
-          ? AppSize.homeSectionHeight! + AppSize.productsSectionHeight! - AppSize.navBarSize!
+          ? AppSize.homeSectionHeight! + AppSize.productsSectionHeight! - AppSize.navBarHeight!
           : index == 3
-            ? AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! - AppSize.navBarSize!
+            ? AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! - AppSize.navBarHeight!
             : index == 4
-              ? AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! + AppSize.aboutSectionHeight! - AppSize.navBarSize!
+              ? AppSize.homeSectionHeight! + AppSize.productsSectionHeight! + AppSize.servicesSectionHeight! + AppSize.aboutSectionHeight! - AppSize.navBarHeight!
               : 0;
     controller.animateTo(
       offset,

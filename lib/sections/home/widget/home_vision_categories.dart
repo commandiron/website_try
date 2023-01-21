@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../configs/app_config.dart';
 import '../../../configs/app_size.dart';
+import '../../../configs/app_strings.dart';
 import 'home_expanded_divider.dart';
 
 class HomeVisionCategories extends StatefulWidget {
@@ -51,10 +52,10 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
     calculateOpacity();
 
     List<Widget> list = <Widget>[];
-    for(var i = 0; i < AppConfig.visionCategories!.length - 1; i++){
+    for(var i = 0; i < AppStrings.visionCategories!.length - 1; i++){
       list.add(SizedBox(width: widget.radius * 2,));
       list.add(const HomeExpandedDivider());
-      if(i == AppConfig.visionCategories!.length - 2) {
+      if(i == AppStrings.visionCategories!.length - 2) {
         list.add(SizedBox(width: widget.radius * 2,));
       }
     }
@@ -68,7 +69,7 @@ class _HomeVisionCategoriesState extends State<HomeVisionCategories> {
           Row(children: list),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: AppConfig.visionCategories!.map(
+            children: AppStrings.visionCategories!.map(
               (title) => VisionCategoryButton(
                 radius: widget.radius,
                 title: title,

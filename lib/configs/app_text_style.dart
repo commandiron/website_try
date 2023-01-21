@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'core_theme.dart';
 
-class AppText {
+class AppTextStyle {
   static TextStyle? btn;
 
   // Headings
@@ -26,28 +26,28 @@ class AppText {
   static TextStyle? l2b;
 
   static init() {
-    const b = FontWeight.bold;
+    const bold = FontWeight.bold;
     const baseStyle = TextStyle(fontFamily: fontFamily);
 
     h1 = baseStyle.copyWith(fontSize: 36);
-    h1b = h1!.copyWith(fontWeight: b);
+    h1b = h1!.copyWith(fontWeight: bold);
 
     h2 = baseStyle.copyWith(fontSize: 22);
-    h2b = h2!.copyWith(fontWeight: b);
+    h2b = h2!.copyWith(fontWeight: bold);
 
     h3 = baseStyle.copyWith(fontSize: 18);
-    h3b = h3!.copyWith(fontWeight: b);
+    h3b = h3!.copyWith(fontWeight: bold);
 
     b1 = baseStyle.copyWith(fontSize: 16);
-    b1b = b1!.copyWith(fontWeight: b);
+    b1b = b1!.copyWith(fontWeight: bold);
 
     b2 = baseStyle.copyWith(fontSize: 14);
-    b2b = b2!.copyWith(fontWeight: b);
+    b2b = b2!.copyWith(fontWeight: bold);
 
     l1 = baseStyle.copyWith(fontSize: 10);
-    l1b = l1!.copyWith(fontWeight: b);
+    l1b = l1!.copyWith(fontWeight: bold);
 
     l2 = baseStyle.copyWith(fontSize: 8);
-    l2b = l2!.copyWith(fontWeight: b);
+    l2b = l2!.copyWith(fontWeight: bold);
   }
 }

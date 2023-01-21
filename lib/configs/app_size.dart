@@ -19,7 +19,7 @@ class AppSize {
   static double? contactSectionHeight;
 
   static void init() {
-    logoWidth = 256 - 32;
+    logoWidth = 256;
     navBarSize = 96;
     bodyDividerHeight = 0;
 

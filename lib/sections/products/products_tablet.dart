@@ -6,85 +6,44 @@ import 'package:demirli_tech_website/sections/products/widget/products_title.dar
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../configs/app_config.dart';
 import '../../model/company_product.dart';
 import '../../provider/carousel_provider.dart';
-import '../../provider/scroll_provider.dart';
 import 'widget/products_base.dart';
 import 'widget/products_next_arrow.dart';
 
-class ProductsTablet extends StatefulWidget {
+class ProductsTablet extends StatelessWidget {
   const ProductsTablet({Key? key}) : super(key: key);
-
-  @override
-  State<ProductsTablet> createState() => _ProductsTabletState();
-}
-
-class _ProductsTabletState extends State<ProductsTablet> {
-
-  double _opacity = 0.0;
-
-  void calculateOpacity() {
-    if(AppConfig.animationEnabled!) {
-      Provider.of<ScrollProvider>(context).addOffsetListener(
-        (endOffset) {
-          if(endOffset >= AppSize.productsAnimationStartOffset!
-              && endOffset < AppSize.productsAnimationEndOffset!) {
-            if(mounted) {
-              setState(() {
-                _opacity = 1.0;
-              });
-            }
-          } else {
-            if(mounted) {
-              setState(() {
-                _opacity = 0.0;
-              });
-            }
-          }
-        },
-      );
-    } else {
-      _opacity = 1.0;
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
 
-    calculateOpacity();
-
     final carouselProvider = Provider.of<CarouselProvider>(context);
 
     return ProductsBase(
-      child: AnimatedOpacity(
-        opacity: _opacity,
-        duration: const Duration(seconds: 1),
-        child: Stack(
-          children: [
-            const ProductsTitle(),
-            Padding(
-              padding: AppPadding.verticalXXL!,
-              child: CarouselSlider.builder(
-                key: carouselProvider.key,
-                itemCount: CompanyProduct.companyProducts.length,
-                carouselController: carouselProvider.controller,
-                options: CarouselOptions(
-                  viewportFraction: 1.0,
-                  height: AppSize.productsSectionHeight,
-                ),
-                itemBuilder: (context, index, realIndex) {
-                  return CarouselItemTablet(product: CompanyProduct.companyProducts[index]);
-                },
+      child: Stack(
+        children: [
+          const ProductsTitle(),
+          Padding(
+            padding: AppPadding.verticalXXL!,
+            child: CarouselSlider.builder(
+              key: carouselProvider.key,
+              itemCount: CompanyProduct.companyProducts.length,
+              carouselController: carouselProvider.controller,
+              options: CarouselOptions(
+                viewportFraction: 1.0,
+                height: AppSize.productsSectionHeight,
               ),
+              itemBuilder: (context, index, realIndex) {
+                return CarouselItemTablet(product: CompanyProduct.companyProducts[index]);
+              },
             ),
-            ProductsNextArrow(
-              onTap:() {
-                carouselProvider.controller.nextPage();
-              }
-            )
-          ],
-        ),
+          ),
+          ProductsNextArrow(
+            onTap:() {
+              carouselProvider.controller.nextPage();
+            }
+          )
+        ],
       ),
     );
   }

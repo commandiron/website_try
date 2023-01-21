@@ -55,7 +55,6 @@ class _AboutTabletState extends State<AboutTablet> {
     return Container(
       width: double.infinity,
       height: AppSize.servicesSectionHeight,
-      color: Theme.of(context).colorScheme.primaryContainer,
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.primaryContainer,
         border: Border(

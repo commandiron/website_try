@@ -59,8 +59,8 @@ class _AboutMobileState extends State<AboutMobile> {
         color: Theme.of(context).colorScheme.primaryContainer,
         border: Border(
           top: BorderSide(
-              color: Theme.of(context).colorScheme.primary,
-              width: AppSize.bodyDividerHeight!
+            color: Theme.of(context).colorScheme.primary,
+            width: AppSize.bodyDividerHeight!
           )
         )
       ),

@@ -42,7 +42,7 @@ class _ContactIconButtonState extends State<ContactIconButton> {
           ),
           child: Image.asset(
             widget.iconPath,
-            width: 20,
+            width: 16,
           ),
         ),
       ),

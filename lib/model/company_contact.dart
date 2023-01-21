@@ -29,7 +29,7 @@ class CompanyContact {
     CompanyContact(
       url: "https://facebook.com/emirdemirli",
       iconPath: "assets/images/facebook_icon_20.png",
-      iconOriginalColor: const Color(0xff3B5998)
+      iconOriginalColor: const Color(0xff1976D2)
     ),
     CompanyContact(
       url: "https://api.whatsapp.com/send?phone=905355085552",

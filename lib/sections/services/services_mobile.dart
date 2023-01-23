@@ -26,6 +26,7 @@ class ServicesMobile extends StatelessWidget {
                     child: CompanyServiceItem(
                       width: 180,
                       height: 180,
+                      defaultColor: Theme.of(context).colorScheme.onPrimaryContainer,
                       companyService: companyService
                     ),
                   );

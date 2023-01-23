@@ -34,7 +34,7 @@ class _AboutMobileState extends State<AboutMobile> {
                 flex: 3,
                 child: Text(
                   AppStrings.aboutText!,
-                  style: AppTextStyle.b3?.copyWith(color: Colors.white),
+                  style: AppTextStyle.b3!,
                 ),
               ),
               AppSpace.horizontalExpanded!,

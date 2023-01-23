@@ -15,7 +15,7 @@ class ContactTitle extends StatelessWidget {
       alignment: Alignment.center,
       child: Text(
         BodySection.contact.title,
-        style: AppTextStyle.h1!.copyWith(color: Colors.white)
+        style: AppTextStyle.h1!
       ),
     );
   }

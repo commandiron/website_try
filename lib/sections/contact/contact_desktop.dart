@@ -24,7 +24,7 @@ class ContactDesktop extends StatelessWidget {
             child: SelectionArea(
               child: Column(
                 children: [
-                  Text("Sosyal Medya", style: AppTextStyle.h3!.copyWith(color: Colors.white)),
+                  Text("Sosyal Medya", style: AppTextStyle.h3!),
                   AppSpace.verticalM!,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -39,12 +39,12 @@ class ContactDesktop extends StatelessWidget {
                     ).toList(),
                   ),
                   AppSpace.verticalL!,
-                  Text("Eposta", style: AppTextStyle.h3!.copyWith(color: Colors.white)),
+                  Text("Eposta", style: AppTextStyle.h3!),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       AppSpace.horizontalL!,
-                      Text("info@demirli.tech", style: AppTextStyle.b1!.copyWith(color: Colors.white)),
+                      Text("info@demirli.tech", style: AppTextStyle.b1!),
                       AppSpace.horizontalM!,
                       InkWell(
                         onTap: () => openURL("mailto:info@demirli.tech"),
@@ -57,13 +57,13 @@ class ContactDesktop extends StatelessWidget {
                     ],
                   ),
                   AppSpace.verticalL!,
-                  Text("Ofis", style: AppTextStyle.h3!.copyWith(color: Colors.white)),
+                  Text("Ofis", style: AppTextStyle.h3!),
                   FittedBox(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         AppSpace.horizontalL!,
-                        Text("Yıldızbakkal Taşköprü Cad. Demirli İş Merkezi Kadıköy - İSTANBUL", style: AppTextStyle.b1!.copyWith(color: Colors.white)),
+                        Text("Yıldızbakkal Taşköprü Cad. Demirli İş Merkezi Kadıköy - İSTANBUL", style: AppTextStyle.b1!),
                         AppSpace.horizontalM!,
                         InkWell(
                           onTap: () => openURL("https://goo.gl/maps/RNiqv558Wzu3nqeR7"),
@@ -77,13 +77,13 @@ class ContactDesktop extends StatelessWidget {
                     ),
                   ),
                   AppSpace.verticalL!,
-                  Text("Telefon", style: AppTextStyle.h3!.copyWith(color: Colors.white)),
+                  Text("Telefon", style: AppTextStyle.h3!),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       if(!kIsWeb)
                         AppSpace.horizontalL!,
-                      Text("+90 535 508 55 52", style: AppTextStyle.b1!.copyWith(color: Colors.white)),
+                      Text("+90 535 508 55 52", style: AppTextStyle.b1!),
                       if(!kIsWeb)
                         Row(
                           children: [

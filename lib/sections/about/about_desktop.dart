@@ -30,7 +30,7 @@ class _AboutDesktopState extends State<AboutDesktop> {
                 flex: 3,
                 child: Text(
                   AppStrings.aboutText!,
-                  style: AppTextStyle.b1?.copyWith(color: Colors.white),
+                  style: AppTextStyle.b1,
                 ),
               ),
               Expanded(

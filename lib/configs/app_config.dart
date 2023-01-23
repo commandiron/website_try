@@ -16,7 +16,7 @@ class AppConfig {
     animationEnabled = true;
 
     AppSize.init();
-    AppTextStyle.init();
+    AppTextStyle.init(context);
     AppSpace.init();
     AppPadding.init();
     AppButton.init(context);

@@ -14,7 +14,7 @@ class ProductsTitle extends StatelessWidget {
       alignment: Alignment.center,
       child: Text(
         BodySection.products.title,
-        style: AppTextStyle.h1!.copyWith(color: Colors.white)
+        style: AppTextStyle.h1!
       ),
     );
   }

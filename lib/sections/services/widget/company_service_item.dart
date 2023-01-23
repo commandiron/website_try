@@ -12,6 +12,7 @@ class CompanyServiceItem extends StatefulWidget {
     {
       required this.width,
       required this.height,
+      required this.defaultColor,
       required this.companyService,
       Key? key
     }
@@ -19,6 +20,7 @@ class CompanyServiceItem extends StatefulWidget {
 
   final double width;
   final double height;
+  final Color defaultColor;
   final CompanyService companyService;
 
   @override
@@ -27,8 +29,8 @@ class CompanyServiceItem extends StatefulWidget {
 
 class _CompanyServiceItemState extends State<CompanyServiceItem> {
 
-  Color _textColor = Colors.white;
-  List<Color> _iconColorList = [Colors.white, Colors.white];
+  late Color _textColor = widget.defaultColor;
+  late List<Color> _iconColorList = [widget.defaultColor, widget.defaultColor];
   double _cardElevation = 0;
   double _frameColorOpacity = 0.5;
 
@@ -44,13 +46,13 @@ class _CompanyServiceItemState extends State<CompanyServiceItem> {
       onHover: (value) {
         setState(() {
           if (value) {
-            _iconColorList = widget.companyService.highlightedIconColorList;
             _textColor = Theme.of(context).colorScheme.primary;
+            _iconColorList = widget.companyService.highlightedIconColorList;
             _cardElevation = 20.0;
             _frameColorOpacity = 1.0;
           } else {
-            _iconColorList = [Colors.white, Colors.white];
-            _textColor = Colors.white;
+            _textColor = widget.defaultColor;
+            _iconColorList = [widget.defaultColor, widget.defaultColor];
             _cardElevation = 0;
             _frameColorOpacity = 0.5;
           }

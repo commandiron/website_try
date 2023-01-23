@@ -39,9 +39,7 @@ class _CarouselItemMobileState extends State<CarouselItemMobile> {
           AppSpace.verticalL!,
           Text(
             widget.product.title,
-            style: AppTextStyle.h2b!.copyWith(
-                color: Colors.white
-            ),
+            style: AppTextStyle.h2b!,
           ),
           AppSpace.verticalXL!,
           ColorFiltered(

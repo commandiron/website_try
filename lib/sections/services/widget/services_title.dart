@@ -16,7 +16,7 @@ class ServicesTitle extends StatelessWidget {
         alignment: Alignment.center,
         child: Text(
           BodySection.services.title,
-          style: AppTextStyle.h1?.copyWith(color: Colors.white)
+          style: AppTextStyle.h1!
         ),
       ),
     );

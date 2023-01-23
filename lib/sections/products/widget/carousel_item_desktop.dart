@@ -51,16 +51,12 @@ class _CarouselItemDesktopState extends State<CarouselItemDesktop> {
                     children: [
                       Text(
                         widget.product.title,
-                        style: AppTextStyle.h2b!.copyWith(
-                          color: Colors.white
-                        ),
+                        style: AppTextStyle.h2b!,
                       ),
                       AppSpace.verticalXL!,
                       Text(
                         widget.product.body,
-                        style: AppTextStyle.b2!.copyWith(
-                          color: Colors.white
-                        ),
+                        style: AppTextStyle.b2!,
                       ),
                       AppSpace.verticalXL!,
                       Image.asset(

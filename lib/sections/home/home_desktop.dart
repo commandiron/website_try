@@ -20,7 +20,7 @@ class HomeDesktop extends StatelessWidget {
           Expanded(
             child: HomeVisionCategories(
               radius: 80,
-              style: AppTextStyle.h2!.copyWith(color: Colors.white)
+              style: AppTextStyle.h2!
             )
           )
         ]

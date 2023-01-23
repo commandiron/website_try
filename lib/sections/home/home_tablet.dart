@@ -20,7 +20,7 @@ class HomeTablet extends StatelessWidget {
           Expanded(
             child: HomeVisionCategories(
               radius: 44,
-              style: AppTextStyle.h3!.copyWith(color: Colors.white),
+              style: AppTextStyle.h3!,
             )
           )
         ]

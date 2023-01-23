@@ -14,7 +14,7 @@ class AboutTitle extends StatelessWidget {
       alignment: Alignment.center,
       child: Text(
         BodySection.about.title,
-        style: AppTextStyle.h1?.copyWith(color: Colors.white)
+        style: AppTextStyle.h1!
       ),
     );
   }

@@ -66,13 +66,13 @@ class _HomeTitleState extends State<HomeTitle> {
               widthFactor: widget.titleWidthFactor,
               child: Text(
                 AppStrings.homeTitle!,
-                style: AppTextStyle.h1b!.copyWith(color: Colors.white),
+                style: AppTextStyle.h1b!,
               ),
             ),
             AppSpace.verticalL!,
             Text(
               AppStrings.homeSubTitle!,
-              style: AppTextStyle.h2!.copyWith(color: Colors.white),
+              style: AppTextStyle.h2!,
             ),
           ],
         ),

@@ -24,13 +24,13 @@ class NavBarMobile extends StatelessWidget {
       child: Row(
         children: [
           IconButton(
-            highlightColor: Colors.white54,
+            highlightColor: Theme.of(context).colorScheme.onPrimaryContainer,
             onPressed: () {
               drawerProvider.key.currentState!.openDrawer();
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.menu,
-              color: Colors.white,
+              color: Theme.of(context).colorScheme.onPrimaryContainer,
             ),
           ),
           AppSpace.horizontalExpanded!,

@@ -41,9 +41,7 @@ class _CarouselItemTabletState extends State<CarouselItemTablet> {
               AppSpace.verticalL!,
               Text(
                 widget.product.title,
-                style: AppTextStyle.h2b!.copyWith(
-                    color: Colors.white
-                ),
+                style: AppTextStyle.h2b!,
               ),
               AppSpace.verticalXL!,
               ColorFiltered(
@@ -82,9 +80,7 @@ class _CarouselItemTabletState extends State<CarouselItemTablet> {
             child: SingleChildScrollView(
               child: Text(
                 widget.product.body,
-                style: AppTextStyle.b2!.copyWith(
-                    color: Colors.white
-                ),
+                style: AppTextStyle.b2!,
               ),
             ),
           ),

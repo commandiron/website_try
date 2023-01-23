@@ -34,7 +34,7 @@ class _AboutTabletState extends State<AboutTablet> {
                 flex: 3,
                 child: Text(
                   AppStrings.aboutText!,
-                  style: AppTextStyle.b2?.copyWith(color: Colors.white),
+                  style: AppTextStyle.b2!,
                 ),
               ),
               AppSpace.horizontalExpanded!,

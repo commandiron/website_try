@@ -27,6 +27,7 @@ class ServicesDesktop extends StatelessWidget {
                     child: CompanyServiceItem(
                       width: 400,
                       height: 400,
+                      defaultColor: Theme.of(context).colorScheme.onPrimaryContainer,
                       companyService: companyService
                     ),
                   );

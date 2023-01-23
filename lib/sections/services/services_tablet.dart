@@ -27,6 +27,7 @@ class ServicesTablet extends StatelessWidget {
                     child: CompanyServiceItem(
                       width: 300,
                       height: 300,
+                      defaultColor: Theme.of(context).colorScheme.onPrimaryContainer,
                       companyService: companyService
                     ),
                   );

@@ -10,7 +10,7 @@ class AppButton {
           if (states.contains(MaterialState.hovered)) {
             return Theme.of(context).colorScheme.primary;
           }
-          return Colors.white;
+          return Theme.of(context).colorScheme.onPrimaryContainer;
         },
       ),
       overlayColor: MaterialStateProperty.all(Colors.transparent)

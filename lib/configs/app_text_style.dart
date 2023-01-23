@@ -18,6 +18,8 @@ class AppTextStyle {
   static TextStyle? b1b;
   static TextStyle? b2;
   static TextStyle? b2b;
+  static TextStyle? b3;
+  static TextStyle? b3b;
 
   // Label
   static TextStyle? l1;
@@ -43,6 +45,9 @@ class AppTextStyle {
 
     b2 = baseStyle.copyWith(fontSize: 14);
     b2b = b2!.copyWith(fontWeight: bold);
+
+    b3 = baseStyle.copyWith(fontSize: 12);
+    b3b = b3!.copyWith(fontWeight: bold);
 
     l1 = baseStyle.copyWith(fontSize: 10);
     l1b = l1!.copyWith(fontWeight: bold);

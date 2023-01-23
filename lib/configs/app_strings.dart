@@ -32,7 +32,10 @@ class AppStrings {
       "\n"
       "\nMisyonumuz, sektörde verimliliği artırmak ve iş süreçlerini kolaylaştırmaktır. "
       "Bunu yaparken, kullanıcıların gerçek ihtiyaçlarını anlamak ve onların beklentilerini karşılamak için "
-      "sürekli olarak araştırma ve geliştirme yapıyoruz.";
+      "sürekli olarak araştırma ve geliştirme yapıyoruz."
+      "\n"
+      "\nDemirli Tech, teknolojik gelişmelerin inşaat sektörüyle entegrasyonunu güçlendirmeyi "
+      "ve inşaat süreçlerinin otomatize edilmesini hedefliyor.";
 
     contactFooter = "© 2023 by Demirli Tech";
   }

@@ -21,7 +21,7 @@ class CompanyService {
     ),
     CompanyService(
       logoAssetPath: "assets/images/smart_construction_icon_512.png",
-      title: "Akıll İnşaat Uygulamaları",
+      title: "Akıllı İnşaat Uygulamaları",
       highlightedIconColorList: [Color(0xff02D9DE), Color(0xffFC00FF),]
     ),
     CompanyService(

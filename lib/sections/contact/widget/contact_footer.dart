@@ -13,7 +13,7 @@ class ContactFooter extends StatelessWidget {
     return Expanded(
       child: Container(
         alignment: Alignment.bottomLeft,
-        padding: AppPadding.allM,
+        padding: AppPadding.allL,
         child: Text(
           AppStrings.contactFooter!,
           style: AppTextStyle.b2!.copyWith(color: Colors.grey),

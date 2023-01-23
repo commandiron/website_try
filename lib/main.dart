@@ -27,7 +27,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class MaterialChild extends StatelessWidget {
   const MaterialChild({Key? key}) : super(key: key);
 

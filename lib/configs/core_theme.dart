@@ -5,6 +5,7 @@ const fontFamily = 'Poppins';
 const colorSchemeLight = ColorScheme.light(
   primary: Color(0xffF48B0B),
   primaryContainer: Color(0xff1F1F1F),
+  onPrimaryContainer: Colors.white,
   secondaryContainer: Color(0xff242424)
 );
 

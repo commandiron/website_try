@@ -27,14 +27,14 @@ class ProductsTablet extends StatelessWidget {
             padding: AppPadding.verticalXXL!,
             child: CarouselSlider.builder(
               key: carouselProvider.key,
-              itemCount: CompanyProduct.companyProducts.length,
+              itemCount: CompanyProduct.items.length,
               carouselController: carouselProvider.controller,
               options: CarouselOptions(
                 viewportFraction: 1.0,
                 height: AppSize.productsSectionHeight,
               ),
               itemBuilder: (context, index, realIndex) {
-                return CarouselItemTablet(product: CompanyProduct.companyProducts[index]);
+                return CarouselItemTablet(product: CompanyProduct.items[index]);
               },
             ),
           ),

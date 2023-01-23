@@ -19,7 +19,7 @@ class ServicesMobile extends StatelessWidget {
           const ServicesTitle(),
           FittedBox(
             child: Column(
-              children: CompanyService.companyServices.map(
+              children: CompanyService.items.map(
                 (companyService) {
                   return Padding(
                     padding: AppPadding.horizontalM!,

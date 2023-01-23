@@ -13,7 +13,7 @@ class CompanyProduct {
     }
   );
 
-  static List<CompanyProduct> companyProducts = [
+  static List<CompanyProduct> items = [
     CompanyProduct(
       logoAssetPath: "assets/images/products/konut_maliyet/beson_logo.png",
       title: "Koskonut",

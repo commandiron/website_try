@@ -13,7 +13,7 @@ class CompanyService {
       }
       );
 
-  static List<CompanyService> companyServices = [
+  static List<CompanyService> items = [
     CompanyService(
       logoAssetPath: "assets/images/design_development_icon_512.png",
       title: "Design & Development",

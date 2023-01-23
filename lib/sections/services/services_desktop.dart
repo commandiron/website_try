@@ -20,7 +20,7 @@ class ServicesDesktop extends StatelessWidget {
           FittedBox(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: CompanyService.companyServices.map(
+              children: CompanyService.items.map(
                 (companyService) {
                   return Padding(
                     padding: AppPadding.horizontalL!,

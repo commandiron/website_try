@@ -15,7 +15,7 @@ class CompanyContact {
     }
   );
 
-  static List<CompanyContact> companyContacts = [
+  static List<CompanyContact> items = [
     CompanyContact(
       url: "https://linkedin.com/in/emirdemirli/",
       iconPath: "assets/images/linkedin_icon_20.png",

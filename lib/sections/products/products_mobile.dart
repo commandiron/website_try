@@ -26,14 +26,14 @@ class ProductsMobile extends StatelessWidget {
             padding: AppPadding.verticalXXL!,
             child: CarouselSlider.builder(
               key: carouselProvider.key,
-              itemCount: CompanyProduct.companyProducts.length,
+              itemCount: CompanyProduct.items.length,
               carouselController: carouselProvider.controller,
               options: CarouselOptions(
                 viewportFraction: 1.0,
                 height: AppSize.productsSectionHeight,
               ),
               itemBuilder: (context, index, realIndex) {
-                return CarouselItemMobile(product: CompanyProduct.companyProducts[index]);
+                return CarouselItemMobile(product: CompanyProduct.items[index]);
               },
             ),
           ),

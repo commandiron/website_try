@@ -47,7 +47,7 @@ class NavBarDesktop extends StatelessWidget {
             )
           ),
           Row(
-            children: CompanyContact.companyContacts.map(
+            children: CompanyContact.items.map(
               (companyContact) {
                 return ContactIconButton(
                   iconPath: companyContact.iconPath,

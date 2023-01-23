@@ -26,14 +26,14 @@ class ProductsDesktop extends StatelessWidget {
             padding: AppPadding.verticalXXL!,
             child: CarouselSlider.builder(
               key: carouselProvider.key,
-              itemCount: CompanyProduct.companyProducts.length,
+              itemCount: CompanyProduct.items.length,
               carouselController: carouselProvider.controller,
               options: CarouselOptions(
                 viewportFraction: 1.0,
                 height: AppSize.productsSectionHeight,
               ),
               itemBuilder: (context, index, realIndex) {
-                return CarouselItemDesktop(product: CompanyProduct.companyProducts[index]);
+                return CarouselItemDesktop(product: CompanyProduct.items[index]);
               },
             ),
           ),

@@ -23,29 +23,28 @@ class _AppDrawerState extends State<AppDrawer> {
 
     return Drawer(
       backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-      child: Column(
+      child: Stack(
+        fit: StackFit.expand,
         children: [
-          AppSpace.verticalXL!,
-          const NavBarLogo(),
-          AppSpace.verticalXL!,
-          ListView.builder(
-            itemCount: BodySection.values.length,
-            shrinkWrap: true,
-            itemBuilder: (context, index) => DrawerItem(
-              title: BodySection.values[index].title,
-              onPressed: () => scrollProvider.scroll(index),
-            )
+          Opacity(
+              opacity: 0.2,
+              child: Image.asset(AppAssets.companyOnlyLogoIconPath!,fit: BoxFit.cover)
           ),
-          AppSpace.verticalExpanded!,
-          FractionallySizedBox(
-            widthFactor: 0.4,
-            child: Opacity(
-              opacity: 0.1,
-              child: Image.asset(AppAssets.companyOnlyLogoIconPath!)
-            )
-          )
-          ,
-          AppSpace.verticalXXL!,
+          Column(
+            children: [
+              AppSpace.verticalXL!,
+              const NavBarLogo(),
+              AppSpace.verticalXL!,
+              ListView.builder(
+                itemCount: BodySection.values.length,
+                shrinkWrap: true,
+                itemBuilder: (context, index) => DrawerItem(
+                  title: BodySection.values[index].title,
+                  onPressed: () => scrollProvider.scroll(index),
+                )
+              ),
+            ],
+          ),
         ],
       )
     );

@@ -5,9 +5,9 @@ import 'package:demirli_tech_website/sections/contact/widget/contact_base.dart';
 import 'package:demirli_tech_website/sections/contact/widget/contact_footer.dart';
 import 'package:demirli_tech_website/sections/contact/widget/contact_title.dart';
 import 'package:flutter/material.dart';
-
 import '../../helper/url_launcher.dart';
 import '../../widget/nav_bar/contact_icon_button.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class ContactDesktop extends StatelessWidget {
   const ContactDesktop({Key? key}) : super(key: key);
@@ -17,7 +17,7 @@ class ContactDesktop extends StatelessWidget {
     return ContactBase(
       child: Column(
         children: [
-          ContactTitle(),
+          const ContactTitle(),
           SelectionArea(
             child: Column(
               children: [
@@ -37,17 +37,61 @@ class ContactDesktop extends StatelessWidget {
                 ),
                 AppSpace.verticalL!,
                 Text("Eposta", style: AppTextStyle.h3!.copyWith(color: Colors.white)),
-                Text("info@demirli.tech", style: AppTextStyle.b1!.copyWith(color: Colors.white)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("info@demirli.tech", style: AppTextStyle.b1!.copyWith(color: Colors.white)),
+                    AppSpace.horizontalM!,
+                    InkWell(
+                      onTap: () => openURL("mailto:info@demirli.tech"),
+                      child: Icon(
+                        Icons.mail,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                    ),
+                  ],
+                ),
                 AppSpace.verticalL!,
                 Text("Ofis", style: AppTextStyle.h3!.copyWith(color: Colors.white)),
-                Text("Yıldızbakkal Taşköprü Cad. Demirli İş Merkezi Kadıköy - İSTANBUL", style: AppTextStyle.b1!.copyWith(color: Colors.white)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Yıldızbakkal Taşköprü Cad. Demirli İş Merkezi Kadıköy - İSTANBUL", style: AppTextStyle.b1!.copyWith(color: Colors.white)),
+                    AppSpace.horizontalM!,
+                    InkWell(
+                      onTap: () => openURL("https://goo.gl/maps/RNiqv558Wzu3nqeR7"),
+                      child: Icon(
+                        Icons.location_on,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                    ),
+                  ],
+                ),
                 AppSpace.verticalL!,
                 Text("Telefon", style: AppTextStyle.h3!.copyWith(color: Colors.white)),
-                Text("+90 535 508 55 52", style: AppTextStyle.b1!.copyWith(color: Colors.white)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("+90 535 508 55 52", style: AppTextStyle.b1!.copyWith(color: Colors.white)),
+                    if(!kIsWeb)
+                      Row(
+                        children: [
+                          AppSpace.horizontalM!,
+                          IconButton(
+                            icon: Icon(
+                              Icons.phone,
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
+                            onPressed: () => openURL("tel:+90 535 508 55 52"),
+                          )
+                        ],
+                      )
+                  ],
+                ),
               ],
             )
           ),
-          ContactFooter()
+          const ContactFooter()
         ],
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:demirli_tech_website/model/body_section.dart';
 import 'package:flutter/material.dart';
 
 import '../../../configs/app_size.dart';
@@ -12,7 +13,7 @@ class AboutTitle extends StatelessWidget {
       height: AppSize.navBarHeight,
       alignment: Alignment.center,
       child: Text(
-        "Hakkımızda",
+        BodySection.about.title,
         style: AppTextStyle.h1?.copyWith(color: Colors.white)
       ),
     );

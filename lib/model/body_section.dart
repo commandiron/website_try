@@ -6,37 +6,19 @@ import '../sections/home/home.dart';
 import '../sections/products/products.dart';
 import '../sections/services/services.dart';
 
-class BodySection {
-  String title;
-  Widget view;
+enum BodySection {
 
-  BodySection(
-    {
-      required this.title,
-      required this.view,
-    }
+  home("Ana Sayfa", Home()),
+  products("Ürünler", Products()),
+  services("Hizmetler", Services()),
+  about("Hakkımızda", About()),
+  contact("İletişim", Contact());
+
+  const BodySection(
+    this.title,
+    this.view
   );
 
-  static List<BodySection> bodySections = [
-    BodySection(
-      title: "Ana Sayfa",
-      view: const Home()
-    ),
-    BodySection(
-        title: "Ürünler",
-        view: const Products()
-    ),
-    BodySection(
-        title: "Hizmetler",
-        view: const Services()
-    ),
-    BodySection(
-        title: "Hakkımızda",
-        view: const About()
-    ),
-    BodySection(
-        title: "İletişim",
-        view: const Contact()
-    ),
-  ];
+  final String title;
+  final Widget view;
 }

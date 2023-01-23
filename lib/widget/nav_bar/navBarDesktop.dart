@@ -30,7 +30,7 @@ class NavBarDesktop extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ...BodySection.bodySections.asMap().entries.map(
+                  ...BodySection.values.asMap().entries.map(
                     (bodySection) {
                       if(bodySection.value.title != "İletişim") {
                         return NavBarActionButton(

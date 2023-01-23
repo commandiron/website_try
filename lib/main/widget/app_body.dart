@@ -14,8 +14,8 @@ class AppBody extends StatelessWidget {
 
     return ListView.builder(
       controller: scrollProvider.controller,
-      itemCount: BodySection.bodySections.length,
-      itemBuilder: (context, index) => BodySection.bodySections[index].view,
+      itemCount: BodySection.values.length,
+      itemBuilder: (context, index) => BodySection.values[index].view,
     );
   }
 }

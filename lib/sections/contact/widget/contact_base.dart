@@ -13,7 +13,7 @@ class ContactBase extends StatelessWidget {
       width: double.infinity,
       height: AppSize.contactSectionHeight!,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).colorScheme.secondaryContainer,
         border: Border(
           top: BorderSide(
             color: Theme.of(context).colorScheme.primary,

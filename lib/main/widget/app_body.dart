@@ -1,4 +1,4 @@
-import 'package:demirli_tech_website/sections/body_sections.dart';
+import 'package:demirli_tech_website/model/body_section.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -14,8 +14,8 @@ class AppBody extends StatelessWidget {
 
     return ListView.builder(
       controller: scrollProvider.controller,
-      itemCount: BodySections.views.length,
-      itemBuilder: (context, index) => BodySections.views[index],
+      itemCount: BodySection.bodySections.length,
+      itemBuilder: (context, index) => BodySection.bodySections[index].view,
     );
   }
 }

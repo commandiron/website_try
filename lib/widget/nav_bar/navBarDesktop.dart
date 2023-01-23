@@ -1,6 +1,6 @@
 import 'package:demirli_tech_website/configs/app_space.dart';
 import 'package:demirli_tech_website/helper/url_launcher.dart';
-import 'package:demirli_tech_website/sections/body_sections.dart';
+import 'package:demirli_tech_website/model/body_section.dart';
 import 'package:demirli_tech_website/widget/nav_bar/contact_icon_button.dart';
 import 'package:demirli_tech_website/widget/nav_bar/nav_bar_logo.dart';
 import 'package:demirli_tech_website/widget/nav_bar/navbar_actions_button.dart';
@@ -30,12 +30,12 @@ class NavBarDesktop extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ...BodySections.names.asMap().entries.map(
-                    (sectionName) {
-                      if(sectionName.value != "İletişim") {
+                  ...BodySection.bodySections.asMap().entries.map(
+                    (bodySection) {
+                      if(bodySection.value.title != "İletişim") {
                         return NavBarActionButton(
-                          label: sectionName.value,
-                          index: sectionName.key,
+                          label: bodySection.value.title,
+                          index: bodySection.key,
                         );
                       } else {
                         return const SizedBox.shrink();

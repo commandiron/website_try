@@ -18,7 +18,7 @@ class NavBarDesktop extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: AppSize.navBarHeight,
-      color: Theme.of(context).colorScheme.primaryContainer.withOpacity(0.0),
+      color: Theme.of(context).navigationBarTheme.backgroundColor,
       padding: AppPadding.navBarPadding,
       child: Row(
         children: [
@@ -32,7 +32,7 @@ class NavBarDesktop extends StatelessWidget {
                 children: [
                   ...BodySection.values.asMap().entries.map(
                     (bodySection) {
-                      if(bodySection.value.title != "İletişim") {
+                      if(bodySection.value != BodySection.contact) {
                         return NavBarActionButton(
                           label: bodySection.value.title,
                           index: bodySection.key,
@@ -59,8 +59,8 @@ class NavBarDesktop extends StatelessWidget {
           ),
           SizedBox(
             width: AppSize.logoWidth!,
-            child: const NavBarActionButton(
-              label: "İletişim",
+            child: NavBarActionButton(
+              label: BodySection.contact.title,
               index: 4,
               highlighted: true,
             ),

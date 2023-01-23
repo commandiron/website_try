@@ -19,7 +19,7 @@ class NavBarMobile extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: AppSize.navBarHeight,
-      color: Theme.of(context).colorScheme.primaryContainer.withOpacity(0.0),
+      color: Theme.of(context).navigationBarTheme.backgroundColor,
       padding: AppPadding.navBarPadding,
       child: Row(
         children: [

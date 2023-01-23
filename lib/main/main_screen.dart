@@ -6,8 +6,8 @@ import '../configs/app_config.dart';
 import '../provider/drawer_provider.dart';
 import 'widget/app_body.dart';
 import 'widget/app_drawer.dart';
-import '../widget/nav_bar/navBarDesktop.dart';
-import '../widget/nav_bar/navBarMobile.dart';
+import '../widget/nav_bar/nav_bar_desktop.dart';
+import '../widget/nav_bar/nav_bar_mobile.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);

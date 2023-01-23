@@ -50,7 +50,7 @@ class _AboutBaseState extends State<AboutBase> {
 
     return Container(
       width: double.infinity,
-      height: AppSize.servicesSectionHeight,
+      height: AppSize.aboutSectionHeight,
       decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.primaryContainer,
           border: Border(

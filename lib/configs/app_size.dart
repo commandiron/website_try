@@ -29,7 +29,7 @@ class AppSize {
     homeSectionHeight = 960;
     productsSectionHeight = 960;
     servicesSectionHeight = 720;
-    aboutSectionHeight = 960;
+    aboutSectionHeight = 720;
     contactSectionHeight = 480;
 
     homeAnimationStartOffset = 0;

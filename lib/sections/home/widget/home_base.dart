@@ -24,7 +24,7 @@ class HomeBase extends StatelessWidget {
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
           child: Container(
-            color: Theme.of(context).colorScheme.primaryContainer.withOpacity(0.4),
+            color: const Color(0xff1F1F1F).withOpacity(0.4),
             child: Padding(
               padding: AppPadding.homePadding!, 
               child: child

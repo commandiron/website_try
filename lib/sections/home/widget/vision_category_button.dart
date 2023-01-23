@@ -35,7 +35,7 @@ class _VisionCategoryButtonState extends State<VisionCategoryButton> {
         radius: widget.radius,
         backgroundColor: _isOnHover
           ? Theme.of(context).colorScheme.primary.withOpacity(0.75)
-          : Theme.of(context).colorScheme.primaryContainer.withOpacity(0.75),
+          : Theme.of(context).navigationBarTheme.backgroundColor,
         child: Padding(
           padding: AppPadding.allS!,
           child: FittedBox(

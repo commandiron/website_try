@@ -50,7 +50,7 @@ class NavBarActionButton extends StatelessWidget {
           padding: AppPadding.verticalM!,
           child: Text(
             label,
-            style: AppTextStyle.l1!
+            style: AppTextStyle.l1
           ),
         )
       ),

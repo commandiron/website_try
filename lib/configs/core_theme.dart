@@ -19,4 +19,19 @@ final themeDark = ThemeData(
   )
 );
 
-final themeLight = themeDark;
+final colorSchemeLight = ColorScheme.dark(
+  primary: const Color(0xffF48B0B),
+
+  primaryContainer: Colors.grey.shade50,
+  onPrimaryContainer: Colors.black,
+
+  secondaryContainer: Colors.grey.shade100,
+  onSecondaryContainer: Colors.grey.shade800
+);
+
+final themeLight = ThemeData(
+  colorScheme: colorSchemeLight,
+  navigationBarTheme: NavigationBarThemeData(
+    backgroundColor: colorSchemeLight.primaryContainer.withOpacity(1.0)
+  )
+);

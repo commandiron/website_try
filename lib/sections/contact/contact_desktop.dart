@@ -40,6 +40,7 @@ class ContactDesktop extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    AppSpace.horizontalL!,
                     Text("info@demirli.tech", style: AppTextStyle.b1!.copyWith(color: Colors.white)),
                     AppSpace.horizontalM!,
                     InkWell(
@@ -47,6 +48,7 @@ class ContactDesktop extends StatelessWidget {
                       child: Icon(
                         Icons.mail,
                         color: Theme.of(context).colorScheme.primary,
+                        size: 16,
                       ),
                     ),
                   ],
@@ -56,6 +58,7 @@ class ContactDesktop extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    AppSpace.horizontalL!,
                     Text("Yıldızbakkal Taşköprü Cad. Demirli İş Merkezi Kadıköy - İSTANBUL", style: AppTextStyle.b1!.copyWith(color: Colors.white)),
                     AppSpace.horizontalM!,
                     InkWell(
@@ -63,6 +66,7 @@ class ContactDesktop extends StatelessWidget {
                       child: Icon(
                         Icons.location_on,
                         color: Theme.of(context).colorScheme.primary,
+                        size: 16,
                       ),
                     ),
                   ],
@@ -72,18 +76,21 @@ class ContactDesktop extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    if(!kIsWeb)
+                      AppSpace.horizontalL!,
                     Text("+90 535 508 55 52", style: AppTextStyle.b1!.copyWith(color: Colors.white)),
                     if(!kIsWeb)
                       Row(
                         children: [
                           AppSpace.horizontalM!,
-                          IconButton(
-                            icon: Icon(
+                          InkWell(
+                            onTap: () => openURL("tel:+90 535 508 55 52"),
+                            child: Icon(
                               Icons.phone,
                               color: Theme.of(context).colorScheme.primary,
+                              size: 16,
                             ),
-                            onPressed: () => openURL("tel:+90 535 508 55 52"),
-                          )
+                          ),
                         ],
                       )
                   ],

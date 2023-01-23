@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const fontFamily = 'Poppins';
 
-final colorSchemeLight = ColorScheme.light(
+final colorSchemeDark = ColorScheme.dark(
   primary: const Color(0xffF48B0B),
 
   primaryContainer: const Color(0xff1F1F1F),
@@ -12,11 +12,11 @@ final colorSchemeLight = ColorScheme.light(
   onSecondaryContainer: Colors.grey.shade200
 );
 
-final themeLight = ThemeData(
-  colorScheme: colorSchemeLight,
+final themeDark = ThemeData(
+  colorScheme: colorSchemeDark,
   navigationBarTheme: NavigationBarThemeData(
-    backgroundColor: colorSchemeLight.primaryContainer.withOpacity(0.75)
+    backgroundColor: colorSchemeDark.primaryContainer.withOpacity(0.75)
   )
 );
 
-final themeDark = themeLight;
+final themeLight = themeDark;

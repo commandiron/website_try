@@ -43,7 +43,7 @@ class _CarouselItemDesktopState extends State<CarouselItemDesktop> {
                   height: 96,
                   child: Image.asset(widget.product.logoAssetPath),
                 ),
-                AppSpace.verticalXL!,
+                AppSpace.verticalM!,
                 Container(
                   padding: AppPadding.horizontalS,
                   child: Column(
@@ -53,10 +53,15 @@ class _CarouselItemDesktopState extends State<CarouselItemDesktop> {
                         widget.product.name,
                         style: AppTextStyle.h2b!,
                       ),
+                      AppSpace.verticalM!,
+                      Text(
+                        widget.product.shortDescription,
+                        style: AppTextStyle.b2!,
+                      ),
                       AppSpace.verticalXL!,
                       Text(
                         widget.product.fullDescription,
-                        style: AppTextStyle.b2!,
+                        style: AppTextStyle.b3!,
                       ),
                       AppSpace.verticalXL!,
                       Image.asset(

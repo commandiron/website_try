@@ -37,8 +37,9 @@ flutter:
     - assets/images/contact/
     - assets/images/logo/
     - assets/images/product/
-    - assets/images/product/konut_maliyet/
-    - assets/images/product/konut_plan/
+    - assets/images/product/kost/
+    - assets/images/product/oto_plan/
+    - assets/images/product/rebar_bot/
     - assets/images/service/
 
   fonts:

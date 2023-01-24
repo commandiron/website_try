@@ -39,7 +39,7 @@ class _AboutDesktopState extends State<AboutDesktop> {
                   height: 500,
                   child: Image.asset(
                     Theme.of(context).brightness == Brightness.dark
-                        ? AppAssets.companyLogoIconPath!
+                        ? AppAssets.companyLogoWhiteIconPath!
                         : AppAssets.companyLogoBlackIconPath!
                   ),
                 )

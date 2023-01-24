@@ -1,7 +1,7 @@
 class AppAssets {
-  static String? companyTextLogoIconPath;
+  static String? companyTextLogoWhiteIconPath;
   static String? companyTextLogoBlackIconPath;
-  static String? companyLogoIconPath;
+  static String? companyLogoWhiteIconPath;
   static String? companyLogoBlackIconPath;
   static String? companyOnlyLogoIconPath;
   static String? homeBackgroundPath;
@@ -9,9 +9,9 @@ class AppAssets {
   static String? googlePlayBadgePath;
 
   static void init() {
-    companyTextLogoIconPath = "assets/images/logo/demirli_tech_text_logo.png";
+    companyTextLogoWhiteIconPath = "assets/images/logo/demirli_tech_text_logo_white.png";
     companyTextLogoBlackIconPath = "assets/images/logo/demirli_tech_text_logo_black.png";
-    companyLogoIconPath = "assets/images/logo/demirli_tech_logo.png";
+    companyLogoWhiteIconPath = "assets/images/logo/demirli_tech_logo_white.png";
     companyLogoBlackIconPath = "assets/images/logo/demirli_tech_logo_black.png";
     companyOnlyLogoIconPath ="assets/images/logo/demirli_tech_only_logo.png";
     homeBackgroundPath = "assets/images/construction_technology_.jpg";

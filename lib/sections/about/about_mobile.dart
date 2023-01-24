@@ -26,7 +26,7 @@ class _AboutMobileState extends State<AboutMobile> {
           Expanded(
             child: Image.asset(
               Theme.of(context).brightness == Brightness.dark
-                  ? AppAssets.companyLogoIconPath!
+                  ? AppAssets.companyLogoWhiteIconPath!
                   : AppAssets.companyLogoBlackIconPath!
             ),
           ),

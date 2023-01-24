@@ -26,7 +26,7 @@ class _AboutTabletState extends State<AboutTablet> {
           Expanded(
             child: Image.asset(
               Theme.of(context).brightness == Brightness.dark
-                  ? AppAssets.companyLogoIconPath!
+                  ? AppAssets.companyLogoWhiteIconPath!
                   : AppAssets.companyLogoBlackIconPath!
             ),
           ),

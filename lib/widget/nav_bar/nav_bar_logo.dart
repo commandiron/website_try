@@ -21,7 +21,7 @@ class NavBarLogo extends StatelessWidget {
         width: AppSize.logoWidth,
         child: Image.asset(
           Theme.of(context).brightness == Brightness.dark
-            ? AppAssets.companyTextLogoIconPath!
+            ? AppAssets.companyTextLogoWhiteIconPath!
             : AppAssets.companyTextLogoBlackIconPath!
         ),
       )

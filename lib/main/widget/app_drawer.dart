@@ -27,8 +27,8 @@ class _AppDrawerState extends State<AppDrawer> {
         fit: StackFit.expand,
         children: [
           Opacity(
-              opacity: 0.2,
-              child: Image.asset(AppAssets.companyOnlyLogoIconPath!,fit: BoxFit.cover)
+            opacity: 0.8,
+            child: Image.asset(AppAssets.companyOnlyLogoIconPath!,fit: BoxFit.cover)
           ),
           Column(
             children: [

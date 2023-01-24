@@ -39,7 +39,8 @@ flutter:
     - assets/images/product/
     - assets/images/product/kost/
     - assets/images/product/oto_plan/
-    - assets/images/product/rebar_bot/
+    - assets/images/product/qr_projem/
+    - assets/images/product/reb_ar/
     - assets/images/service/
 
   fonts:

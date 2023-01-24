@@ -37,7 +37,11 @@ class _AboutDesktopState extends State<AboutDesktop> {
                 flex: 3,
                 child: SizedBox(
                   height: 500,
-                  child: Image.asset(AppAssets.companyLogoIconPath!),
+                  child: Image.asset(
+                    Theme.of(context).brightness == Brightness.dark
+                        ? AppAssets.companyLogoIconPath!
+                        : AppAssets.companyLogoBlackIconPath!
+                  ),
                 )
               ),
               AppSpace.horizontalExpanded!,

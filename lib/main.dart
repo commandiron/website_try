@@ -37,7 +37,7 @@ class MaterialChild extends StatelessWidget {
       title: 'Demirli Tech',
       theme: themeLight,
       darkTheme: themeDark,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.light,
       initialRoute: "/",
       routes: {
         "/": (context) => const MainScreen(),

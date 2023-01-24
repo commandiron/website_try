@@ -1,6 +1,8 @@
 class AppAssets {
   static String? companyTextLogoIconPath;
+  static String? companyTextLogoBlackIconPath;
   static String? companyLogoIconPath;
+  static String? companyLogoBlackIconPath;
   static String? companyOnlyLogoIconPath;
   static String? homeBackgroundPath;
   static String? appStoreBadgePath;
@@ -8,7 +10,9 @@ class AppAssets {
 
   static void init() {
     companyTextLogoIconPath = "assets/images/demirli_tech_text_logo.png";
+    companyTextLogoBlackIconPath = "assets/images/demirli_tech_text_logo_black.png";
     companyLogoIconPath = "assets/images/demirli_tech_logo.png";
+    companyLogoBlackIconPath = "assets/images/demirli_tech_logo_black.png";
     companyOnlyLogoIconPath ="assets/images/demirli_tech_only_logo.png";
     homeBackgroundPath = "assets/images/construction_technology_.jpg";
     appStoreBadgePath = "assets/images/badges/app_store_badge.png";

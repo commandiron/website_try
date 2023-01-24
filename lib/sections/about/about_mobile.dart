@@ -24,7 +24,11 @@ class _AboutMobileState extends State<AboutMobile> {
         children: [
           const AboutTitle(),
           Expanded(
-            child: Image.asset(AppAssets.companyLogoIconPath!),
+            child: Image.asset(
+              Theme.of(context).brightness == Brightness.dark
+                  ? AppAssets.companyLogoIconPath!
+                  : AppAssets.companyLogoBlackIconPath!
+            ),
           ),
           AppSpace.verticalL!,
           Row(

@@ -19,7 +19,11 @@ class NavBarLogo extends StatelessWidget {
       },
       child: SizedBox(
         width: AppSize.logoWidth,
-        child: Image.asset(AppAssets.companyTextLogoIconPath!),
+        child: Image.asset(
+          Theme.of(context).brightness == Brightness.dark
+            ? AppAssets.companyTextLogoIconPath!
+            : AppAssets.companyTextLogoBlackIconPath!
+        ),
       )
     );
   }

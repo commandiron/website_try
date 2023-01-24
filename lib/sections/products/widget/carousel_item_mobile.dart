@@ -38,7 +38,7 @@ class _CarouselItemMobileState extends State<CarouselItemMobile> {
           ),
           AppSpace.verticalL!,
           Text(
-            widget.product.title,
+            widget.product.name,
             style: AppTextStyle.h2b!,
           ),
           AppSpace.verticalXL!,

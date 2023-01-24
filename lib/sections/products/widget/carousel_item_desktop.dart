@@ -50,12 +50,12 @@ class _CarouselItemDesktopState extends State<CarouselItemDesktop> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        widget.product.title,
+                        widget.product.name,
                         style: AppTextStyle.h2b!,
                       ),
                       AppSpace.verticalXL!,
                       Text(
-                        widget.product.body,
+                        widget.product.fullDescription,
                         style: AppTextStyle.b2!,
                       ),
                       AppSpace.verticalXL!,

@@ -40,7 +40,7 @@ class _CarouselItemTabletState extends State<CarouselItemTablet> {
               ),
               AppSpace.verticalL!,
               Text(
-                widget.product.title,
+                widget.product.name,
                 style: AppTextStyle.h2b!,
               ),
               AppSpace.verticalXL!,
@@ -79,7 +79,7 @@ class _CarouselItemTabletState extends State<CarouselItemTablet> {
           Expanded(
             child: SingleChildScrollView(
               child: Text(
-                widget.product.body,
+                widget.product.fullDescription,
                 style: AppTextStyle.b2!,
               ),
             ),

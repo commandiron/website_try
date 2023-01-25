@@ -64,15 +64,30 @@ class _CarouselItemDesktopState extends State<CarouselItemDesktop> {
                         style: AppTextStyle.b3!,
                       ),
                       AppSpace.verticalXL!,
-                      Image.asset(
-                        AppAssets.appStoreBadgePath!,
-                        width: 160,
-                      ),
-                      AppSpace.verticalL!,
-                      Image.asset(
-                        AppAssets.googlePlayBadgePath!,
-                        width: 160,
-                      ),
+                      if(widget.product.stage == Stage.research)
+                        Image.asset(
+                          AppAssets.researchBadgePath!,
+                          width: 160,
+                        ),
+                      if(widget.product.stage == Stage.development)
+                        Image.asset(
+                          AppAssets.developmentBadgePath!,
+                          width: 160,
+                        ),
+                      if(widget.product.stage == Stage.live)
+                        Column(
+                          children: [
+                            Image.asset(
+                              AppAssets.appStoreBadgePath!,
+                              width: 160,
+                            ),
+                            AppSpace.verticalL!,
+                            Image.asset(
+                              AppAssets.googlePlayBadgePath!,
+                              width: 160,
+                            ),
+                          ],
+                        )
                     ]
                   ),
                 )

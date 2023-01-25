@@ -20,7 +20,12 @@ class CompanyProduct {
       logoAssetPath: "assets/images/product/kost/kost_logo_100.png",
       name: "Kost",
       shortDescription: "Konut inşaatı maliyet hesaplama uygulaması",
-      fullDescription: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. \n \nNeque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+      fullDescription:
+      "Kost, konut inşaatı maliyet hesaplamak için tasarlanmış bir mobil uygulamadır. Kullanıcı dostu tasarımı sayesinde, kolayca kullanabileceğiniz bir arayüze sahiptir. Küçük ve orta ölçekli konut projeleri için uygun olan uygulama, maliyetleri hızlı ve otomatik olarak hesaplamanızı sağlar. "
+      "Kost, maliyetleri çeşitli kategorilerde sınıflandırarak, maliyetleri daha iyi anlamanızı ve kontrol etmenizi sağlar. "
+      "Örneğin, malzeme maliyetleri, işçilik maliyetleri, giderler veya genel giderler gibi. Ayrıca, uygulama içinde çeşitli maliyet hesaplama aracıları mevcuttur. Örneğin, malzeme maliyetlerini hesaplamak için bir materyal maliyet hesaplama aracı veya işçilik maliyetlerini hesaplamak için bir işçilik maliyet hesaplama aracı gibi. "
+      "\n"
+      "\nKost, konut inşaatı maliyet hesaplamak için ideal bir uygulamadır ve kullanımı kolaydır. Ayrıca, uygulama üzerinden raporlar oluşturarak, maliyetleri daha iyi analiz edebilirsiniz. Bu uygulama, maliyet hesaplamalarınızda size yardımcı olacak ve inşaat projelerinizi daha iyi planlamanıza olanak tanıyacaktır.",
       imageAssetPath: "assets/images/product/kost/example_cover_for_demirli_tech.png"
     ),
     CompanyProduct(

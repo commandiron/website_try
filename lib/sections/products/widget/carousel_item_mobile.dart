@@ -17,8 +17,6 @@ class CarouselItemMobile extends StatefulWidget {
 
 class _CarouselItemMobileState extends State<CarouselItemMobile> {
 
-  double _imageOpacity = 0.5;
-
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -42,24 +40,9 @@ class _CarouselItemMobileState extends State<CarouselItemMobile> {
             style: AppTextStyle.h2b!,
           ),
           AppSpace.verticalXL!,
-          ColorFiltered(
-            colorFilter: ColorFilter.mode(Colors.black.withOpacity(_imageOpacity), BlendMode.srcATop),
-            child: InkWell(
-              onTap: () {},
-              onHover: (value) {
-                setState(() {
-                  if(value){
-                    _imageOpacity = 0.1;
-                  } else {
-                    _imageOpacity = 0.5;
-                  }
-                });
-              },
-              child: Image.asset(
-                widget.product.imageAssetPath,
-                height: 360,
-              ),
-            ),
+          Image.asset(
+            widget.product.imageAssetPath,
+            height: 360,
           ),
           AppSpace.verticalXL!,
           Image.asset(

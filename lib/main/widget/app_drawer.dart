@@ -3,6 +3,7 @@ import 'package:demirli_tech_website/configs/app_space.dart';
 import 'package:demirli_tech_website/widget/nav_bar/nav_bar_logo.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../configs/app_size.dart';
 import '../../model/body_section.dart';
 import '../../provider/scroll_provider.dart';
 import 'drawer_item.dart';
@@ -33,7 +34,7 @@ class _AppDrawerState extends State<AppDrawer> {
           Column(
             children: [
               AppSpace.verticalXL!,
-              const NavBarLogo(),
+              NavBarLogo(width: AppSize.logoWidthMobile!,),
               AppSpace.verticalXL!,
               ListView.builder(
                 itemCount: BodySection.values.length,

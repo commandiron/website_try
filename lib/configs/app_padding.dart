@@ -28,7 +28,9 @@ class AppPadding {
   static EdgeInsets? symmetric;
 
   static EdgeInsetsGeometry? navBarPadding;
-  static EdgeInsets? homePadding;
+  static EdgeInsets? homePaddingDesktop;
+  static EdgeInsets? homePaddingTablet;
+  static EdgeInsets? homePaddingMobile;
 
   static EdgeInsets? zero;
 
@@ -59,10 +61,20 @@ class AppPadding {
 
     navBarPadding = horizontalL!.add(verticalM!);
 
-    homePadding = EdgeInsets.only(
+    homePaddingDesktop = EdgeInsets.only(
       top: verticalXXL!.vertical,
       right: horizontalL!.horizontal,
       left: horizontalL!.horizontal,
+    );
+    homePaddingTablet = EdgeInsets.only(
+      top: verticalXXL!.vertical,
+      right: horizontalL!.horizontal,
+      left: horizontalL!.horizontal,
+    );
+    homePaddingMobile = EdgeInsets.only(
+      top: verticalXL!.vertical,
+      right: horizontalM!.horizontal,
+      left: horizontalM!.horizontal,
     );
 
     zero = EdgeInsets.zero;

@@ -34,7 +34,7 @@ class NavBarMobile extends StatelessWidget {
             ),
           ),
           AppSpace.horizontalExpanded!,
-          const NavBarLogo()
+          NavBarLogo(width: AppSize.logoWidthMobile!)
         ],
       ),
     );

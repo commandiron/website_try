@@ -1,8 +1,8 @@
 import 'dart:ui';
+
 import 'package:demirli_tech_website/configs/app_assets.dart';
 import 'package:demirli_tech_website/configs/app_size.dart';
 import 'package:flutter/material.dart';
-import '../../../configs/app_padding.dart';
 
 class HomeBase extends StatelessWidget {
   const HomeBase({required this.child, super.key});
@@ -25,10 +25,7 @@ class HomeBase extends StatelessWidget {
           filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
           child: Container(
             color: const Color(0xff1F1F1F).withOpacity(0.4),
-            child: Padding(
-              padding: AppPadding.homePadding!, 
-              child: child
-            ),
+            child: child,
           ),
         ),
       ),

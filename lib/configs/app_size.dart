@@ -1,5 +1,6 @@
 class AppSize {
-  static double? logoWidth;
+  static double? logoWidthDesktop;
+  static double? logoWidthMobile;
   static double? navBarHeight;
   static double? bodyDividerHeight;
 
@@ -22,7 +23,8 @@ class AppSize {
   static double? contactSectionHeight;
 
   static void init() {
-    logoWidth = 256;
+    logoWidthDesktop = 256;
+    logoWidthMobile = 128;
     navBarHeight = 96;
     bodyDividerHeight = 0;
 

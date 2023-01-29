@@ -23,18 +23,18 @@ class NavBarMobile extends StatelessWidget {
       padding: AppPadding.navBarPadding,
       child: Row(
         children: [
+          NavBarLogo(width: AppSize.logoWidthMobile!),
+          AppSpace.horizontalExpanded!,
           IconButton(
             highlightColor: Theme.of(context).colorScheme.onPrimaryContainer,
             onPressed: () {
-              drawerProvider.key.currentState!.openDrawer();
+              drawerProvider.key.currentState!.openEndDrawer();
             },
             icon: Icon(
               Icons.menu,
               color: Theme.of(context).colorScheme.onPrimaryContainer,
             ),
           ),
-          AppSpace.horizontalExpanded!,
-          NavBarLogo(width: AppSize.logoWidthMobile!)
         ],
       ),
     );

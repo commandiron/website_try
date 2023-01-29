@@ -24,6 +24,7 @@ class _AppDrawerState extends State<AppDrawer> {
 
     return Drawer(
       backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+      width: MediaQuery.of(context).size.width / 2,
       child: Stack(
         fit: StackFit.expand,
         children: [

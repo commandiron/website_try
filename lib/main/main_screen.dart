@@ -26,7 +26,7 @@ class _MainScreenState extends State<MainScreen> {
 
     return Scaffold(
       key: drawerProvider.key,
-      drawer: !Responsive.isDesktop(context) ? const AppDrawer() : null,
+      endDrawer: !Responsive.isDesktop(context) ? const AppDrawer() : null,
       body: Stack(
         children: [
           const AppBody(),

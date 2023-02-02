@@ -44,10 +44,10 @@ class ContactDesktop extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       AppSpace.horizontalL!,
-                      Text("info@demirli.tech", style: AppTextStyle.b1!),
+                      Text("demirlitech@gmail.com", style: AppTextStyle.b1!),
                       AppSpace.horizontalM!,
                       InkWell(
-                        onTap: () => openURL("mailto:info@demirli.tech"),
+                        onTap: () => openURL("mailto:demirlitech@gmail.com"),
                         child: Icon(
                           Icons.mail,
                           color: Theme.of(context).colorScheme.primary,

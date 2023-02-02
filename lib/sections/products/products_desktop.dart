@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:demirli_tech_website/configs/app_padding.dart';
 import 'package:demirli_tech_website/configs/app_size.dart';
@@ -24,17 +26,26 @@ class ProductsDesktop extends StatelessWidget {
           const ProductsTitle(),
           Padding(
             padding: AppPadding.verticalXXL!,
-            child: CarouselSlider.builder(
-              key: carouselProvider.key,
-              itemCount: CompanyProduct.items.length,
-              carouselController: carouselProvider.controller,
-              options: CarouselOptions(
-                viewportFraction: 1.0,
-                height: AppSize.productsSectionHeight,
+            child: ScrollConfiguration(
+              behavior: ScrollConfiguration.of(context).copyWith(
+                dragDevices: {
+                  PointerDeviceKind.mouse,
+                  PointerDeviceKind.touch,
+                  PointerDeviceKind.trackpad
+                },
               ),
-              itemBuilder: (context, index, realIndex) {
-                return CarouselItemDesktop(product: CompanyProduct.items[index]);
-              },
+              child: CarouselSlider.builder(
+                key: carouselProvider.key,
+                itemCount: CompanyProduct.items.length,
+                carouselController: carouselProvider.controller,
+                options: CarouselOptions(
+                  viewportFraction: 1.0,
+                  height: AppSize.productsSectionHeight,
+                ),
+                itemBuilder: (context, index, realIndex) {
+                  return CarouselItemDesktop(product: CompanyProduct.items[index]);
+                },
+              ),
             ),
           ),
           ProductsNextArrow(

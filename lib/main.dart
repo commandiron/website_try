@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_strategy/url_strategy.dart';
 import 'configs/core_theme.dart';
 import 'main/main_screen.dart';
 import 'provider/carousel_provider.dart';
@@ -7,6 +8,7 @@ import 'provider/drawer_provider.dart';
 import 'provider/scroll_provider.dart';
 
 void main() {
+  setPathUrlStrategy();
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }

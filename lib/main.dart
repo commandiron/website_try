@@ -47,4 +47,3 @@ class MaterialChild extends StatelessWidget {
     );
   }
 }
-

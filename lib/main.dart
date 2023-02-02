@@ -8,8 +8,8 @@ import 'provider/drawer_provider.dart';
 import 'provider/scroll_provider.dart';
 
 void main() {
-  setPathUrlStrategy();
   WidgetsFlutterBinding.ensureInitialized();
+  setPathUrlStrategy();
   runApp(const MyApp());
 }
 

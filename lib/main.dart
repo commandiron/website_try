@@ -40,9 +40,12 @@ class MaterialChild extends StatelessWidget {
       theme: themeLight,
       darkTheme: themeDark,
       themeMode: ThemeMode.dark,
-      initialRoute: "/",
-      routes: {
-        "/": (context) => const MainScreen(),
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (context) {
+            return const MainScreen();
+          },
+        );
       },
     );
   }
